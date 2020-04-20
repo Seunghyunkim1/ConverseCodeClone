@@ -1,0 +1,94 @@
+.Banner {
+    z-index: 4;
+    position: relative;
+    background-color: #e5e5e5;
+    
+    // min-height: 50px;
+
+    img {
+        width: inherit;
+        height: inherit;
+    }
+    
+    .content{
+        display: flex;
+        position: relative;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        .global {
+            display: flex;
+            left: 0;
+            padding: 20px 8px;
+            width: 15.66667%;
+
+            .flag-icon {
+                width: 18px;
+                height: 12px;
+                margin-right: 10px;
+            }
+    
+            .locale {
+                position: relative;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 1.4;
+
+                .break-line {
+                    padding: 0 2px;
+                    color: #9b9b9b;
+                }
+            }
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            width: 66.66667%;
+            
+            .promo-wrapper {
+                display: flex;
+                justify-content: center;
+
+                .slider {
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    
+
+                    .slider-left {
+                        position: absolute;
+                        left: -14px;
+                    }
+
+                    .slider-right {
+                        position: absolute;
+                        right: -14px;
+                    }
+
+                    .arrow-icon {
+                        background-color: transparent;
+                        width: 1em;
+                        height: 1em;                        
+                    }
+                    
+                    .promo {
+                        display: flex;
+                        justify-content: center;
+                        text-align: center;
+                        width: 552px;
+                        padding: 17px 18px;
+
+                        span {
+                            font-size: 14px;
+                            line-height: 1.2;
+                            font-family: "proxima nova", "proxima-nova", "Nanum Gothic", Helvetica, Arial, sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
