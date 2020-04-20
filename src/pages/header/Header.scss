@@ -1,0 +1,124 @@
+#root {
+    border-bottom: 0.5px solid gray;
+    border-top: 0.5px solid gray;
+    background-color: #ffffff;
+}
+
+.headerContentWrapper{
+    width: 1679px;
+  
+}
+
+.navAll {
+    width: 1750px;
+}
+
+.flexAlignCenter{
+    //    display: flex;
+    //     position: relative;
+    //     max-width: 1440px;
+    //     margin: 0 auto;
+    //     padding: 0 20px;
+
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 0 0 70px;
+}
+
+.headerNavigation {
+    width: 180px;
+    height: 30px;
+}
+
+.navLeftFlex {
+   
+}
+
+.navLeftName {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 20px;
+    
+}
+.navRight {
+    display: flex;
+    justify-content: center;
+}
+
+.navRightAll {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+   
+}
+
+.navContent{
+    
+}
+.ulName {
+   
+    display: flex;
+    font-weight: bold;
+    width: 200px;
+    height: 30px;
+    padding-top: 5px;
+}
+
+.liName {
+    list-style-type: none;
+    margin-left: 10px;
+    
+}
+
+.liName ::after {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+.userImg {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.shoppingCart{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.heartImg {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.questionMart{
+    width: 20px;
+    height: 20px;
+   
+}
+
+.searchBox {
+    width: 250px;
+    height: 60px;
+    background-color: black;
+    margin-left: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.searchImg{
+    color: white;
+    width: 100px;
+    height: 100px;
+}
+
+.ptagSearch {
+    margin-left: 15px;
+    color: white;
+}

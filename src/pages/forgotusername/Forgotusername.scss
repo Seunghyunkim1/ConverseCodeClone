@@ -1,0 +1,42 @@
+.ForgotId{
+    .IdForm{
+        width: 540px;
+        height: 536px;
+        margin: 100px auto;
+        border: 1px solid black;
+        display: flex;
+    .IdPwd {
+        display: flex;
+    }
+    .FindId{
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        width: 269px;
+        height: 50px;
+        text-align: center;
+        color: #000000;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #ffffff;
+
+    }
+    .ResetPwd {
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        width: 269px;
+        height: 50px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        color: #9b9b9b;
+        background-color: #f4f4f4;
+        }
+     .ForgotContent {
+         width: 100%;
+         margin-top: 100px;
+     }
+    }
+}

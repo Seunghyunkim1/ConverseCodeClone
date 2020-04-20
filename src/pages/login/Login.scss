@@ -1,0 +1,198 @@
+.Login {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+
+    .AccountAuthContent {
+        width: 538px;
+        height: 631px;
+        border: 1px solid #e5e5e5;
+        padding: 50px 40px;
+
+        .AccountAuthContentTitle {
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .LoginForm {
+            margin-top: 50px;
+
+            .FieldFirstLabel {
+                .InputId {
+                    padding-left: 20px;
+                    width: 450px;
+                    height: 50px;
+                    line-height: 14px;
+                    margin-bottom: 15px;
+                    border: 1px solid #e5e5e5;
+                }
+            }
+
+
+            .FieldSecondLabel {
+                margin-top: 2px;
+
+                .InputPwd {
+                    padding-left: 20px;
+                    width: 450px;
+                    height: 50px;
+                    line-height: 14px;
+                    border: 1px solid #e5e5e5;
+                }
+            }
+
+           .loginInfo {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+                width: 450px;
+
+                .AccountTools {
+                    font-size: 12px;
+
+                    .IcheckBox {
+                        position: relative;
+                        font-size: 12px;
+                        line-height: 1;
+                        color: #9b9b9b;
+                    }
+
+                    .text {
+                        
+                        background-color: #ffffff;
+                    }
+
+                }
+
+
+            }
+
+            .FindIdPwd {
+                display: flex;
+                justify-content: space-between;
+                color: black;
+                font-size: 14px;
+
+                .FindIdPwdLink {
+                    color: #000000;
+                    font-size: 13px;
+                }
+            }
+
+
+        }
+
+
+        .FirstButtonLogin {
+            display: flex;
+
+            .ClickLogin {
+                margin-top: 20px;
+                width: 534px;
+                height: 50px;
+                line-height: 14px;
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                cursor: pointer;
+                border: 0;
+            }
+        }
+
+        .ButtonLogin {
+            display: flex;
+
+            .KakaoLogin {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                border: 0;
+                width: 534px;
+                height: 50px;
+                line-height: 14px;
+                border-color: #f5ca0f;
+                background-color: #f5ca0f;
+                color: black;
+                font-weight: bold;
+                font-size: 16px;
+                text-decoration: none;
+                cursor: pointer;
+
+                .SpeechBubblImg {
+                    display: flex;
+                    align-items: center;
+                    width: 22px;
+                    height: 44px;
+                    margin-right: 5px;
+                }
+
+                .KakaoLoginImg {
+                    width: 50%;
+                    height: 50%;
+                    padding-top: 15px;
+                    .KakaoLoginName{
+                        
+                    }
+                }
+            }
+
+        }
+
+
+
+
+
+        .FooterInfo {
+            display: flex;
+            justify-content: space-between;
+            width: 450px;
+
+            .Register {
+                cursor: pointer;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+
+            a {
+                color: #000000;
+            }
+        }
+
+
+        .NotMember {
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 20px;
+
+            a {
+                color: #000000;
+            }
+        }
+
+        .LoginEventInfo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+            background-color: #f4f4f4;
+            font-size: 15px;
+            height: 80px;
+
+            .EventImg {
+                width: 40px;
+                height: 40px;
+
+            }
+        }
+
+
+
+        .EventInfoPtag {
+            margin-left: 30px;
+        }
+
+    }
+
+}
