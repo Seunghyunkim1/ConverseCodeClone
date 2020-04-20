@@ -43,9 +43,31 @@ class Main extends Component {
             },
             {
                 img: "",
+                name: "일번 X 개굴개굴",
+                price: 135000,
+                badges: ["BEST SELLER", "NEW ARRIVAL"],
+                type: 1
+            },
+            {
+                img: "",
+                name: "이번 X 개구리",
+                price: 125000,
+                badges: ["NEW ARRIVAL"],
+                type: 1
+            },
+            {
+                img: "",
+                title: "삼번 X NEIGHBORHOOD", //P: weight 700, line-height:1.2em, font-size: calc( 30px + 1.25*(100vw - 767px)/42.0625)
+                description: "컨버스와의 두번째 콜라보를 위해 돌아온 네이버후드는 모터사이클 문화에 대한 깊은 해석을 통해<br/> 척70, 잭퍼셀 그리고 어패럴 컬렉션을 선보입니다.",
+                //font-size: calc( 12px + 0.25*(100vw - 767px)/42.0625)
+                badges: ["LIMITED EDITION"],
+                type: 2
+            },
+            {
+                img: "",
                 title: "CONVERSE X NEIGHBORHOOD",
                 type: 4
-            }
+            },
         ];
 
         this.makeGroup(contents);
@@ -60,19 +82,23 @@ class Main extends Component {
             console.log("TT", content);
 
             if (content.type !== undefined) {
-                if (sum + content.type <= 8) {
+                if (content.type === 4) { //type 4, 독자 Contents 차지
+                    dividedContents.push([content]);
+                }
+                else if (sum + content.type <= 8) {
                     section.push(content);
                     sum += content.type;
-                } else { // 8초과 후 남는 contents 버려짐
-                    sum = 0;
-                    dividedContents.push(section);
-                    section = [].push(content);
+                    if (sum === 4) {
+                        dividedContents.push(section);
+                        sum = 0;
+                        section = [];
+                    }
                 }
+                console.log("DD", dividedContents)
             }
-            console.log("con", content);
-            console.log("sec", section);
-            console.log("div", dividedContents);
         });
+
+        dividedContents.push(section);
 
         this.setState({
             contents: Array.from(dividedContents)
@@ -84,6 +110,7 @@ class Main extends Component {
     }
 
     render() {
+        console.log("콘", this.state.contents)
         return (
             <div className="Main">
                 <h1>--- Header ---</h1>

@@ -10,9 +10,13 @@ class ContentsContainer extends Component {
 
         return (
             <div className="ContentsContainer">
-                {this.props.contents.map((content) => (
-                    <Contents contents={content} />
-                ))}
+                {this.props.contents.map((content) => {
+                    console.log("콘텐트",content);
+                    //1,2 <--> 4 분리
+                    if (content.length > 0) {                        
+                        return <Contents contents={content} />
+                    }
+                })}
             </div>
         );
     }

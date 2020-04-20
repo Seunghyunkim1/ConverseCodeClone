@@ -6,9 +6,10 @@ import ContentForFour from "./ContentForFour";
 
 import "./Contents.scss";
 
-class Contents extends Component {
+class Contents extends Component { //8칸 모음 섹션
+    
     render() {
-        console.log(this.props.contents);
+        console.log("두둔", this.props.contents);
         return (
             <div className="Contents">
                 {this.props.contents.map((content) => {
