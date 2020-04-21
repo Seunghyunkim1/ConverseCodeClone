@@ -1,0 +1,298 @@
+#root {
+
+    border-bottom-style: none;
+
+.Register {
+    .SignUpHeader {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+
+      .HeaderImg {
+        width: 100%;
+        height: 230px;
+    }
+    .HeaderContent {
+      
+
+    .HeaderContentRegister {
+        font-size: 30px;
+        font-weight: bold;
+        background-color: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        right: 26%;
+        top: 16%;
+    }
+}
+
+    .HeadContentAll{
+
+    }    .HeaderFirstContent {
+        width: 450px;
+        background-color: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        right: 17%;
+        top: 22%;
+    }
+    
+    .HeaderSecondContent{
+        width: 450px;
+        background-color: none;
+        text-align: center;
+        position: absolute;
+        color: white;
+        right: 17%;
+        top: 25%;
+    }
+    }
+
+    .SignUpBody {
+        
+        height: 625px;
+        margin : auto 0;
+        display: flex;
+        
+        .EntryField {
+            width: 840px;
+            height: 625px;
+            border: 0;
+            margin-left : 120px;
+            margin-top: 50px;
+        }
+    }
+    .ButtonLogin {
+        display: flex;
+
+        .KakaoLogin {
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+            border: 0;
+            width: 384px;
+            height: 52px;
+            line-height: 14px;
+            border-color: #f5ca0f;
+            background-color: #f5ca0f;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+
+            .SpeechBubblImg {
+                display: flex;
+                align-items: center;
+                width: 22px;
+                height: 44px;
+            }
+
+            .KakaoLoginImg {
+                width: 50%;
+                height: 50%;
+                padding-top: 15px;
+                .KakaoLoginName{
+                    
+                }
+            } 
+        }    
+  }
+
+  .RegisterOr {
+
+    font-size: 14px;
+    line-height: 1;
+    color: #666666;
+    text-align: center;
+    ::before {
+        content: '';
+        display: block;
+        width: 180px;
+        height : 1px;
+        background-color: #e5e5e5;
+        margin-right: 10px;
+      } ::after {
+        content: '';
+        display: block;
+        width: 160px;
+        height : 1px;
+        background-color: #e5e5e5;
+        margin-left: 10px;
+      } 
+      .OrSpan{
+        display: flex;
+        align-items: center;
+        margin-left: 230px;
+    }
+  }  
+
+  .AccountSignup {
+      margin-left: 230px;
+  } .NeedInfo {
+    
+    margin-top: 40px;
+
+  } .InputEmail {
+    width: 384px;
+    height: 50px;
+    line-height: 1.5;
+    letter-spacing: -.025em;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    margin-top: 10px;
+    padding: 20px;
+    
+  }
+  .FieldName{
+      margin-top: 10px;
+      font-size: 13px;
+      color : gray;
+  }
+
+  .MailFemail {
+    border: 1px solid #e5e5e5;
+    display: flex;
+    background-color: #f4f4f4;
+    width: 384px;
+    margin-left: 230px;
+    margin-top: 10px;
+    
+    .Femail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color : #9b9b9b;
+        width: 192px;
+        height: 48px;
+        font-size: 14px;
+       
+    }
+    .Mail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color : #9b9b9b;
+        width: 192px;
+        height: 48px;
+        font-size: 14px;
+    }
+  }
+
+  .AgreeField {
+      width: 600px;
+      height: 625px;
+      margin : 70px 0;
+      border-left: 1px solid #e5e5e5;  
+       
+    .AgreeSignup {
+        margin-left: 100px;
+    }
+    .AgreeBox {
+        display: flex;
+    }
+    
+  }
+  .SelectContent {
+      margin-top: 10px;
+      line-height: 24px;
+
+  }
+
+  .UlContent {
+      margin-top: 15px;
+     
+    .LiContent{
+        padding-left: 1em;
+        color: #757575;
+        font-size: 13px;
+        line-height: 24px;
+        content: '-';
+        display: inline-block;
+        margin-left: -1em;
+        }
+}
+
+.AccountSignupFieldset {
+    margin-top: 40px;
+    .FieldsetLegend{
+        .titleLong{
+            color: #444;
+            text-transform: none;
+            margin-left: 100px;
+            margin-top: 25px;
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: -.025em;
+        }
+        .EventInfo {
+            
+            line-height: 1;
+            letter-spacing: -.025em;
+            color: #00c3d7;
+            font-size: 14px;
+            margin : 8px 0 15px 100px;
+        }
+    }
+}
+  
+.FieldRow{
+    .FieldAll{
+        width: 499px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-top : 10px;
+        font-size: 13px;
+       
+    }
+   .FieldFistRow{
+       display: flex;
+  
+   } 
+
+   .FieldAtag {
+       padding-right: 50px;
+   }
+
+   .ChooseEmail{
+    width: 499px;
+    margin-left: 100px;
+    margin-top : 10px;
+    font-size: 13px;
+   
+}
+.Email{
+   display: flex;
+   margin-bottom: 10px;
+
+} 
+
+}
+
+.FirstButtonLogin {
+    display: flex;
+    margin-top: 20px;
+
+    .ClickLogin {
+        margin: 20px 0 0 100px;
+        width: 455px;
+        height: 50px;
+        line-height: 14px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        border: 0;
+    }
+}
+
+
+  
+}
+}
+   

@@ -1,11 +1,11 @@
 import React , {Component} from 'react';
-import './Forgotusername.scss';
+import './Forgotpassword.scss';
 
-export class Forgotusername extends Component {
+export class Forgotpassword extends Component {
 
     render() {
         return (
-            <div className="Forgotusername">
+            <div className="Forgotpassword">
                 <form className="IdForm">
                  <div className="IdPwdForm">
                   <div className="IdPwd">
@@ -41,12 +41,8 @@ export class Forgotusername extends Component {
 
                 <form className="LoginForm">
                   <div className="FieldFirstLabel">
-                    <input className="InputId" type="text" placeholder="전화번호를 입력하세요"  /> 
+                    <input className="InputId" type="text" placeholder="아이디를 입력하세요 (이메일형식)"  /> 
                   </div>
-
-                <div className="FieldSecondLabel">
-                    <input className="InputPwd"  type="password" placeholder="이름을 입력하세요" /> 
-                </div>
                 </form>
                 
                 <div className="FirstButtonLogin">
@@ -63,4 +59,4 @@ export class Forgotusername extends Component {
         );  
     }
 }
-export default Forgotusername;
+export default Forgotpassword;

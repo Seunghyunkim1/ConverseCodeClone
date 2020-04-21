@@ -1,0 +1,24 @@
+.Registersuccess{
+
+    .SuccessFormAll{
+        width: 1438px;
+        height: 567px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        .SuccessForm {
+            text-align: center;
+            .SuccessImg{
+                width: 170px;
+                height: 114px;
+                margin: auto;
+            }
+            .SuccessEnd {
+                font-size: 36px;
+               line-height: 1;
+            }
+            
+        }
+    }
+
+}
