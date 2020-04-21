@@ -1,0 +1,233 @@
+.Footer {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-top: 1px solid #e5e5e5;
+    
+    
+
+
+    .Footer-top {
+       
+        max-width: 1440px;
+
+        display: flex;
+        justify-content: space-around;
+        height: 160px;
+        font-size: 14px;
+        line-height: 1;
+        color: #000000;
+        
+          
+        
+
+
+            .Box {
+                padding: 0 auto;    
+                width: 100%;           
+                
+                line-height: 1;
+                // border-left: 1px solid #e5e5e5;
+                border-right: 1px solid #e5e5e5;
+                
+                .Box-items {
+                    padding: 25px 0 0 35px;
+                    height: 160px;
+                    
+                            
+                    .Box-items-inside {
+                        border: 0;
+                        width: 100%;
+                    }
+
+                    .Box-items-title {
+                    
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        letter-spacing: 1px;
+                        color: #000000;
+
+                    }
+
+                    .SocialMedia-link-flex {
+                        display: flex;
+                        align-items: center;
+                        border: 0px solid black;
+                    
+                        .Link-flex-align-center{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #e5e5e5;
+                            width: 50px;
+                            height: 50px;
+                        }
+
+                        .Link-flex-align-center:last-child {
+                            border-left: none;
+                        }
+                                    
+                    }
+
+                    .imge {
+                        display: inline-block;
+                        width: 1em;
+                        fill: currentColor;
+                    }
+                
+                
+                    
+
+                    .Link-column {
+                        margin: 15px 0;
+                        padding: 0;
+                        line-height: 1.7;
+                        opacity: 0.7;
+                        font-weight: 500;
+
+                        li {
+                            list-style-type: none;
+                            display: list-item;
+                            text-align: match-parent;
+
+                        
+                            .Link-column-text {
+                                font-size: 12px;
+                                line-height: 1;
+                                text-decoration: none;
+                                color: inherit;
+
+
+
+                
+                            }     
+                            .Link-column-text-privacy {
+                                font-weight: 600;
+                                text-decoration: none;
+                                color: inherit;
+
+
+
+                            }                
+                
+                        }
+                    }
+
+
+
+                  
+
+
+                   
+                }
+            }
+
+            .Box:last-child {
+                border-right: none;
+            }// &:last-child {}
+        
+   
+    }
+
+
+    .Footer-bottom {
+        background-color: #000000;
+       
+       
+        .Footer-bottom-content {
+            padding: 38px 40px;            
+            font-size: 12px;
+            line-height: 20x;
+            letter-spacing: -.025em;
+            color: #999999;
+
+
+            .Content-row-flex {
+                display: flex;
+                justify-content: space-around;
+                
+
+
+                .Content-site-info {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between; 
+                   
+                    .Content-inside {
+                        width: 100%;
+                        line-height: 1.5;
+                        display: flex;
+                        justify-content: space-between;  
+
+                        .Content-inside-left {
+                            width: 650px;                    
+
+                            .Content-info {
+                                display: inline-block;
+                                margin-right: -2px;
+                                vertical-align: top;
+                                                                                      
+                                
+                            }
+
+                            a {
+                                font-weight: 700;
+                                text-decoration: none;
+                                color: #c2bbc2;
+    
+                            }
+
+                        }
+
+                        .Copyright {
+                            margin: 22px 0 0;
+                        }
+
+
+                        .Content-inside-right {
+                            width: 380px    ;
+                        }
+                        .Content-inside-right p {
+                            margin: 2.5px;
+                        }
+
+                        .Content-inside-right a {
+                            font-weight: 600;
+                            text-decoration: none;
+                            color: #c2bbc2;
+                            margin: 2.5px;
+
+
+                        }
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                    }
+                }
+
+            }
+
+        }
+   
+   
+   
+   
+    }
+
+    
+}
