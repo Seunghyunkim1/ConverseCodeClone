@@ -1,19 +1,19 @@
 .Forgotusername{
-    .IdForm{
+    .id-form{
         width: 540px;
         height: 600px;
         margin: 100px auto;
         display: flex;
         border: 1px solid #e5e5e5;
-    .IdPwdForm{
+    .idpwd-form{
         width: 540px;
         height: 540px;
         
     }
-    .IdPwd {
+    .id-pwd {
         display: flex;
     }
-    .FindId{
+    .find-id{
         display: flex;
         align-items: center;
         justify-content: center;    
@@ -26,7 +26,7 @@
         background-color: #ffffff;
 
     }
-    .ResetPwd {
+    .reset-pwd {
         display: flex;
         align-items: center;
         justify-content: center;  
@@ -39,7 +39,7 @@
         color: #9b9b9b;
         background-color: #f4f4f4;
         }
-     .ForgotContent {
+     .forgot-content {
          width: 100%;
          margin-top: 60px;
          text-align: center;
@@ -50,10 +50,10 @@
      }
      }
      
-     .ButtonLogin {
+     .button-login {
         display: flex;
 
-        .KakaoLogin {
+        .kakao-login {
             display: flex;
             justify-content: center;
             margin: 20px auto;
@@ -69,24 +69,24 @@
             text-decoration: none;
             cursor: pointer;
 
-            .SpeechBubblImg {
+            .speech-bubbleimg {
                 display: flex;
                 align-items: center;
                 width: 22px;
                 height: 44px;
             }
 
-            .KakaoLoginImg {
+            .kakao-loginimg {
                 width: 50%;
                 height: 50%;
                 padding-top: 15px;
-                .KakaoLoginName{
+                .kakaologin-name{
                     
                 }
             } 
         }    
   }
-  .ForgotExplanation {
+  .forgot-explanation {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -94,13 +94,13 @@
     text-align: center;
     font-size: 14px;
   }
-  .LoginForm {
+  .login-form {
      
       display: inline;
       margin: 20px 0 0 20px;
     
-    .FieldFirstLabel {
-        .InputId {
+    .field-firstlabel {
+        .input-id {
             padding-left: 20px;
             width: 458px;
             height: 50px;
@@ -112,10 +112,10 @@
     }
 
 
-    .FieldSecondLabel {
+    .field-secondlabel {
         margin-top: 2px;
 
-        .InputPwd {
+        .input-pwd {
             padding-left: 20px;
             width: 458px;
             height: 50px;
@@ -126,10 +126,10 @@
     }
     
   }
-  .FirstButtonLogin {
+  .first-buttonlogin {
     display: flex;
 
-    .ClickLogin {
+    .login-click {
         margin : 20px 0px 15px 42px;
         width: 458px;
         height: 50px;

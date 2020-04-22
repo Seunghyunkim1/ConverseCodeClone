@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../header/Header.scss';
+import './Header.scss';
 
 // import myPageIcon from '/image/icon.png';
 
@@ -8,12 +8,12 @@ import '../header/Header.scss';
 export class Header extends Component {
     render() {
         return (
-        <div className='headerContentWrapper'> 
+        <div className='Header'> 
              <div className='content'>    
-                 <div className='navAll'>
-                     <div className='flexAlignCenter'>
-                     <div className='navLeftFlex'>
-                     <div className='navLeftName'>
+                 <div className='nav-all'>
+                     <div className='flex-aligncenter'>
+                     <div className='nav-Leftflex'>
+                     <div className='nav-leftname'>
                        <a className ="logoFlex">
                        <img src="https://www.logo.wine/a/logo/Converse_(shoe_company)/Converse_(shoe_company)-Converse3-Logo.wine.svg" 
                             className = "headerNavigation" alt=""/>
@@ -29,7 +29,6 @@ export class Header extends Component {
                                 <li className="liName">
                                     <a> 아동  </a>
                                 </li>
-
                             </ul>
                             
                         </nav>
@@ -46,9 +45,7 @@ export class Header extends Component {
                             </div>
                         <div className="heartImg">
                           <img src="https://image.flaticon.com/icons/svg/1077/1077035.svg" alt=""/> 
-                          </div>
-
-                          
+                          </div>       
                             
                             <div className='questionMart'>
                               <img src="https://image.flaticon.com/icons/svg/906/906794.svg" alt=""/>

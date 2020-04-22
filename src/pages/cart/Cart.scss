@@ -1,25 +1,25 @@
 .Cart {
 
-    .CartWrap {
+    .cart-wrap {
     width: 100%;
     height: 610px;
      margin: 100px ;
      
         
     }
-    .CartEmpty {
+    .cart-empty {
     
         font-size: 18px;
         line-height: 1;
         margin-left: 500px;
         
-        .CartName{
+        .cart-name{
 
             line-height: 2;
-            .CartList {
+            .cart-list {
             
             }
-            .CartBottomLine {
+            .cart-bottomline {
                
                 width: 810px;
                 border-bottom: 1px solid #e5e5e5;
@@ -27,29 +27,29 @@
                 }
             }  
             
-            .CartEmptyContent {
+            .cart-emptycontent {
                 width: 810px;
                 height: 417px;
                 text-align: center;
                 margin-top: 150px;
-             .CartNo{
+             .in-nothing{
                 margin: 20px 0;
                 font-size: 24px;
                 font-weight: 700;
                 line-height: 1;
              }
-             .CartNoContent {
+             .in-nothingcontent {
                 color: e5e5e5;
                 margin: 20px 0;
                 font-size: 14px;
                 line-height: 1;
              }
 
-             .FirstButtonLogin {
+             .first-buttonlogin {
                 display: flex;
                 margin-top: 20px;
             
-                .ClickLogin {
+                .click-login {
                     margin: auto;
                     width: 330px;
                     height: 50px;

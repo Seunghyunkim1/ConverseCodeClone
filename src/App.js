@@ -3,15 +3,16 @@ import { BrowserRouter as Router, Route} from "react-router-dom";
 
 import Banner from "./components/banner/Banner";
 import Main from "./pages/main/Main";
-import Login from "./pages/login/Login"
-import Category from "./pages/category/Category";
-import Header from './pages/header/Header';
-import Forgotid from "./pages/forgotusername/Forgotusername";
-import Forgotpwd from "./pages/forgotpassword/Forgotpassword";
-import Notmember from "./pages/notmembersearch/Notmembersearch";
-import Register from "./pages/register/Register";
-import Cart from "./pages/cart/Cart";
-import Registersuccess from "./pages/registersuccess/Registersuccess";
+import Login from "./pages/Login/Login"
+import Shoesmenu from "./pages/Shoesmenu/Shoesmenu";
+import Header from './pages/Header/Header';
+import Forgotid from "./pages/Forgotusername/Forgotusername";
+import Forgotpwd from "./pages/Forgotpassword/Forgotpassword";
+import Notmember from "./pages/Notmembersearch/Notmembersearch";
+import Register from "./pages/Register/Register";
+import Cart from "./pages/Cart/Cart";
+import Registersuccess from "./pages/Registersuccess/Registersuccess";
+import Cartadd from "./pages/Cartadd/Cartadd";
 
 class App extends Component {
     render() {
@@ -24,9 +25,10 @@ class App extends Component {
                 <Route path="/login/forgotpwd" component={Forgotpwd}/>
                 <Route path="/login/Notmember" component={Notmember}/>
                 <Route path="/cart" component={Cart}/>
+                <Route path="/cartadd" component={Cartadd}/>
                 <Route exact path="/Register" component={Register}/>
                 <Route path="/Register/registersuccess" component={Registersuccess}/>
-                <Route path="/Category" component={Category} />
+                <Route path="/Shoesmenu" component={Shoesmenu} />
                 <Route path="/Header" component={Header} />
                 
                 

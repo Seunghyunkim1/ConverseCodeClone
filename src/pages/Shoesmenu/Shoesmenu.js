@@ -1,11 +1,11 @@
 import React , {Component} from 'react';
-import './Category.scss';
+import './Shoesmenu.scss';
 
-export class Category extends Component {
+export class Shoesmenu extends Component {
 
     render() {
         return (
-          <div className="Inner">
+          <div className="Shoesmenu">
            <div className ="Main">
                <ul> 
                  <li className="LiList"> 전체보기</li>
@@ -68,4 +68,4 @@ export class Category extends Component {
         );
     }
 }
-export default Category;
+export default Shoesmenu;

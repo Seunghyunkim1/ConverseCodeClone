@@ -50,11 +50,15 @@
     }
     }
 
+    .RegisterMain {
+        display: flex;
+        justify-content: center;
+    }
     .SignUpBody {
         
-        height: 625px;
-        margin : auto 0;
+       
         display: flex;
+        margin-top: 30px;
         
         .EntryField {
             width: 840px;

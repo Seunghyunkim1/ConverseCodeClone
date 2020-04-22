@@ -16,8 +16,35 @@
             .SuccessEnd {
                 font-size: 36px;
                line-height: 1;
+               margin-top: 20px;
             }
+            .SuccessContent {
+                font-size: 18px;
+                line-height: 26px;
+                margin-top: 18px;
+                margin-bottom: 0;
+                color: #757575;
+            }
+
             
+            
+        }
+        .FirstButtonLogin {
+            display: flex;
+            justify-content: center;
+
+            .ClickLogin {
+                margin-top: 20px;
+                width: 280px;
+                height: 50px;
+                line-height: 14px;
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                cursor: pointer;
+                border: 0;
+            }
         }
     }
 

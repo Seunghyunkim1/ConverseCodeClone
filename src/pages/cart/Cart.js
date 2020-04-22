@@ -6,21 +6,21 @@ export class Cart extends Component {
     render() {
         return (
           <div className="Cart">
-          <div className="CartWrap">
-              <div className="CartEmpty">
-               <div className="CartName">
-                   <p className="CartList"> 장바구니 (0) </p>
-                    <div className="CartBottomLine"> 
+          <div className="cart-wrap">
+              <div className="cart-empty">
+               <div className="cart-name">
+                   <p className="cart-list"> 장바구니 (0) </p>
+                    <div className="cart-bottomline"> 
                     </div>
                </div>
 
-               <div className="CartEmptyContent">
+               <div className="cart-emptycontent">
 
-                 <p className="CartNo"> 장바구니에 담긴 상품이 없습니다. </p>
-                 <p className="CartNoContent"> 척테일러, 척 70, 잭퍼셀, 원스타 등 지금 컨버스의 다양한 상품을 찾아보세요. </p>
+                 <p className="in-nothing"> 장바구니에 담긴 상품이 없습니다. </p>
+                 <p className="in-nothingcontent"> 척테일러, 척 70, 잭퍼셀, 원스타 등 지금 컨버스의 다양한 상품을 찾아보세요. </p>
 
-                 <div className="FirstButtonLogin">
-                  <button className="ClickLogin">
+                 <div className="first-buttonlogin">
+                  <button className="click-login">
                       쇼핑 계속 하기
                   </button>     
                 </div>

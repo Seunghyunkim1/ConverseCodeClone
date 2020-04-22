@@ -1,0 +1,298 @@
+.Cartadd {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .cart-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        height: 610px;
+
+    }
+    .cart-empty {
+    
+        font-size: 18px;
+        line-height: 1;
+        margin-left: 100px;
+        
+        .cart-name{
+
+            line-height: 2;
+            .cart-list {
+                width: 810px;
+                background-color: #ffffff;
+            }
+            .cart-bottomline {
+                width: 708px;
+                height: 162px;
+               border : 1px solid #e5e5e5;
+               display: flex;
+               justify-content: space-evenly;
+               align-items: center;
+
+               .cart-bottomimg{
+
+                .cart-imgsize {
+                    width: 98px;
+                    height: 122px;
+                }
+
+               }
+
+               .cart-content {
+                   width: 554px;
+                   height: 122px;
+                   align-items: center;
+                   font-size: 14px;
+                    line-height: 22px;
+                    .shoseinfo {
+                        display: flex;
+                        .shoseinfo-left{
+                           .shose-info{
+                               .shoes-color{
+                               }
+                                   .shoes-size{
+
+                               }
+
+                               .shoes-amount{
+
+                               }
+                           } 
+                        } 
+                        
+                        .shoseinfo-right {
+                            width: 215px;
+                            height: 72px;
+                            margin: auto;
+                            padding-left: 120px;
+                           
+                            .price{
+                                width: 200px;
+                            }
+                            .button{
+                                width: 150px;
+                                height: 36px;
+                                .input-account{
+                                    width: 60px;
+                                    height: 36px;
+                                    text-align: center;
+                                    background-color: #ffffff;
+                                    border : 1px solid #e5e5e5;
+                                   
+                                }
+                                .plus-button{
+                                    width: 36px;
+                                    height: 36px;
+                                    border : 1px solid #e5e5e5;
+                                    background-color: #ffffff;
+                                }
+                                .minus-button{
+                                    width: 36px;
+                                    height: 36px;
+                                    border : 1px solid #e5e5e5;
+                                    background-color: #ffffff;
+
+                                }
+                            }
+                        }
+                    }
+                    .shose-info{
+                        display: flex;
+                     .shoes-color{
+                        margin-right: 5px;
+                     }
+                     .shoes-size{
+                         margin-left: 5px;
+                     }
+                    }
+                    .shoes-amount{
+                        font-size: 15px;
+                    }
+
+                    .add-wishlist{
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 35px;
+                        .wishlist {
+                            display: flex;
+                        }
+                       .wishlist-content {
+                           margin-right: 15px;
+
+                           .wishlist-img {
+                            width: 16px;
+                            height: 16px;
+                           
+                        }
+
+                        .wishlist-add {
+                            font-size: 14px;
+                            height: 16px;
+                        }
+                       }
+
+                  
+                      
+                    }
+                    .buy-after {
+                        font-size: 14px;
+                        
+                        .buy-afterimg{
+                            width: 16px;
+                            height: 16px;
+                        }
+                        .buy-left{
+                            height: 16px;
+                        }
+                    }
+               }
+              
+                }
+
+                .clear-cart {
+                  width: 140px;
+                  height: 40px;
+                  font-size: 14px;
+                 border: 1px solid #e5e5e5;
+                 display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin-top: 20px;
+                  margin-left: 570px;
+                
+                }
+            
+            }  
+            
+         
+        }
+
+        .cart-summary {
+            width: 290px;
+            height: 573px;
+            margin-top: 100px;
+            border: 1px solid #e5e5e5;
+            background-color: #f4f4f4;
+            .summary-title{
+              margin-top: 20px;
+              margin-bottom: 20px;
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 1;
+               letter-spacing: -.025em;
+               text-align: center;
+            }
+            .summary-content{
+                border: 1px solid #e5e5e5;
+                background-color: #ffffff;
+                margin: 30px 20px 0 20px;
+
+                .order-totals{
+                    padding: 25px;
+                    border-bottom: 1px solid #e5e5e5;
+                    
+                
+                .order-total-item{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 18px;
+                    .label-align-center{
+                        
+                    }
+                    .value{
+                        // margin-left: 100px;
+                    }
+                }
+                .order-total-highlight{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 18px;
+                }
+            }
+            .order-checkout{
+                .first-buttonlogin {
+                    display: flex;
+        
+                    .click-login {
+                        margin: 30px;
+                        width: 208px;
+                        height: 50px;
+                        line-height: 14px;
+                        background-color: black;
+                        color: white;
+                        font-weight: bold;
+                        font-size: 16px;
+                        cursor: pointer;
+                        border: 0;
+                    }
+                }
+
+            }
+
+        
+           
+            }
+            .cart-entry-promo{
+                margin-top: 10px;
+                margin-left: 12px;
+                .promo-message{
+                    margin-bottom: 16px;
+                    font-size: 12px;
+                    line-height: 20px;    
+                    letter-spacing: -.025em;
+                    word-break: keep-all;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
+                    margin-left: 10px;
+                }
+            }
+        .input-code{
+            display: flex;
+            align-items: center;
+            .row-flex-no{
+                .promo-code{
+                    padding-left: 20px;
+                    width: 170px;
+                    height: 45px;
+                    line-height: 1.5;
+                    letter-spacing: -0.025em;
+                    border: 1px solid #e5e5e5;
+                    background-color: #ffffff;
+                    margin : 20px 0 0 20px;
+                }
+            }
+
+           
+            }
+            .submit-promo{
+              
+                .btn-submit{
+                    margin-top: 20px;
+                    width: 80px;
+                    height: 45px;
+                    background-color: #ffffff;
+                    border: 1px solid #e5e5e5;
+                }
+            }
+
+            .movement-guide {
+                width: 248px;
+                height: 52px;
+                border: 1px solid #e5e5e5;
+                background-color: #ffffff;
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+                margin: 20px;
+                .movement-content{
+                    padding : 10px;
+                }
+            }
+
+        }
+    }
+    
+
