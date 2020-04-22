@@ -1,13 +1,12 @@
-
 .Category {
     display: block;
 
-    .DashBoard {
+    .dashboard {
         margin: 0 auto;
         max-width: 1440px;
 
 
-        .LocationOfUser {
+        .location-user {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
@@ -23,35 +22,35 @@
             }
 
 
-            .Home {
+            .home {
                 opacity: .5;
                 
             }
-            .Home::after {
+            .home::after {
                 content: '/';
                 display: inline-block;
                 padding: 0 3px;
             }
         }
 
-        .Dashboard-image-part {
+        .dashboard-image-part {
             margin-bottom : 20px;
             position: relative;
            
 
 
-            .Dashboard-image-inside {
+            .dashboard-image-inside {
                 width: 100%;
                 height: 100%;
                
 
-                .DashImage1 {
+                .dashImage1 {
                     width: 100%;
                     height: 100%;
                      
                 } 
             }
-            .Dash-text-center {
+            .dash-text-center {
                 position: absolute;
                 display: flex;
                 top: 0;
@@ -62,7 +61,7 @@
                     line-height: 1;
                     margin-bottom: 0;
                     font-size: calc( 24px + 0.75*(100vw - 767px)/42.0625);
-                    font-family: "proxima nova", "proxima-nova", "Nanum Gothic", Helvetica, Arial, sans-serif;
+                    font-family: "proxima nova", "proxima-nova", "Nanum Gothic", helvetica, Arial, sans-serif;
                     font-weight: 700;
                 }
             }
@@ -72,13 +71,13 @@
         }
     }
 
-    .Filter-nav {
+    .filter-nav {
         border-top: 1px solid #e5e5e5;
         border-bottom: 1px solid #e5e5e5;
         margin-bottom: 16px;
         background-color: #ffffff;
 
-        .Filter-nav-inside {
+        .filter-nav-inside {
             display: flex;            
             justify-content: space-between;
             padding-left: 20px;
@@ -88,24 +87,30 @@
             background-color: #ffffff;
             position: relative;
 
-            .Filter-nav-button {
+            span {
+                font-size: 14px;
+                opacity: 0.5;
+            }
+
+            .filter-nav-button {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                align-self: stretch;
+                // align-self: stretch;
                 width: 256px;
                 flex-basis: 256px;
                 height: 60px;
-                flex-shrink: 0;
+                // flex-shrink: 0;
                 border: 1px solid #e5e5e5;
                 background-color: #ffffff;
                 border-left: none;
                 border-bottom: none;
                 border-top: none;
                 cursor: pointer;
+                padding: 0 16px;
             }
 
-            .Filter-nav-button img {
+            .filter-nav-button img {
                 width: 18px;
                 height: 13px;
             }
@@ -115,7 +120,7 @@
                 align-items: flex-start;
             }
 
-            .ProductCount {
+            .productcount {
                 margin-left: 20px;
                 margin-right: auto;
                 font-size: 14px;
@@ -123,7 +128,7 @@
                 line-height: 1;
             }
 
-            .Filter-nav-center {
+            .filter-nav-center {
                 border: 0;
                 display: flex;
                 align-items: center;
@@ -133,12 +138,10 @@
             
                             
 
-                .ProductCount {
-                    
-                }
+                
             }
 
-            .Filter-nav-newproducts {
+            .filter-nav-newproducts {
                 border: 0;
                 display: flex;
                 justify-content: space-between;
@@ -160,7 +163,7 @@
 
     }
 
-    .Category-bottom {
+    .category-bottom {
         border: 0;
         margin-left: auto;
         margin-right: auto;
@@ -169,23 +172,23 @@
         max-width: 1440px;
         display: flex;
 
-        .Category-bottom-left {
+        .category-bottom-left {
             border: 0px solid black;
             width: 276px;
             visibility: inherit;
             flex: 0 0 276px;
 
-            .Left-inside {
+            .left-inside {
                 border: 0px solid black;
                 width: 224px;
                 margin-left: 16px;
                 border-top: 1px solid #e5e5e5;
 
-                .Left-inside-border {
+                .left-inside-border {
                     border: 0px solid black;
                     width: 100%;
 
-                    .Left-inside-box {
+                    .left-inside-box {
                         border-bottom: 1px solid #e5e5e5;
                         padding: 10px 0;
                         display: flex;
@@ -194,7 +197,7 @@
                         flex-direction: column;
                         width: 100%;
 
-                        .Box-detail-title {
+                        .box-detail-title {
                             border: 0;
                             width: 100%;
                             min-height: 36px;
@@ -213,25 +216,34 @@
                             line-height: 1;
                         }
                         img {
-                            width: 18px;
-                            height: 13px;
+                            width: 16px;
+                            height: 14px;
+                        }
+
+                        .none {
+                            display: none
+                        }
+
+                        .block {
+                            display: block
                         }
                         
-                        .Box-detail-inside {
+                        .box-detail-inside {
                             margin-bottom: -10px;
                             padding-top: 2px;
                             padding-bottom: 17px;
                             width: 100%;
+                            transition: 213ms;
                             
                             
 
                             
 
-                            .Details1{
+                            .details1{
                                 border: 0px solid black;
 
 
-                                .Inside1 {
+                                .inside1 {
                                     border: 0px solid black;
                                     display: flex;
                                     align-items: center;
@@ -258,7 +270,7 @@
                                     border: 1px solid black;  
                                 }
                                 
-                                .Color-dots {
+                                .color-dots {
                                 height: 70px;
                                 display: flex;
                                 flex-flow: wrap;    
@@ -267,7 +279,7 @@
                                 
                                 
 
-                                .Dotdotdot {
+                                .dotdotdot {
                                     cursor: pointer;
                                     margin: 5px 9px 5px 2px;
                                     border: 2px solid rgba(0,0,0,0.1);
@@ -304,7 +316,7 @@
                              
                                 }
 
-                                .Shoe-size {
+                                .shoe-size {
                                 width: 100%;
                                 
                                 border: 0px solid #c3c3c3;
@@ -313,17 +325,17 @@
                                 //border-right: 1px solid #e5e5e5;
                                 
 
-                                    .Shoe-size-detail{
+                                    .shoe-size-detail{
 
                                         width: 100%;
                                         overflow: hidden;
                                         display: flex;
                                         flex-wrap: wrap;
                                  
-                                        .Square-inside {
+                                        .square-inside {
                                             display: flex;
                                             flex-wrap: wrap;
-                                            //background-color: DodgerBlue;
+                                            //background-color: dodgerBlue;
                                             cursor: pointer;
                                            
                                             padding: 10px 10px 10px;
@@ -360,20 +372,20 @@
                             
                                 }
                                 
-                                .Silhouette {
+                                .silhouette {
                                     
                                     width: 100%;
                                     border-bottom: 1px solid #e5e5e5;
                                     border-left: 1px solid #e5e5e5;
                                     //border-right: 1px solid #e5e5e5;
 
-                                    .Silhouette-detail{
+                                    .silhouette-detail{
                                         width: 100%;
                                         overflow: hidden;
                                         display: flex;
                                         flex-wrap: wrap;
                                         
-                                        .Shoe-silhouette {
+                                        .shoe-silhouette {
                                             width: 50%;
                                             display: flex;
                                             // flex-wrap: wrap;
@@ -402,7 +414,7 @@
 
                                             flex-grow: 2;
 
-                                            .Shoe-more {
+                                            .shoe-more {
                                                 display: flex;
                                                 justify-content: center;
                                                 align-items: center;
@@ -441,48 +453,47 @@
 
         }
 
-        .Category-bottom-right {
-            border: 1px solid black;
+        .category-bottom-right {
+            border: 0px solid black;
             width: 100%;
             padding-bottom: 120px;
             padding-left: 34px;
             padding-right: 34px;
 
-            .Product-layout {
-                border: 1px solid black;
+            .product-layout {
+                border: 0px solid black;
                 display: flex;
                 flex-wrap: wrap;
 
-                .Product-layout-detail {
+                .product-layout-detail {
                     display: flex;
                     flex-wrap: wrap;
 
 
                 
-                    .Product-detail {
-                        border: 1px solid black;
+                    .product-detail {
+                        border: 0px solid black;
                         margin-bottom: 16px;
                         padding: 0 8px;
                         flex-basis: 25%;
                         max-width: 25%;
                         font-size: 14px;
                        
-                        .Product-detail-relative {
+                        .product-detail-relative {
 
                             position: relative;
 
-                                .Shoeppp {
-                                    width: 100%;
-                                    height: 192px;
+                                .shoeppp {
+                                    width: 252px;
+                                    height: 315px;
                                     
                                 }
-                                .Heart-product-state {
+                                .heart-product-state {
                                     position: absolute;
                                     top: 0;
                                     left: 0;
                                     width: 100%;
                                     display: flex;
-                                    align-items: center;
                                     justify-content: space-between;
                                     padding-top: 10px;
                                     padding-left: 10px;
@@ -490,15 +501,15 @@
                                 
                                                                             
                                     
-                                        .Heart-icon {
-
+                                        .heart-icon {
+                                            top:0;
                                             width: 30px;
                                             height: 20px;
                                             display: flex;
                                             align-items: center;
                                             justify-content: center;
                                             
-                                            .Heart-heart {
+                                            .heart-heart {
                                                 width: 18px;
                                                 height: 18px;
                                                 transition: 213ms;
@@ -511,7 +522,7 @@
                                             }
                                         }
 
-                                    .Product-state{
+                                    .product-state{
                                         // border: 1px solid black;
                                         display: flex;
                                         flex-wrap: wrap;
@@ -522,14 +533,14 @@
 
                             
 
-                            .Product-explain {
+                            .product-explain {
                                 margin-top: 12px;
                                 font-size: 14px;
                                 line-height: 22px;
                                 letter-spacing: -.025em;
                             }
 
-                            .Product-color-sort {
+                            .product-color-sort {
                                 padding-top: 0;
                                 margin-top: 0;
                                 display: flex;
@@ -538,7 +549,7 @@
                             }
                     
                             
-                            .Product-color-sort {
+                            .product-color-sort {
                                 margin:5px 0;
                             }
                     
