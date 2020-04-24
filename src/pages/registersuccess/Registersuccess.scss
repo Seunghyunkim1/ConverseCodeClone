@@ -1,24 +1,28 @@
-.Registersuccess{
+.Registersuccess {
 
-    .SuccessFormAll{
+    .success-formall {
         width: 1438px;
         height: 567px;
         justify-content: center;
         display: flex;
         align-items: center;
-        .SuccessForm {
+
+        .success-form {
             text-align: center;
-            .SuccessImg{
+
+            .success-img {
                 width: 170px;
                 height: 114px;
                 margin: auto;
             }
-            .SuccessEnd {
+
+            .success-end {
                 font-size: 36px;
-               line-height: 1;
-               margin-top: 20px;
+                line-height: 1;
+                margin-top: 20px;
             }
-            .SuccessContent {
+
+            .success-content {
                 font-size: 18px;
                 line-height: 26px;
                 margin-top: 18px;
@@ -26,14 +30,15 @@
                 color: #757575;
             }
 
-            
-            
+
+
         }
-        .FirstButtonLogin {
+
+        .firstbutton-login {
             display: flex;
             justify-content: center;
 
-            .ClickLogin {
+            .click-login {
                 margin-top: 20px;
                 width: 280px;
                 height: 50px;

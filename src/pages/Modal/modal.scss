@@ -1,0 +1,182 @@
+.Modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.Modal {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+
+  &>* {
+    &:first-child {
+      margin-top: 16px;
+    }
+
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+
+
+  .content {
+
+    margin-top: 16px;
+
+    .modal-img {
+      width: auto;
+      height: 550px;
+    }
+
+
+  }
+
+  .modal-content {
+
+    top: 0;
+    left: 0;
+    padding: 40px;
+    width: 330px;
+    height: 100%;
+    overflow: auto;
+
+    .product-name {
+      margin-bottom: 30px;
+
+      .product-detail-name {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+
+    .product-price {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 40px;
+
+      .product-info {}
+
+    }
+
+    .size-form {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+
+      .product-size {
+
+        border: 1px solid #e5e5e5;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .size-box {
+          .variation-anchor {
+            background-color: white;
+          }
+        }
+
+        .product-variations {
+          margin-bottom: 30px;
+        }
+
+
+      }
+    }
+
+    .size-secondform {
+      display: flex;
+
+      .product-size {
+
+        border: 1px solid #e5e5e5;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .size-box {
+          .variation-anchor {
+            background-color: white;
+          }
+        }
+
+        .product-variations {
+          margin-bottom: 30px;
+        }
+
+
+      }
+    }
+
+    .shose-amount {
+      display: flex;
+
+      .amount {
+        .quantity {
+          width: 70px;
+          height: 50px;
+          margin-top: 20px;
+          border: 1px solid #e5e5e5;
+        }
+      }
+
+      .delivery-icon {
+        display: flex;
+        border: 1px solid #e5e5e5;
+        font-size: 14px;
+        background-color: white;
+        margin-top: 20px;
+        width: 50px;
+        transition: all 1s ease;
+
+        .plus-icon {
+          margin: auto;
+          width: 15px;
+          height: 15px;
+        }
+
+        .minus-icon {
+          margin: auto;
+          width: 15px;
+          height: 15px;
+        }
+      }
+
+
+    }
+
+    .first-buttonlogin {
+      display: flex;
+
+      .click-login {
+        margin-top: 20px;
+        width: 534px;
+        height: 50px;
+        line-height: 14px;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+        border: 0;
+      }
+    }
+  }
+
+
+}
