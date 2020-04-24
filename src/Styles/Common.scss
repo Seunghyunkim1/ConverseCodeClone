@@ -32,6 +32,7 @@ input[type="text"], input[type="password"], textarea, select {
 button {
     border: 0;
     outline: 0;
+    background-color: inherit; // Updated
 }
 
 button:hover {

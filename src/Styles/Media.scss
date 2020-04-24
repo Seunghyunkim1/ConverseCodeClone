@@ -1,0 +1,11 @@
+$desktop-l: "screen and (max-width: 1440px)"; // 데스크탑 width 최대(l)
+$desktop-s: "screen and (min-width: 1025px)";
+
+$tablet-l: "screen and (max-width: 1024px)"; // 태블릿 width 최대
+$tablet-s : "screen and (min-width: 768px)"; // 태블릿 width 최소(s)
+
+$mobile-l : "screen and (max-width: 767px)"; // 모바일 width 최대
+
+// ( min-width: #{$tablest-s} ) 적용되는 곳은 
+// 기본값 OR
+// ( max-width: #{$mobile-l} ) 적용 필수

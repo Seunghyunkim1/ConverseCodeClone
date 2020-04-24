@@ -1,42 +1,46 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 import "./ContentForOne.scss";
 
 class ContentForOne extends Component {
+  render() {
+    // console.log("one", this.props.content);
+    const { img, name, price, badges } = this.props.content;
 
-
-    render() {
-        console.log("one", this.props.content);
-        const { img, name, price, badges } = this.props.content;
-        
-        return (
-            <div className="ContentForOne">
-                <a className="product-url" href="/">
-                    <div className="product-img">
-                        <img src={img} alt="" />
-                    </div>
-                    <div className="product-img">
-                        <img src={img} alt="" />
-                    </div>
-                </a>
-                <div className="product-wish">
-                    <a className="wish-action add" href="#add"> </a>
-                    <a className="wish-action remove" href="#remove"> </a>
-                </div>
-                <div className="product-badges">
-                    {badges.map(badge => (
-                        <span className="badges-text">{badge}</span>
-                    ))}
-                </div>
-                <div className="product-detail">
-                    <p calssName="name">
-                        <a className="text-link" href="/">{name}</a>
-                    </p>
-                    <p className="price">{price} 원</p>
-                </div>
-            </div>
-        );
-    }
+    return (
+      <div className="ContentForOne">
+        <a className="product-url" href="/">
+          <div className="product-img">
+            <img src={img} alt="" />
+          </div>
+          <div className="product-img">
+            <img src={img} alt="" />
+          </div>
+        </a>
+        <div className="product-wish">
+          <a className="wish-action add" href="#add">
+            {" "}
+          </a>
+          <a className="wish-action remove" href="#remove">
+            {" "}
+          </a>
+        </div>
+        <div className="product-badges">
+          {badges.map((badge) => (
+            <span className="badges-text">{badge}</span>
+          ))}
+        </div>
+        <div className="product-detail">
+          <p calssName="name">
+            <a className="text-link" href="/">
+              {name}
+            </a>
+          </p>
+          <p className="price">{price} 원</p>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default ContentForOne
+export default ContentForOne;
