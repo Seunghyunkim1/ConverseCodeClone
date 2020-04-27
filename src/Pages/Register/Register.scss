@@ -1,0 +1,316 @@
+#root {
+
+    border-bottom-style: none;
+
+    .Register {
+        .signup-header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .header-img {
+                width: 100%;
+                height: 230px;
+            }
+
+            .header-content {
+
+
+                .header-contentregister {
+                    font-size: 30px;
+                    font-weight: bold;
+                    background-color: none;
+                    text-align: center;
+                    position: absolute;
+                    color: white;
+                    right: 26%;
+                    top: 16%;
+                }
+            }
+
+            .head-contentall {}
+
+            .header-firstcontent {
+                width: 450px;
+                background-color: none;
+                text-align: center;
+                position: absolute;
+                color: white;
+                right: 17%;
+                top: 22%;
+            }
+
+            .header-secondcontent {
+                width: 450px;
+                background-color: none;
+                text-align: center;
+                position: absolute;
+                color: white;
+                right: 17%;
+                top: 25%;
+            }
+        }
+
+        .register-main {
+            display: flex;
+            justify-content: center;
+        }
+
+        .signup-body {
+
+
+            display: flex;
+            margin-top: 30px;
+
+            .entry-field {
+                width: 840px;
+                height: 625px;
+                border: 0;
+                margin-left: 120px;
+                margin-top: 50px;
+            }
+        }
+
+        .button-login {
+            display: flex;
+
+            .kakao-login {
+                display: flex;
+                justify-content: center;
+                margin: 20px auto;
+                border: 0;
+                width: 384px;
+                height: 52px;
+                line-height: 14px;
+                border-color: #f5ca0f;
+                background-color: #f5ca0f;
+                color: black;
+                font-weight: bold;
+                font-size: 14px;
+                text-decoration: none;
+                cursor: pointer;
+
+                .speechbubble-img {
+                    display: flex;
+                    align-items: center;
+                    width: 22px;
+                    height: 44px;
+                }
+
+                .kakaologin-img {
+                    width: 50%;
+                    height: 50%;
+                    padding-top: 15px;
+
+                    .kakaologin-name {}
+                }
+            }
+        }
+
+        .register-or {
+
+            font-size: 14px;
+            line-height: 1;
+            color: #666666;
+            text-align: center;
+
+            ::before {
+                content: '';
+                display: block;
+                width: 180px;
+                height: 1px;
+                background-color: #e5e5e5;
+                margin-right: 10px;
+            }
+
+            ::after {
+                content: '';
+                display: block;
+                width: 160px;
+                height: 1px;
+                background-color: #e5e5e5;
+                margin-left: 10px;
+            }
+
+            .or-span {
+                display: flex;
+                align-items: center;
+                margin-left: 230px;
+            }
+        }
+
+        .account-signup {
+            margin-left: 230px;
+        }
+
+        .need-info {
+
+            margin-top: 40px;
+
+        }
+
+        .input-email {
+            width: 384px;
+            height: 50px;
+            line-height: 1.5;
+            letter-spacing: -.025em;
+            border: 1px solid #e5e5e5;
+            background-color: #ffffff;
+            margin-top: 10px;
+            padding: 20px;
+
+        }
+
+        .field-name {
+            margin-top: 10px;
+            font-size: 13px;
+            color: gray;
+        }
+
+        .mail-femail {
+            border: 1px solid #e5e5e5;
+            display: flex;
+            background-color: #f4f4f4;
+            width: 384px;
+            margin-left: 230px;
+            margin-top: 10px;
+
+            .femail {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #9b9b9b;
+                width: 192px;
+                height: 48px;
+                font-size: 14px;
+
+            }
+
+            .mail {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #9b9b9b;
+                width: 192px;
+                height: 48px;
+                font-size: 14px;
+            }
+        }
+
+        .agree-field {
+            width: 600px;
+            height: 625px;
+            margin: 70px 0;
+            border-left: 1px solid #e5e5e5;
+
+            .agree-signup {
+                margin-left: 100px;
+            }
+
+            .agree-box {
+                display: flex;
+            }
+
+        }
+
+        .select-content {
+            margin-top: 10px;
+            line-height: 24px;
+
+        }
+
+        .ul-content {
+            margin-top: 15px;
+
+            .li-content {
+                padding-left: 1em;
+                color: #757575;
+                font-size: 13px;
+                line-height: 24px;
+                content: '-';
+                display: inline-block;
+                margin-left: -1em;
+            }
+        }
+
+        .account-signupfieldset {
+            margin-top: 40px;
+
+            .field-setlegend {
+                .title-long {
+                    color: #444;
+                    text-transform: none;
+                    margin-left: 100px;
+                    margin-top: 25px;
+                    font-size: 17px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: -.025em;
+                }
+
+                .event-info {
+
+                    line-height: 1;
+                    letter-spacing: -.025em;
+                    color: #00c3d7;
+                    font-size: 14px;
+                    margin: 8px 0 15px 100px;
+                }
+            }
+        }
+
+        .field-row {
+            .field-all {
+                width: 499px;
+                display: flex;
+                justify-content: space-between;
+                margin-left: 100px;
+                margin-top: 10px;
+                font-size: 13px;
+
+            }
+
+            .field-firstrow {
+                display: flex;
+
+            }
+
+            .field-atag {
+                padding-right: 50px;
+            }
+
+            .choose-email {
+                width: 499px;
+                margin-left: 100px;
+                margin-top: 10px;
+                font-size: 13px;
+
+            }
+
+            .email {
+                display: flex;
+                margin-bottom: 10px;
+
+            }
+
+        }
+
+        .first-buttonlogin {
+            display: flex;
+            margin-top: 20px;
+
+            .click-login {
+                margin: 20px 0 0 100px;
+                width: 455px;
+                height: 50px;
+                line-height: 14px;
+                background-color: black;
+                color: white;
+                font-weight: bold;
+                font-size: 16px;
+                cursor: pointer;
+                border: 0;
+            }
+        }
+    }
+}
