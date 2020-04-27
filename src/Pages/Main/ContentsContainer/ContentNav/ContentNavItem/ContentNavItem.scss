@@ -1,0 +1,20 @@
+.ContentNavItem {
+    display: inline-block; //768px 이상
+    // width: 180px; //""
+    text-align: center; //""
+
+    float: left;
+    min-height: 1px;
+
+    .item-photo {
+        img {
+            display: block;
+        }
+    }
+
+    .item-title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1;
+    }
+}
