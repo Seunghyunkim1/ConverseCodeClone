@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import "./Cartadd.scss";
 import Plusimg from "../../images/Cartadd-plus.png";
 import Minusimg from "../../images/Cartadd-minus.png";
+import Modal from "../Modal/modal";
 
 export class Cartadd extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       clickbutton: [false, false],
+      showModal: false,
     };
   }
 
@@ -16,6 +18,18 @@ export class Cartadd extends Component {
     arr[num] = !arr[num];
     this.setState({
       clickbutton: arr,
+    });
+  };
+
+  handleOpenModal = () => {
+    this.setState({
+      showModal: true,
+    });
+  };
+
+  handleCloseModal = () => {
+    this.setState({
+      showModal: false,
     });
   };
 
@@ -77,12 +91,8 @@ export class Cartadd extends Component {
                             src="https://image.flaticon.com/icons/svg/535/535285.svg"
                             alt=""
                           />
-                          <span className="wishlist-add">
-                            {" "}
-                            위시리스트 추가{" "}
-                          </span>
+                          <span className="wishlist-add">위시리스트 추가</span>
                         </div>
-
                         <div className="buy-after">
                           <img
                             className="buy-afterimg"
@@ -94,13 +104,16 @@ export class Cartadd extends Component {
                       </div>
 
                       <div className="option">
-                        <a href="/#" className="change-option">
-                          {" "}
-                          옵션변경{" "}
-                        </a>
+                        <button
+                          className="change-option"
+                          onClick={this.handleOpenModal}
+                        >
+                          {this.state.showModal && <Modal />}
+                          옵션 변경
+                        </button>
+
                         <a href="/#" className="delete-option">
-                          {" "}
-                          삭제{" "}
+                          삭제
                         </a>
                       </div>
                     </div>
@@ -112,7 +125,6 @@ export class Cartadd extends Component {
             </div>
           </div>
         </div>
-
         <div className="cart-summary">
           <h2 class="summary-title">주문금액</h2>
           <div class="summary-content">
@@ -120,7 +132,7 @@ export class Cartadd extends Component {
               <div class="order-total-item">
                 <span class="label-align-center">상품금액</span>
                 <span class="value">
-                  <span class="sale">95,000 원</span>
+                  <span class="sale"> 95,000원 </span>
                 </span>
               </div>
               <div class="order-total-item">
@@ -162,8 +174,7 @@ export class Cartadd extends Component {
 
             <div class="submit-promo">
               <button type="submit" className="btn-submit">
-                {" "}
-                적용{" "}
+                적용
               </button>
             </div>
           </div>
@@ -178,21 +189,21 @@ export class Cartadd extends Component {
                   }}
                 >
                   <p> 이용 안내 </p>
-                  <img className="plus-icon" src={Plusimg} alt="" />
+                  <img className="plus-icon" src={Minusimg} alt="" />
                 </button>
-                <div className={this.state.clickbutton[0] ? "block" : "none"}>
+                <div className={this.state.clickbutton[0] ? "block" : "move"}>
                   <ul className="movement-ultag">
-                    <li>
+                    <li className="movement-litag">
                       실 결제 금액은 주문서 내 고객님의 쿠폰/할인 적용에 따라
                       달라집니다.
                     </li>
-                    <li>
+                    <li className="movement-litag">
                       실제 쿠폰코드의 적용여부는 금액에서 확인하여 주세요.
                     </li>
-                    <li>
+                    <li className="movement-litag">
                       적용되지 않는 쿠폰은 등록은 되나 금액은 변동되지 않습니다.
                     </li>
-                    <li>
+                    <li className="movement-litag">
                       프로모션 제품은 중복할인 또는 쿠폰 사용이 불가합니다.
                     </li>
                   </ul>
@@ -209,17 +220,15 @@ export class Cartadd extends Component {
                   }}
                 >
                   <p> 배송비 안내 </p>
-                  <img className="plus-icon" src={Plusimg} alt="" />
+                  <img className="plus-icon" src={Minusimg} alt="" />
                 </button>
                 <div className={this.state.clickbutton[1] ? "block" : "move"}>
-                  <ul>
-                    <li>
-                      {" "}
+                  <ul className="movement-ultag">
+                    <li className="movement-litag">
                       총 구매금액이 5만원 이상인 경우,배송비는 무료입니다.
                       (5만원 미만인 경우,배송비 2,500원이 별도 부가됩니다.)
                     </li>
-                    <li>
-                      {" "}
+                    <li className="movement-litag">
                       장기간 장바구니에 보관하신 상품은 시간이 지남에 따라
                       가격과 혜택이 변동 될 수 있으며, 최대 30일 동안
                       보관됩니다.

@@ -13,7 +13,6 @@ export class Forgotusername extends Component {
             </div>
             <div className="forgot-content">
               <span>
-                {" "}
                 카카오 로그인을 연동하시면 아이디, 비밀번호를 찾을 필요 없이
               </span>
               <br />
@@ -37,9 +36,8 @@ export class Forgotusername extends Component {
 
             <div className="forgot-explanation">
               <p>
-                {" "}
                 계정에 연결된 정보를 입력하시면 <br />
-                아이디 찾기와 비밀번호 재설정이 가능합니다.{" "}
+                아이디 찾기와 비밀번호 재설정이 가능합니다.
               </p>
             </div>
 
@@ -66,8 +64,7 @@ export class Forgotusername extends Component {
             </div>
             <div className="NotMember">
               <a href="/#" className="find-idpwdlink">
-                {" "}
-                로그인으로 돌아가기{" "}
+                로그인으로 돌아가기
               </a>
             </div>
           </div>

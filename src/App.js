@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Link, BrowserRouter } from "react";
 
 import Banner from "./components/banner/Banner";
 import Main from "./pages/main/Main";
@@ -13,7 +14,9 @@ import Register from "./pages/Register/Register";
 import Cart from "./pages/Cart/Cart";
 import Registersuccess from "./pages/Registersuccess/Registersuccess";
 import Cartadd from "./pages/Cartadd/Cartadd";
-import Modal from "./pages/Modal/modal";
+import Mypage from "./pages/Mypage/Mypage";
+import modalshow from "./pages/Modal/modal";
+import Cscenter from "./pages/Cscenter/Cscenter";
 
 class App extends Component {
   render() {
@@ -25,13 +28,15 @@ class App extends Component {
         <Route path="/login/forgotid" component={Forgotid} />
         <Route path="/login/forgotpwd" component={Forgotpwd} />
         <Route path="/login/Notmember" component={Notmember} />
+        <Route path="/mypage" component={Mypage} />
         <Route path="/cart" component={Cart} />
         <Route path="/cartadd" component={Cartadd} />
         <Route exact path="/Register" component={Register} />
         <Route path="/Register/registersuccess" component={Registersuccess} />
         <Route path="/Shoesmenu" component={Shoesmenu} />
         <Route path="/Header" component={Header} />
-        <Route path="/modaltest" component={Modal} />
+        <Route path="/modal" component={modalshow} />
+        <Route path="/cscenter" component={Cscenter} />
       </Router>
     );
   }

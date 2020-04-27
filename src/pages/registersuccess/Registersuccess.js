@@ -14,10 +14,9 @@ class Registersuccess extends Component {
             />
             <p className="success-end"> 회원가입이 완료 되었습니다. </p>
             <p className="success-content">
-              {" "}
               회원가입이 성공적으로 완료되었습니다.
               <br />
-              컨버스 공식 온라인 스토어의 다양한 서비스를 이용해보세요.{" "}
+              컨버스 공식 온라인 스토어의 다양한 서비스를 이용해보세요.
             </p>
 
             <div className="firstbutton-login">

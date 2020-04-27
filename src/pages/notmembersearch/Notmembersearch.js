@@ -15,7 +15,7 @@ export class NotMemberSearch extends Component {
 
             <div className="check-number">
               <p className="ptag-content">
-                주문번호는 주문완료 후 수신받은 이메일 또는 카카오톡을 통해{" "}
+                주문번호는 주문완료 후 수신받은 이메일 또는 카카오톡을 통해
               </p>
               <p className="ptag-content"> 확인하실 수 있습니다.</p>
             </div>

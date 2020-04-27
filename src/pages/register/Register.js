@@ -15,11 +15,9 @@ class Register extends Component {
 
           <div className="head-contentall">
             <p className="header-firstcontent">
-              {" "}
               지금 컨버스 회원으로 가입하시고, 특별한 멤버십 혜택과
             </p>
             <p className="header-secondcontent">
-              {" "}
               다양한 회원 전용 상품을 만나보세요.
             </p>
           </div>
@@ -99,26 +97,23 @@ class Register extends Component {
                 </label>
                 <p className="select-content">
                   아래 모든 약관(필수), 개인정보 수집 및 이용에 대한 동의 <br />
-                  (필수) 및 광고성 정보수신 동의 (선택) 내용을 확인하고 전체{" "}
+                  (필수) 및 광고성 정보수신 동의 (선택) 내용을 확인하고 전체
                   <br />
                   동의합니다.
                 </p>
 
                 <ul className="ul-content">
                   <li className="li-content">
-                    {" "}
                     - 필수 정보의 수집 및 이용에 관한 동의를 거부하실 수 있으나,
                     <br /> &nbsp; 다만 이 경우 회원 가입 및 관련 서비스 이용은
                     불가합니다.
                   </li>
 
                   <li className="li-content">
-                    {" "}
                     - 선택 항목에 대한 동의를 거부하더라도 회원가입에 영향을
                     미치지 않습니다.
                   </li>
                   <li className="li-content">
-                    {" "}
                     - 만 14세 미만은 서비스 이용이 불가합니다.
                   </li>
                 </ul>

@@ -15,9 +15,8 @@ export class Cart extends Component {
             <div className="cart-emptycontent">
               <p className="in-nothing"> 장바구니에 담긴 상품이 없습니다. </p>
               <p className="in-nothingcontent">
-                {" "}
                 척테일러, 척 70, 잭퍼셀, 원스타 등 지금 컨버스의 다양한 상품을
-                찾아보세요.{" "}
+                찾아보세요.
               </p>
 
               <div className="first-buttonlogin">

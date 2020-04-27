@@ -39,7 +39,6 @@ export class Login extends Component {
 
               <div className="find-idpwd">
                 <a href="#" className="find-idpwdlink">
-                  {" "}
                   아이디/비밀번호찾기
                 </a>
               </div>
@@ -68,15 +67,13 @@ export class Login extends Component {
           <div className="footer-info">
             <div className="register">
               <a href="/#" className="find-idpwdlink">
-                {" "}
-                회원가입{" "}
+                회원가입
               </a>
             </div>
 
             <div className="not-member">
               <a href="/#" className="find-idpwdlink">
-                {" "}
-                비회원 주문조회{" "}
+                비회원 주문조회
               </a>
             </div>
           </div>
@@ -91,9 +88,8 @@ export class Login extends Component {
 
             <div className="event-info">
               <p className="event-infoptag">
-                {" "}
                 지금 회원으로 가입하시고, 특별한 멤버십 혜택과 <br></br>다양한
-                회원 전용 상품을 만나보세요.{" "}
+                회원 전용 상품을 만나보세요.
               </p>
             </div>
           </div>
