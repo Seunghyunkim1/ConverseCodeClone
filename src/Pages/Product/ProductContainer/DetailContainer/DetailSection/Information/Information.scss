@@ -1,0 +1,116 @@
+@import "../../../../../../Styles/Media.scss";
+
+.Information {
+  .detail-section {
+    @media #{$mobile-l} {
+      padding-bottom: 32px;
+    }
+    @media #{$tablet-s} {
+      padding-bottom: 70px;
+    }
+    border-top: 1px solid;
+    -webkit-transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+
+    .head {
+      @media #{$mobile-l} {
+        height: 60px;
+      }
+      @media #{$tablet-s} {
+        height: 74px;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .title {
+        @media #{$mobile-l} {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        @media #{$tablet-s} {
+          font-size: 24px;
+          line-height: 28px;
+        }
+
+        margin: 0;
+        font-weight: 700;
+        color: inherit;
+      }
+
+      .icon {
+        display: block;
+        cursor: pointer;
+        width: 1em;
+        height: 1em;
+        max-width: 100%;
+        fill: currentColor;
+      }
+    }
+
+    .contents-wrapper {
+      @media #{$mobile-l} {
+        font-size: 12px;
+        line-height: 16px;
+        line-height: -0.025em;
+      }
+      @media #{$tablet-s} {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .contents {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+
+        .content {
+          @media #{$mobile-l} {
+            padding: 2px 0;
+            min-height: 20px;
+          }
+          @media #{$tablet-s} {
+            padding: 8px 0 2px;
+            min-height: 30px;
+          }
+
+          display: flex;
+          flex-direction: column;
+          flex-grow: 0;
+          flex-shrink: 0;
+          padding: 0 8px;
+          word-break: keep-all;
+          word-wrap: break-word;
+          overflow-wrap: break-word;
+        }
+
+        .key {
+          @media #{$mobile-l} {
+            flex-basis: 33.33333%;
+            max-width: 33.33333%;
+          }
+          @media #{$tablet-s} {
+            flex-basis: 25%;
+            max-width: 25%;
+          }
+
+          color: #757575;
+        }
+
+        .value {
+          @media #{$mobile-l} {
+            flex-basis: 66.666667%;
+            max-width: 66.666667%;
+          }
+          @media #{$tablet-s} {
+            flex-basis: 75%;
+            max-width: 75%;
+          }
+
+          color: #000000;
+        }
+      }
+    }
+  }
+}

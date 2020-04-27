@@ -19,6 +19,7 @@ import Cartadd from "./Pages/Cartadd/Cartadd";
 import Mypage from "./Pages/Mypage/Mypage";
 import modalshow from "./Pages/Modal/modal";
 import Cscenter from "./Pages/Cscenter/Cscenter";
+import Store from "./Pages/Store/Store";
 
 class Routes extends Component {
   render() {
@@ -41,6 +42,7 @@ class Routes extends Component {
         <Route path="/modal" component={modalshow} />
         <Route path="/cscenter" component={Cscenter} />
         <Route path="/category" component={Category} />
+        <Route path="/store" component={Store} />
         <Route path="/footer" component={Footer} />
       </Router>
     );
