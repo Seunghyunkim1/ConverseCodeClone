@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Banner from "./components/banner/Banner";
-import Main from "./pages/main/Main";
+import Banner from "./components/Banner/Banner";
+import Main from "./Pages/Main/Main";
 import Category from "./components/Category/Category";
 import Footer from "./components/Footer/Footer";
 
