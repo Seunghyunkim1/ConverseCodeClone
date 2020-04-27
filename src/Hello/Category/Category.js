@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import filterImage from "../../images/filter-nav-left.png";
-//import arrowdown from "../../images/filter-nav-right.png";
-import minus from "../../images/category-minus.png";
-import plus from "../../images/category-plus.png";
-import highshoe from "../../images/highshoe.png";
-import lowshoe from "../../images/lowshoe.png";
-import midshoe from "../../images/midshoe.png";
-import flatformshoe from "../../images/flatformshoe.png";
-import slipshoe from "../../images/slipshoe.png";
-import hearticon from "../../images/heart-icon.png";
+import React, { Component } from "./node_modules/react";
+import filterImage from "../../Images/filter-nav-left.png";
+//import arrowdown from "../../Images/filter-nav-right.png";
+import minus from "../../Images/category-minus.png";
+import plus from "../../Images/category-plus.png";
+import highshoe from "../../Images/highshoe.png";
+import lowshoe from "../../Images/lowshoe.png";
+import midshoe from "../../Images/midshoe.png";
+import flatformshoe from "../../Images/flatformshoe.png";
+import slipshoe from "../../Images/slipshoe.png";
+import hearticon from "../../Images/heart-icon.png";
 import "./Category.scss";
 
 class Category extends Component {
