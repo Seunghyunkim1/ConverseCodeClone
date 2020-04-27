@@ -15,8 +15,8 @@ class ProductContainer extends Component {
     return (
       <div className="ProductContainer">
         <Gallery />
-        <DetailContainer />
         <SideBar />
+        <DetailContainer />
       </div>
     );
   }

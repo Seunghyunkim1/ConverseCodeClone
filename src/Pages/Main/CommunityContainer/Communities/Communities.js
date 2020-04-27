@@ -6,7 +6,7 @@ import "./Communities.scss";
 
 class Communities extends Component {
   render() {
-    const communities = this.props.Communities;
+    const communities = this.props.communities;
 
     return (
       <div className="Communities">

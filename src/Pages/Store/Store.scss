@@ -1,0 +1,93 @@
+@import "../../Styles/Media.scss";
+
+.Store {
+  @media #{$mobile-l} {
+    position: relative;
+    padding: 0 16px;
+  }
+  @media #{$tablet-s} {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px 100px;
+  }
+
+  .banner-mobile {
+    @media #{$mobile-l} {
+      z-index: 100;
+      width: 100%;
+      height: 52px;
+      border-bottom: 1px solid #e5e5e5;
+      justify-content: center;
+    }
+    @media #{$tablet-s} {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+
+    .title {
+      @media #{$mobile-l} {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 600;
+        color: #444;
+      }
+    }
+
+    .button {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 9px;
+      align-items: center;
+      padding: 7px;
+      font-size: 14px;
+      min-width: 28px;
+      height: 100%;
+      .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        fill: currentColor;
+        max-width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  .picture {
+    @media #{$tablet-s} {
+      margin-bottom: 80px;
+      width: 100%;
+      height: 400px;
+    }
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url(https://www.converse.co.kr/store/cmsstatic/img-store-top.jpg);
+  }
+  .picture::before {
+    content: "";
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+  }
+
+  .content-wrapper {
+    @media #{$mobile-l} {
+      margin: 0 -16px;
+    }
+    @media #{$tablet-s} {
+      height: 625px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

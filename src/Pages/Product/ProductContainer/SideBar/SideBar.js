@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 
 import star from "../../../../Images/star.png";
+import heart from "../../../../Images/heart.png";
+import heart_filled from "../../../../Images/heart_filled.png";
 
 import "./SideBar.scss";
 
@@ -31,6 +33,7 @@ class SideBar extends Component {
               </a>
             </div>
           </div>
+          {/* 폼 시작 */}
           <form method="POST" action="/cart/add">
             <div className="option-wrapper">
               {/* 컬러 옵션 */}
@@ -115,8 +118,78 @@ class SideBar extends Component {
                   </label>
                 </div>
               </div>
+
+              <div className="quantity-wrapper">
+                <div className="input-wrapper">
+                  {/* input 입력법 찾기, value, state*/}
+                  <input
+                    className="quantity"
+                    name="quantity"
+                    type="number"
+                    value="1"
+                    min="1"
+                  />
+                  <button className="button minus">-</button>
+                  <button className="button plus">+</button>
+                </div>
+                <p className="quantity-mesage">개 까지 구매가능 합니다.</p>
+              </div>
+            </div>
+            <div className="status-wrapper">
+              <div className="button-wrapper">
+                <div className="button cart">
+                  <a className="link">장바구니</a>
+                </div>
+                <div className="button buy">
+                  <a className="link">바로구매</a>
+                </div>
+                <div className="wish">
+                  <div className="btn-wish">
+                    <div className="event-wish">
+                      <a className="action add">
+                        <img className="icon" src={heart} alt="add" />
+                      </a>
+                      <a className="action remove">
+                        <img className="icon" src={heart_filled} alt="minus" />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </form>
+          {/* 폼 끝 */}
+          <div className="sns-wrapper">
+            <div className="clear">
+              <div className="animation">
+                <div className="buttons">
+                  <a className="button">
+                    <span className="icon-wrapper">
+                      <img className="icon facebook" src={""} alt="facebook" />
+                    </span>
+                  </a>
+                  <a className="button">
+                    <span className="icon-wrapper">
+                      <img className="icon kakao" src={""} alt="kakao" />
+                    </span>
+                  </a>
+                  <a className="button">
+                    <span className="icon-wrapper">
+                      <img className="icon line" src={""} alt="line" />
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="messsage">
+            <span>5만원이상 구매시 무료배송</span>
+          </div>
+          <div className="delivery">
+            <a className="link">
+              <span className="text">배송정보</span>
+            </a>
+          </div>
         </div>
       </div>
     );
