@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Banner from "./Components/Banner/Banner";
-import Main from "./pages/Main/Main";
+import Main from "./Pages/Main/Main";
 import Category from "./Components/Category/Category";
-import Footer from "./Components/Footer/Footer";
+import Footer from "./Components/footer/Footer";
 import Product from "./Pages/Product/Product";
 import Login from "./Pages/Login/Login";
 import Shoesmenu from "./Pages/Shoesmenu/Shoesmenu";
@@ -40,6 +40,8 @@ class Routes extends Component {
         <Route path="/Header" component={Header} />
         <Route path="/modal" component={modalshow} />
         <Route path="/cscenter" component={Cscenter} />
+        <Route path="/category" component={Category} />
+        <Route path="/footer" component={Footer} />
       </Router>
     );
   }
