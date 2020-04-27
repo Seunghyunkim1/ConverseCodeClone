@@ -10,52 +10,54 @@ export class Header extends Component {
         <div className="content">
           <div className="nav-all">
             <div className="flex-aligncenter">
-              <div className="nav-Leftflex">
+              <div className="nav-leftflex">
                 <div className="nav-leftname">
-                  <a className="logoFlex">
-                    <img
-                      src="https://www.logo.wine/a/logo/Converse_(shoe_company)/Converse_(shoe_company)-Converse3-Logo.wine.svg"
-                      className="headerNavigation"
-                      alt=""
-                    />
-                  </a>
-                  <nav className="navContent">
-                    <ul className="ulName">
-                      <li className="liName">
-                        <a> 신발 </a>
-                      </li>
-                      <li className="liName">
-                        <a> 의류 </a>
-                      </li>
-                      <li className="liName">
-                        <a> 아동 </a>
-                      </li>
-                    </ul>
-                  </nav>
+                  <div className="logo-flex-img">
+                    <a className="logo-flex" href="/#">
+                      <img
+                        src="https://www.logo.wine/a/logo/Converse_(shoe_company)/Converse_(shoe_company)-Converse3-Logo.wine.svg"
+                        className="header-navigation"
+                        alt=""
+                      />
+                    </a>
+                    <nav className="nav-content">
+                      <ul className="ul-name">
+                        <li className="li-name">
+                          <a> 신발 </a>
+                        </li>
+                        <li className="li-name">
+                          <a> 의류 </a>
+                        </li>
+                        <li className="li-name">
+                          <a> 아동 </a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
                 </div>
               </div>
-              <div className="navRightAll">
-                <div className="navRight">
-                  <div className="userImg">
+              <div className="navright-all">
+                <div className="nav-right">
+                  <div className="user-img">
                     <img
                       src="https://image.flaticon.com/icons/svg/747/747376.svg"
                       alt=""
                     />
                   </div>
-                  <div className="shoppingCart">
+                  <div className="shopping-cart">
                     <img
                       src="https://image.flaticon.com/icons/svg/481/481384.svg"
                       alt=""
                     />
                   </div>
-                  <div className="heartImg">
+                  <div className="heart-img">
                     <img
                       src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
                       alt=""
                     />
                   </div>
 
-                  <div className="questionMart">
+                  <div className="question-mart">
                     <img
                       src="https://image.flaticon.com/icons/svg/906/906794.svg"
                       alt=""
@@ -63,10 +65,10 @@ export class Header extends Component {
                   </div>
                 </div>
 
-                <div className="searchBox">
-                  <span className="ptagSearch">검색</span>
+                <div className="search-box">
+                  <span className="ptag-search">검색</span>
                   <image
-                    className="searchImg"
+                    className="search-img"
                     src="https://image.flaticon.com/icons/svg/101/101826.svg"
                     alt="searchbar"
                   ></image>
