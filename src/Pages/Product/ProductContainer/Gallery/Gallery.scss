@@ -1,0 +1,106 @@
+@import "../../../../Styles/Media.scss";
+
+.Gallery {
+    @media #{$tablet-s} {
+        -webkit-flex-basis: 58.33333%;
+        -ms-flex-preferred-size: 58.33333%;
+        flex-basis: 58.33333%;
+        max-width: 58.33333%;
+    }
+    
+    @media #{$desktop-s} {
+        -webkit-flex-basis: 66.66667%;
+        -ms-flex-preferred-size: 66.66667%;
+        flex-basis: 66.66667%;
+        max-width: 66.66667%;
+    }
+
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-width: 1px;
+    padding: 0 8px;
+
+    .primary-image {
+        position: relative;
+        margin-top: -100px;
+        margin-left: -28px;
+        width: calc(100% + 60px);
+
+        .main-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+            font-family: "object-fit: cover;";
+        }
+    }
+
+    .primary-image::before {
+        content: "";
+        display: block;
+        padding-bottom: 93.361%;
+        width: 100%;
+    }
+
+    .image-gallery {
+        @media #{$tablet-s} {
+            margin-top: -40px;
+            padding: 0 35px;
+        }
+
+        position: relative;
+        color: #ffffff;
+
+        .image-container {
+            @media #{$mobile-l} {
+                display: none;
+            }
+
+            @media #{$tablet-s} {
+                display: flex; 
+                flex-wrap: wrap; 
+                justify-content: space-between; 
+            }
+
+            .image-wrapper {
+                @media #{$tablet-s} {
+                    flex-basis: calc(50% - 8px); 
+                    max-width: calc(50% -8px); 
+                    margin-bottom: 16px; 
+                }
+
+                .media-item {
+                    position: relative;
+
+                    .item {
+                        @media #{$tablet-s} {
+                            top: 0;
+                        }
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 15px;
+                        left: 0;
+                        object-fit: cover;
+                    }
+                }
+
+                .media-item::before {
+                    content: "";
+                    display: block;
+                    padding-bottom: 125%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
