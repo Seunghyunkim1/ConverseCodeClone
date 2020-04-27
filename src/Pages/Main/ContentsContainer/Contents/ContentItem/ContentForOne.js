@@ -4,14 +4,18 @@ import "./ContentForOne.scss";
 
 class ContentForOne extends Component {
   render() {
-    console.log("one", this.props.content);
+    // console.log("one", this.props.content);
     const { img, name, price, badges } = this.props.content;
 
     return (
       <div className="ContentForOne">
         <a className="product-url" href="/">
-          <div className="product-img"></div>
-          <div className="product-img"></div>
+          <div className="product-img">
+            <img src={img} alt="" />
+          </div>
+          <div className="product-img">
+            <img src={img} alt="" />
+          </div>
         </a>
         <div className="product-wish">
           <a className="wish-action add" href="#add">

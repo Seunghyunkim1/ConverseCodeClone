@@ -1,9 +1,11 @@
 .ContentForOne {
+    display: inline-block;
     position: relative;
-    // width: 25%;
-    max-width: 25%;
-    width: 286px;
-    height: 358px;
+    width: 50%;
+    // min-width: 25%;
+    // width: 286px;
+    height: 356px;
+    font-size: 14px;
     background-color: skyblue;
 
     .product-wish {
@@ -58,7 +60,7 @@
         flex-direction: column;
         align-items: flex-end;
 
-        .badge-text {
+        .badges-text {
             display: -webkit-inline-box;
             display: -webkit-inline-flex;
             display: -ms-inline-flexbox;

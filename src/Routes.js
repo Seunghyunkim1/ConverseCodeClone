@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import Banner from "./components/Banner/Banner";
-import Main from "./Pages/Main/Main";
-import Category from "./components/Category/Category";
-import Footer from "./components/Footer/Footer";
+import Banner from "./Components/Banner/Banner";
+import Main from "./pages/Main/Main";
+import Category from "./Components/Category/Category";
+import Footer from "./Components/Footer/Footer";
+import Product from "./Pages/Product/Product";
 
 class Routes extends Component {
   render() {
@@ -15,8 +16,7 @@ class Routes extends Component {
         <Route path="/login" component />
         <Route path="/Category" component={Category} />
         <Route path="/Footer" component={Footer} />
-
-        <h1>App!</h1>
+        <Route path="/product" component={Product} />
       </Router>
     );
   }
