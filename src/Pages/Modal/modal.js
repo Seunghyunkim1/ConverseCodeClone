@@ -1,19 +1,52 @@
 import React from "react";
 import "./modal.scss";
-import Plusimg from "../../Images/Cartadd-plus.png";
-import Minusimg from "../../Images/Cartadd-minus.png";
+import Slider from "react-slick";
 
-const Modal = () => {
+import Plusimg from "../../Images/CartAdd-plus.png";
+import Minusimg from "../../Images/CartAdd-minus.png";
+
+const Modal = (props) => {
+  const settings = {
+    className: "modal-img",
+    dots: true,
+    infinite: true,
+    centerMode: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true,
+  };
   return (
     <React.Fragment>
       <div className="Modal-overlay">
-        <div className="Modal">
+        <div className="Modal" onClick={props.closeModal}>
           <div className="content">
-            <img
-              className="modal-img"
-              src="https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse="
-              alt=""
-            />
+            <Slider {...settings}>
+              <div
+                style={{
+                  width: 300,
+                  height: 550,
+                  backgroundSize: "300px 550px",
+                  backgroundImage:
+                    "url('https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse=')",
+                }}
+              />
+              <div
+                style={{
+                  width: 300,
+                  height: 550,
+                  backgroundSize: "300px 550px",
+                  backgroundImage:
+                    "url('https://image.converse.co.kr/cmsstatic/product/167708C_167708C_3.jpg?browse=')",
+                }}
+              />
+
+              {/* <img
+                className="modal-img"
+                src="https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse="
+                alt=""
+              /> */}
+            </Slider>
           </div>
           <div className="modal-content">
             <div className="product-name">

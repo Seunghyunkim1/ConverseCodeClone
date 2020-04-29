@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import "./Cartadd.scss";
-import Plusimg from "../../Images/Cartadd-plus.png";
-import Minusimg from "../../Images/Cartadd-minus.png";
-import Modal from "../Modal/modal";
+import CartProduct from "./CartProduct/CartProduct";
+import Plusimg from "../../Images/CartAdd-plus.png";
+import Minusimg from "../../Images/CartAdd-minus.png";
+import "./CartAdd.scss";
 
 export class Cartadd extends Component {
   constructor(props) {
@@ -22,15 +22,21 @@ export class Cartadd extends Component {
   };
 
   handleOpenModal = () => {
-    this.setState({
-      showModal: true,
-    });
+    this.setState(
+      {
+        showModal: !this.state.showModal,
+      },
+      console.log("button")
+    );
   };
 
   handleCloseModal = () => {
-    this.setState({
-      showModal: false,
-    });
+    this.setState(
+      {
+        showModal: false,
+      },
+      console.log(this.state.showModal)
+    );
   };
 
   render() {
@@ -41,85 +47,22 @@ export class Cartadd extends Component {
             <div className="cart-name">
               <p className="cart-list"> 장바구니 (1) </p>
               <div className="cart-all">
-                <div className="cart-bottomline">
-                  <div className="cart-bottomimg">
-                    <img
-                      className="cart-imgsize"
-                      src="https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-
-                  <div className="cart-content">
-                    <div className="shoseinfo">
-                      <div className="shoseinfo-left">
-                        <a href="/#">
-                          척 70 아카이브 프린트 스타 앤 스트라이프
-                        </a>
-
-                        <div className="shose-info">
-                          <span className="shoes-color"> 블랙</span>
-                          <span> / </span>
-                          <span className="shoes-size"> 270 </span>
-                        </div>
-
-                        <div className="shoes-amount">
-                          <span> 수량 : 1 </span>
-                        </div>
-                      </div>
-
-                      <div className="shoseinfo-right">
-                        <span className="price"> 95,000원</span>
-                        <div className="button">
-                          <input
-                            className="input-account"
-                            type="text"
-                            placeholder=""
-                          />
-
-                          <button className="minus-button"> - </button>
-                          <button className="plus-button"> + </button>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="add-wishlist">
-                      <div className="wishlist">
-                        <div className="wishlist-content">
-                          <img
-                            className="wishlist-img"
-                            src="https://image.flaticon.com/icons/svg/535/535285.svg"
-                            alt=""
-                          />
-                          <span className="wishlist-add">위시리스트 추가</span>
-                        </div>
-                        <div className="buy-after">
-                          <img
-                            className="buy-afterimg"
-                            src="https://image.flaticon.com/icons/svg/2088/2088617.svg"
-                            alt=""
-                          />
-                          <span className="buy-left"> 나중에 구매하기 </span>
-                        </div>
-                      </div>
-
-                      <div className="option">
-                        <button
-                          className="change-option"
-                          onClick={this.handleOpenModal}
-                        >
-                          {this.state.showModal && <Modal />}
-                          옵션 변경
-                        </button>
-
-                        <a href="/#" className="delete-option">
-                          삭제
-                        </a>
-                      </div>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
+                <CartProduct
+                  showModal={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+                  handleCloseModal={this.handleCloseModal}
+                  name="척 70 아카이브 프린트 스타 앤 스트라이프"
+                />
+                <CartProduct
+                  showModal={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+                  handleCloseModal={this.handleCloseModal}
+                />
+                <CartProduct
+                  showModal={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+                  handleCloseModal={this.handleCloseModal}
+                />
                 <div className="clear-cart">장바구니 비우기</div>
               </div>
             </div>

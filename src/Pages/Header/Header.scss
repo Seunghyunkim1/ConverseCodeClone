@@ -5,14 +5,11 @@
 }
 
 .Header {
-
     position: relative;
-    top: 10;
-    left: 10;
-    width: 100%;
     background-color: #ffffff;
     -webkit-transition: background-color 13ms ease-in-out;
     transition: background-color 13ms ease-in-out;
+
 
     .content {
         margin: 0 auto;
@@ -22,12 +19,14 @@
 
         .nav-all {
             margin-right: 0;
+            width: 100%;
 
 
             .flex-aligncenter {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-top: 35px;
 
                 .nav-leftflex {
                     display: flex;
@@ -47,6 +46,8 @@
                             }
 
                             .nav-content {
+                                display: inline-flex;
+
                                 .ul-name {
                                     display: flex;
                                     font-weight: bold;
@@ -72,6 +73,9 @@
 
                 .navright-all {
                     display: flex;
+                    width: 350px;
+                    justify-content: space-between;
+
 
                     .nav-right {
                         display: flex;
