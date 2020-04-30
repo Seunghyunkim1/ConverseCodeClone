@@ -120,7 +120,7 @@ class Register extends Component {
       .then((res) => {
         if (res.status === 200) {
           alert("회원가입 완료");
-          this.props.history.push("/");
+          this.props.history.push("/Register/registersuccess");
           return res.json();
         } else {
           return res.json();

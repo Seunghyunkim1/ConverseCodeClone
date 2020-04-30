@@ -1,0 +1,131 @@
+.CartItem {
+    width: 708px;
+    height: 162px;
+    border: 1px solid #e5e5e5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .cart-bottomimg {
+        .cart-imgsize {
+            width: 98px;
+            height: 122px;
+        }
+    }
+
+    .cart-content {
+        width: 554px;
+        height: 122px;
+        align-items: center;
+        font-size: 14px;
+        line-height: 22px;
+
+        .shoseinfo {
+            display: flex;
+
+            .shoseinfo-left {
+                .shose-info {
+                    .shoes-color {}
+
+                    .shoes-size {}
+
+                    .shoes-amount {}
+                }
+            }
+
+            .shoseinfo-right {
+                width: min-content;
+                height: 72px;
+                margin-left: auto;
+
+                .price {
+                    width: 200px;
+                    margin-left: 78px;
+                    margin-bottom: 10px;
+                }
+
+                .button {
+                    width: 150px;
+                    height: 36px;
+                    margin-left: auto;
+
+                    .input-account {
+                        width: 60px;
+                        height: 36px;
+                        text-align: center;
+                        background-color: #ffffff;
+                        border: 1px solid #e5e5e5;
+                    }
+
+                    .plus-button {
+                        width: 36px;
+                        height: 36px;
+                        border: 1px solid #e5e5e5;
+                        background-color: #ffffff;
+                    }
+
+                    .minus-button {
+                        width: 36px;
+                        height: 36px;
+                        border: 1px solid #e5e5e5;
+                        background-color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        .shose-info {
+            display: flex;
+
+            .shoes-color {
+                margin-right: 5px;
+            }
+
+            .shoes-size {
+                margin-left: 5px;
+            }
+        }
+
+        .shoes-amount {
+            font-size: 15px;
+        }
+
+        .add-wishlist {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 35px;
+
+            .wishlist {
+                display: flex;
+            }
+
+            .wishlist-content {
+                margin-right: 15px;
+
+                .wishlist-img {
+                    width: 16px;
+                    height: 16px;
+                }
+
+                .wishlist-add {
+                    font-size: 14px;
+                    height: 16px;
+                }
+            }
+        }
+
+        .buy-after {
+            font-size: 14px;
+
+            .buy-afterimg {
+                width: 16px;
+                height: 16px;
+            }
+
+            .buy-left {
+                height: 16px;
+            }
+        }
+    }
+}
