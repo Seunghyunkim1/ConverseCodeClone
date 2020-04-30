@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import "./Register.scss";
+import { withRouter } from "react-router-dom";
+import { isCompositeComponent } from "react-dom/test-utils";
 import HeaderImg from "../../Images/converseheader.jpg";
+import "./Register.scss";
 
 class Register extends Component {
   constructor(props) {
@@ -12,15 +14,10 @@ class Register extends Component {
       passwordCheck: "",
       name: "",
       phone: "",
-      gender: "!true",
+      gender: "",
       birth: "",
-      email_confirm: "1",
-      text_confirm: "1",
-
-      //need: true,
-      //   privacy: true,
-      //   email: true,
-      //   message: true,
+      email_confirm: 0,
+      text_confirm: 0,
       agreeAll: true,
     };
   }
@@ -49,11 +46,10 @@ class Register extends Component {
     });
   };
 
-  inputGender = (e) => {
-    console.log(e.target.value);
-    e.preventDefault();
+  inputClickGender = (val) => {
+    console.log("벨류값입니다..", val);
     this.setState({
-      gender: e.target.value,
+      gender: val,
     });
   };
 
@@ -70,21 +66,28 @@ class Register extends Component {
   };
 
   inputEmailconfirm = (e) => {
-    this.setState({
-      email_confirm: e.target.value,
-    });
+    // console.log("e.target.value", e.target.value);
+    if (e.target.value === "on") {
+      this.setState({
+        email_confirm: 1,
+      });
+    } else {
+      this.setState({
+        email_confirm: 0,
+      });
+    }
   };
 
   inputTextconfirm = (e) => {
-    this.setState({
-      text_confirm: e.target.value,
-    });
-  };
-
-  toggleChange = () => {
-    this.setState({
-      isChecked: !this.state.isChecked,
-    });
+    if (e.target.value === "on") {
+      this.setState({
+        email_confirm: 1,
+      });
+    } else {
+      this.setState({
+        email_confirm: 0,
+      });
+    }
   };
 
   handleChange = (e) => {
@@ -94,79 +97,38 @@ class Register extends Component {
     this.setState({ checked });
   };
 
-  agreeAll = () => {
-    console.log(this.state.agreeAll);
-    this.setState({
-      agreeAll: !this.state.agreeAll,
-    });
+  // agreeAll = () => {
+  //   this.setState({
+  //     agreeAll: !this.state.agreeAll,
+  //   });
+  // };
 
-    // if (this.state.agree === false) {
-    //   this.setState({
-    //     need: true,
-    //     privacy: true,
-    //     email: true,
-    //     message: true,
-    //   });
-    // } else {
-    //   this.setState({
-    //     need: false,
-    //     privacy: false,
-    //     email: false,
-    //     message: false,
-    //   });
-    //   console.log("모든동의");
-    // }
-    console.log("하이");
-  };
-  checkNeed = (e) => {
-    this.setState({
-      need: !this.state.need,
-    });
-    console.log("필수");
-  };
-  checkPrivacy = (e) => {
-    this.setState({
-      privacy: !this.state.privacy,
-    });
-    console.log("프라이버시");
-  };
-  checkEmail = (e) => {
-    this.setState({
-      email: !this.state.email,
-    });
-    console.log("이메일확인");
-  };
-
-  checkMessage = (e) => {
-    this.setState({
-      message: !this.state.message,
-    });
-    console.log("문자확인");
-  };
-
-  register = (e) => {
-    e.preventDefault();
+  register = () => {
     fetch("http://10.58.7.60:8000/account/register", {
       method: "post",
       body: JSON.stringify({
         email: this.state.email,
         password: this.state.password,
         name: this.state.name,
-        gender: "남성",
+        gender: this.state.gender,
         phone: this.state.phone,
         birth: this.state.birth,
         email_confirm: this.state.email_confirm,
         text_confirm: this.state.text_confirm,
       }),
     })
-      .then((res) => res.json())
       .then((res) => {
-        console.log("res 들어오시길 바랍니다 ", res);
-        // console.log("token: ", res.access_token);
-        // console.log("res.message", res.Message);
-        if (res.access_token) {
-          localStorage.setItem("token", res.access_token);
+        if (res.status === 200) {
+          alert("회원가입 완료");
           this.props.history.push("/");
+          return res.json();
+        } else {
+          return res.json();
+        }
+      })
+      .then((res) => {
+        if (res.Message === "OK") {
+          return;
         } else if (res.Message === "PASSWORD_VALIDATION_ERROR") {
           alert("비밀번호 특수문자 영문 숫자 미포함");
         } else if (res.Message === "BIRTH_VALIDATION_ERROR") {
@@ -182,6 +144,8 @@ class Register extends Component {
   };
 
   render() {
+    const { gender } = this.state;
+    // console.log("this.state", this.state);
     return (
       <div className="Register">
         <div className="signup-header">
@@ -268,21 +232,19 @@ class Register extends Component {
                 ></input>
               </div>
 
-              <div className="mail-femail">
-                <button
-                  className={
-                    this.inputGender === true ? "choosed-gender" : "femail"
-                  }
-                  onChange={this.inputGender}
+              <div className="male-female">
+                <div
+                  className={gender === "여자" ? "choosed-gender" : "female"}
+                  onClick={() => this.inputClickGender("여자")}
                 >
                   여성
-                </button>
-                <button
-                  className={
-                    this.inputGender === false ? "choosed-gender" : "mail"
-                  }
-                  onChange={this.inputGender}
-                ></button>
+                </div>
+                <div
+                  className={gender === "남자" ? "choosed-gender" : "female"}
+                  onClick={() => this.inputClickGender("남자")}
+                >
+                  남성
+                </div>
               </div>
             </div>
             <div className="agree-field">
@@ -291,9 +253,7 @@ class Register extends Component {
                   <input
                     className={this.state.agreeAll === true ? "test" : ""}
                     type="checkbox"
-                    onClick={this.agreeAll}
-                    // checked={this.state.checked}
-                    // checked={this.state.isChecked}
+                    // onClick={this.agreeAll}
                   />
                   <p> 모든 약관 동의</p>
                 </label>
@@ -336,7 +296,6 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="checkTerms"
-                        id="checkTerms"
                         data-parsley-multiple="checkTerms"
                         // className={this.need ? "toggleOff" : "toggleOn"}
                         onClick={this.inputEmailconfirm}
@@ -354,9 +313,8 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="checkTerms"
-                        id="checkTerms"
                         data-parsley-multiple="checkTerms"
-                        className={this.privacy ? "toggleOff" : "toggleOn"}
+                        // className={this.privacy ? "toggleOff" : "toggleOn"}
                         onClick={this.inputTextconfirm}
                       ></input>
                       <p> (필수) 개인정보 수집 및 이용에 대한 동의 </p>
@@ -379,7 +337,6 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="checkTerms"
-                        id="checkTerms"
                         data-parsley-multiple="checkTerms"
                         className={this.email ? "toggleOff" : "toggleOn"}
                       ></input>
@@ -389,7 +346,6 @@ class Register extends Component {
                       <input
                         type="checkbox"
                         name="checkTerms"
-                        id="checkTerms"
                         data-parsley-multiple="checkTerms"
                         className={
                           this.state.message ? "toggleOff" : "toggleOn"
@@ -400,9 +356,9 @@ class Register extends Component {
                   </div>
 
                   <div className="first-buttonlogin">
-                    <button className="btn-2" onClick={this.register}>
+                    <div className="btn-2" onClick={this.register}>
                       회원가입 하기 (만 14세 이상)
-                    </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -414,4 +370,4 @@ class Register extends Component {
   }
 }
 
-export default Register;
+export default withRouter(Register);

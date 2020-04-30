@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import CartProduct from "./CartProduct/CartProduct";
 import Plusimg from "../../Images/CartAdd-plus.png";
 import Minusimg from "../../Images/CartAdd-minus.png";
-import "./CartAdd.scss";
+import "./Cartadd.scss";
 
 export class Cartadd extends Component {
   constructor(props) {

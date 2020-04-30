@@ -7,7 +7,6 @@ import Category from "./Components/Category/Category";
 import Footer from "./Components/footer/Footer";
 import Product from "./Pages/Product/Product";
 import Login from "./Pages/Login/Login";
-import Shoesmenu from "./Pages/Shoesmenu/Shoesmenu";
 import Header from "./Pages/Header/Header";
 import Forgotid from "./Pages/Forgot/ForgotUsername/ForgotUsername";
 import Forgotpwd from "./Pages/Forgot/ForgotPassword/ForgotPassword";
@@ -15,11 +14,11 @@ import Notmember from "./Pages/Notmembersearch/Notmembersearch";
 import Register from "./Pages/Register/Register";
 import Cart from "./Pages/Cart/Cart";
 import Registersuccess from "./Pages/Registersuccess/Registersuccess";
-import Cartadd from "./Pages/CartAdd/CartAdd";
+import Cartadd from "./Pages/CartAdd/Cartadd";
 import CartProduct from "./Pages/CartAdd/CartProduct/CartProduct";
 import Mypage from "./Pages/Mypage/Mypage";
 import modalshow from "./Pages/Modal/modal";
-import Cscenter from "./Pages/CsCenter/CsCenter";
+import Cscenter from "./Pages/CsCenter/Cscenter";
 
 class Routes extends Component {
   render() {
@@ -38,7 +37,6 @@ class Routes extends Component {
         <Route path="/cartproduct" component={CartProduct} />
         <Route exact path="/Register" component={Register} />
         <Route path="/Register/registersuccess" component={Registersuccess} />
-        <Route path="/Shoesmenu" component={Shoesmenu} />
         <Route path="/Header" component={Header} />
         <Route path="/modal" component={modalshow} />
         <Route path="/cscenter" component={Cscenter} />

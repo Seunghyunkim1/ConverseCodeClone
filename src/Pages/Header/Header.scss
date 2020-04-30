@@ -1,21 +1,17 @@
-#root {
-    border-bottom: 0.5px solid gray;
-    border-top: 0.5px solid gray;
-    background-color: #ffffff;
-}
-
 .Header {
+    display: flex;
     position: relative;
     background-color: #ffffff;
     -webkit-transition: background-color 13ms ease-in-out;
     transition: background-color 13ms ease-in-out;
+    height: 60px;
 
 
     .content {
-        margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 0;
+        margin: auto;
+        width: -webkit-fill-available;
         max-width: 1440px;
+
 
         .nav-all {
             margin-right: 0;
@@ -26,7 +22,6 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin-top: 35px;
 
                 .nav-leftflex {
                     display: flex;

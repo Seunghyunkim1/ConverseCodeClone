@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./CsCenter.scss";
+import "./Cscenter.scss";
 import Plusimg from "../../Images/CartAdd-plus.png";
 import Minusimg from "../../Images/CartAdd-minus.png";
 
