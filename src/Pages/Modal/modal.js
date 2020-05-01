@@ -1,7 +1,7 @@
 import React from "react";
 import "./modal.scss";
-import Plusimg from "../../Images/CartAdd-plus.png";
-import Minusimg from "../../Images/CartAdd-minus.png";
+import Plusimg from "../../Images/Cartadd-plus.png";
+import Minusimg from "../../Images/Cartadd-minus.png";
 
 const Modal = (props) => {
   return (

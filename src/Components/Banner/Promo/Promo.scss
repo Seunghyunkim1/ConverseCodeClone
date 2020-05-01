@@ -1,11 +1,12 @@
 .Promo {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 552px;
-    padding: 17px 18px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  width: 552px;
+  padding: 17px 18px;
+  transition: all 0.35s linear;
 }
-
 
 // slide Event 추가 예정
 // .slide {

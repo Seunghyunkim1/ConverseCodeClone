@@ -1,0 +1,87 @@
+{
+  "data": [
+    {
+      "code": "167677C",
+      "name": "척 70 컨크리트 히트",
+      "price": 95000,
+      "gender": "여성",
+      "summary": "통풍이 용이한 프리미엄 메쉬 스니커즈",
+      "size_list": ["220", "225", "230", "235", "240", "245", "250"],
+      "size_img": null,
+      "series_code": ["167677C#", "167678C"],
+      "series_image": [
+        "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_pdp-option.jpg?browse=",
+        "https://image.converse.co.kr/cmsstatic/product/167678C_167678C_pdp-option.jpg?browse="
+      ],
+      "media_url": [
+        "https://image.converse.co.kr/product/167677C_167677C_01.mp4",
+        "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_primary.jpg?gallery=",
+        "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_02.jpg?browse=",
+        "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_03.jpg?browse=",
+        "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_04.jpg?browse=",
+        "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_05.jpg?browse=",
+        "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_06.jpg?browse="
+      ],
+      "description": [
+        "당대 최고의 디테일과 프리미엄 소재를 사용해 흠잡을 데 없는 장인정신으로 제작한 척 70은 지금도 컨버스 대표 아이콘으로써 그 명목이 이어져오고 있습니다. 클래식한 캔버스 소재에 통기성이 좋은 메쉬 소재디테일의 조합으로 더운 여름에도 날씨에 구애받지 않고 착용할 수 있습니다.",
+        "*  프리미엄 캔버스와 메쉬 소재 사용",
+        "*  하루종일 편안한 착화감을 제공하는 강화된 쿠셔닝",
+        "*  샤이니 러버 미드솔"
+      ],
+      "desc_img": "http://tcakorea.speedgabia.com/converse/SU20/167677C.jpg",
+      "information": "{\"제품소재\": \"겉감: 폴리에스터 100% 안감: 면 100% Outsole: 고무 100%\",\"색상\": \"일렉트릭블러쉬\",\"치수\": \"220-250\",\"제조자\": \"컨버스\",\"제조국\": \"베트남\",\"취급시 주의사항\": \"본 제품은 천연 염료를 사용하여 물빠짐이 있으니 연한색 양말의 착용과 장시간 세탁 및 표백성분 세제와 세탁기 사용을 삼가해 주십시오.\",\"품질보증기준\": \"품질보증기간 내 무상수선 품질 보증 기간 경과 혹은 소비자 과실 유상수선\",\"AS 책임자와 전화번호\": \"컨버스 AS 센터(080-987-0182)\",\"제조연월\": \"상품 라벨에서 확인\"}"
+    }
+  ],
+  "recommendations": [
+    {
+      "code": "167677C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_02.jpg?browse="
+    },
+    {
+      "code": "167678C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167678C_167678C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167678C_167678C_3.jpg?browse="
+    },
+    {
+      "code": "167645C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167645C_167645C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167645C_167645C_02.jpg?browse="
+    },
+    {
+      "code": "167642C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167642C_167642C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167642C_167642C_3.jpg?browse="
+    },
+    {
+      "code": "167827C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167827C_167827C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167827C_167827C_3.jpg?browse="
+    },
+    {
+      "code": "167826C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167826C_167826C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167826C_167826C_3.jpg?browse="
+    },
+    {
+      "code": "167702C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167702C_167702C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167702C_167702C_3.jpg?browse="
+    },
+    {
+      "code": "167910C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167910C_167910C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167910C_167910C_3.jpg?browse="
+    },
+    {
+      "code": "167911C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167911C_167911C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167911C_167911C_3.jpg?browse="
+    },
+    {
+      "code": "167915C",
+      "url": "https://image.converse.co.kr/cmsstatic/product/167915C_167915C_primary.jpg?gallery=",
+      "hover": "https://image.converse.co.kr/cmsstatic/product/167915C_167915C_3.jpg?browse="
+    }
+  ]
+}

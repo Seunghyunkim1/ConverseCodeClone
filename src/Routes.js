@@ -10,13 +10,13 @@ import Login from "./Pages/Login/Login";
 import Forgotid from "./Pages/Forgot/ForgotUsername/ForgotUsername";
 import Forgotpwd from "./Pages/Forgot/ForgotPassword/ForgotPassword";
 import Header from "./Pages/Header/Header";
-
 import Notmember from "./Pages/Notmembersearch/Notmembersearch";
 import Register from "./Pages/Register/Register";
 import Registersuccess from "./Pages/Registersuccess/Registersuccess";
 import Cart from "./Pages/Cart/Cart";
 import modalshow from "./Pages/Modal/modal";
-import Cscenter from "./Pages/CsCenter/Cscenter";
+import Cscenter from "./Pages/Cscenter/Cscenter";
+import Store from "./Pages/Store/Store";
 import Mypage from "./Pages/Mypage/Mypage";
 
 class Routes extends Component {
@@ -24,10 +24,10 @@ class Routes extends Component {
     return (
       <Router>
         <Banner />
+        <Header />
         <Route exact path="/" component={Main} />
-        <Route path="/category" component={Category} />
-        <Route path="/product" component={Product} />
         <Route exact path="/login" component={Login} />
+        <Route path="/product/:id" component={Product} />
         <Route path="/login/forgotid" component={Forgotid} />
         <Route path="/login/forgotpwd" component={Forgotpwd} />
         <Route path="/login/Notmember" component={Notmember} />
@@ -42,6 +42,8 @@ class Routes extends Component {
         <Route path="/Header" component={Header} />
         <Route path="/modal" component={modalshow} />
         <Route path="/cscenter" component={Cscenter} />
+        <Route path="/category" component={Category} />
+        <Route path="/store" component={Store} />
         <Route path="/footer" component={Footer} />
       </Router>
     );

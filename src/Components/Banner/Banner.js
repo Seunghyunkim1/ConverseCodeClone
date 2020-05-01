@@ -12,12 +12,25 @@ class Banner extends Component {
 
     this.state = {
       promos: [],
+      currentNum: 0,
     };
-    //bind here if needed
+
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
     this.initialize();
+    //Timer
+    this.switchPromo = setInterval(() => {
+      let { promos, currentNum } = this.state;
+      this.setState({
+        currentNum: ++currentNum % promos.length,
+      });
+    }, 4500);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.switchPromo);
   }
 
   initialize() {
@@ -31,7 +44,7 @@ class Banner extends Component {
         content: "퍼포먼스 농구화 G4 출시",
       },
       {
-        type: "new",
+        type: "NEW",
         content: "컨버스 아티스트 시리즈 X 스펜서 맥멀렌 척 70 4/23 출시 예정",
       },
       {
@@ -40,12 +53,27 @@ class Banner extends Component {
       },
       {
         type: "NOTICE",
-        content: "충격, 소요시간 1주일도 안걸려..",
+        content: "충격, 소요시간 2주일도 안걸려..",
       },
     ];
 
     this.setState({
       promos: Array.from(promos),
+    });
+  }
+
+  handleClick(e) {
+    let currentNum = this.state.currentNum;
+    let promoLen = this.state.promos.length;
+
+    if (e.target.id === "left" && currentNum > 0) {
+      currentNum = --currentNum % promoLen;
+    } else if (e.target.id === "right") {
+      currentNum = ++currentNum % promoLen;
+    }
+
+    this.setState({
+      currentNum: currentNum,
     });
   }
 
@@ -67,14 +95,23 @@ class Banner extends Component {
           <div className="row">
             <div className="promo-wrapper">
               <div className="slider">
-                <button className="slider-left arrow-icon">
-                  <img src={arrow_left} alt="" />
+                <button
+                  className="slider-left arrow-icon"
+                  onClick={this.handleClick}
+                >
+                  <img id="left" src={arrow_left} alt="" />
                 </button>
 
-                <Promo promos={this.state.promos} />
+                <Promo
+                  promos={this.state.promos}
+                  currentNum={this.state.currentNum}
+                />
 
-                <button className="slider-right arrow-icon">
-                  <img src={arrow_right} alt="" />
+                <button
+                  className="slider-right arrow-icon"
+                  onClick={this.handleClick}
+                >
+                  <img id="right" src={arrow_right} alt="" />
                 </button>
               </div>
             </div>

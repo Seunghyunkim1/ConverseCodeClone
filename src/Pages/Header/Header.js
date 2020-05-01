@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import "./Header.scss";
 import Shoesmenu from "./Shoesmenu/Shoesmenu";
 
@@ -55,18 +57,22 @@ export class Header extends Component {
                 </div>
                 <div className="navright-all">
                   <div className="nav-right">
-                    <div className="user-img">
-                      <img
-                        src="https://image.flaticon.com/icons/svg/747/747376.svg"
-                        alt=""
-                      />
-                    </div>
-                    <div className="shopping-cart">
-                      <img
-                        src="https://image.flaticon.com/icons/svg/481/481384.svg"
-                        alt=""
-                      />
-                    </div>
+                    <Link to={"/mypage"}>
+                      <div className="user-img">
+                        <img
+                          src="https://image.flaticon.com/icons/svg/747/747376.svg"
+                          alt=""
+                        />
+                      </div>
+                    </Link>
+                    <Link to={"/cart"}>
+                      <div className="shopping-cart">
+                        <img
+                          src="https://image.flaticon.com/icons/svg/481/481384.svg"
+                          alt=""
+                        />
+                      </div>
+                    </Link>
                     <div className="heart-img">
                       <img
                         src="https://image.flaticon.com/icons/svg/1077/1077035.svg"
@@ -74,12 +80,14 @@ export class Header extends Component {
                       />
                     </div>
 
-                    <div className="question-mart">
-                      <img
-                        src="https://image.flaticon.com/icons/svg/906/906794.svg"
-                        alt=""
-                      />
-                    </div>
+                    <Link to={"/cscenter"}>
+                      <div className="question-mart">
+                        <img
+                          src="https://image.flaticon.com/icons/svg/906/906794.svg"
+                          alt=""
+                        />
+                      </div>
+                    </Link>
                   </div>
 
                   <div className="search-box">

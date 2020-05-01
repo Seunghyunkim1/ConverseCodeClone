@@ -1,0 +1,69 @@
+@import "../../../../../../Styles/Media.scss";
+
+.Community {
+  .detail-section {
+    @media #{$mobile-l} {
+      padding-bottom: 32px;
+    }
+    @media #{$tablet-s} {
+      padding-bottom: 70px;
+    }
+    padding-top: 24px;
+    border-top: 1px solid;
+    -webkit-transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+
+    .head {
+      @media #{$mobile-l} {
+        margin-bottom: 16px;
+      }
+      @media #{$tablet-s} {
+        margin-bottom: 32px;
+      }
+
+      position: relative;
+
+      .title {
+        font-size: 24px;
+        @media #{$desktop-s} {
+          font-size: 36px;
+        }
+
+        margin: 0;
+        color: inherit;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.025em;
+      }
+
+      .description {
+        @media #{$mobile-l} {
+          margin-top: 6px;
+          font-size: 12px;
+          line-height: 16px;
+        }
+        @media #{$tablet-s} {
+          margin-top: 10px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+
+        margin-bottom: 0;
+
+        strong {
+          font-weight: bolder;
+        }
+      }
+    }
+    .instagram {
+      @media #{$mobile-l} {
+        display: block;
+      }
+      display: flex;
+      // position: relative;
+      overflow: hidden;
+      padding: 40px 0 60px;
+      text-align: left;
+    }
+  }
+}

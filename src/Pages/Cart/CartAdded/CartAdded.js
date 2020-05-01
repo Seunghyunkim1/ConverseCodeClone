@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import CartItem from "./CartItem/CartItem";
-import Plusimg from "../../../Images/CartAdd-plus.png";
-import Minusimg from "../../../Images/CartAdd-minus.png";
+import Plusimg from "../../../Images/Cartadd-plus.png";
+import Minusimg from "../../../Images/Cartadd-minus.png";
 import "./CartAdded.scss";
 
 export class CartAdded extends Component {

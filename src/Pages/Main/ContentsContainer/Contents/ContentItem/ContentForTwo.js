@@ -6,22 +6,32 @@ import "./ContentForTwo.scss";
 class ContentForTwo extends Component {
   render() {
     // console.log("two", this.props.content);
-    const { img, title, description, badges } = this.props.content;
+    const { title, url, description, hover_description } = this.props.content;
 
     return (
       <div className="ContentForTwo">
         <div className="product">
-          <img className="product-img" alt=""></img>
+          <div className="product-img">
+            {url.endsWith("mp4") ? (
+              <video autoPlay loop>
+                <source src={url} type="video/mp4" />
+              </video>
+            ) : (
+              <img src={url} alt="img" />
+            )}
+          </div>
         </div>
         <div className="tile-overlay">
-          {badges.map((badge) => (
+          {/* {badges.map((badge) => (
             <p className="badges-text">{badge}</p>
-          ))}
+          ))} */}
           <p className="title">{title}</p>
           <p className="description">{description}</p>
           <a className="link">
             <img className="icon" src={arrow_right} alt="arrow_right" />
-            <span className="link-text">더 알아보기</span>
+            <span className="link-text">
+              {hover_description ? hover_description : "더 알아보기"}
+            </span>
           </a>
         </div>
       </div>

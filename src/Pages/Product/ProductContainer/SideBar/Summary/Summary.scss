@@ -1,0 +1,112 @@
+@import "../../../../../Styles/Media.scss";
+
+.Summary {
+  @media #{$mobile-l} {
+    display: none;
+  }
+
+  @media #{$tablet-s} {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .name {
+    @media #{$tablet-s} {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: -0.025em;
+      word-break: keep-all;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+    }
+    color: inherit;
+    margin: 0;
+    font-size: 2em;
+    margin: 0.67em 0;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .price {
+    @media #{$tablet-s} {
+      margin: 12px 0 0;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: -0.025em;
+    }
+    display: flex;
+    flex-flow: wrap;
+    margin-top: 15px;
+  }
+
+  .sex {
+    @media #{$tablet-s} {
+      margin-top: 1em;
+      margin-bottom: 0;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.025em;
+      color: #757575;
+    }
+
+    font-weight: 800;
+    margin-top: 15px;
+  }
+
+  .detail {
+    @media #{$tablet-s} {
+      margin-top: 1em;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.025em;
+    }
+
+    .description {
+      @media #{$tablet-s} {
+        display: inline;
+        margin: 0;
+      }
+    }
+
+    .button-description {
+      @media #{$tablet-s} {
+        margin-left: 0.5em;
+        font-size: 14px;
+        color: #757575;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .stars {
+    @media #{$tablet-s} {
+      margin-top: 0.8em;
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .stars-link {
+      @media #{$tablet-s} {
+        display: inline-block;
+      }
+
+      .stars-wrapper {
+        display: flex;
+        align-items: center;
+
+        .star {
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          fill: currentColor;
+        }
+
+        .star:not(:last-child) {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
