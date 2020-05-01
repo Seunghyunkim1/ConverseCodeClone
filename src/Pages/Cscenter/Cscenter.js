@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "./Cscenter.scss";
-import Plusimg from "../../Images/Cartadd-plus.png";
-import Minusimg from "../../Images/Cartadd-minus.png";
+import Plusimg from "../../Images/CartAdd-plus.png";
+import Minusimg from "../../Images/CartAdd-minus.png";
 
-export class Cscenter extends Component {
+export class CsCenter extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -347,4 +347,4 @@ export class Cscenter extends Component {
     );
   }
 }
-export default Cscenter;
+export default CsCenter;

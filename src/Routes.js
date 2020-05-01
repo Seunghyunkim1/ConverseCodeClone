@@ -7,18 +7,18 @@ import Category from "./Components/Category/Category";
 import Footer from "./Components/footer/Footer";
 import Product from "./Pages/Product/Product";
 import Login from "./Pages/Login/Login";
-import Shoesmenu from "./Pages/Shoesmenu/Shoesmenu";
 import Header from "./Pages/Header/Header";
-import Forgotid from "./Pages/Forgotusername/Forgotusername";
-import Forgotpwd from "./Pages/Forgotpassword/Forgotpassword";
+import Forgotid from "./Pages/Forgot/ForgotUsername/ForgotUsername";
+import Forgotpwd from "./Pages/Forgot/ForgotPassword/ForgotPassword";
 import Notmember from "./Pages/Notmembersearch/Notmembersearch";
 import Register from "./Pages/Register/Register";
 import Cart from "./Pages/Cart/Cart";
 import Registersuccess from "./Pages/Registersuccess/Registersuccess";
-import Cartadd from "./Pages/Cartadd/Cartadd";
+import Cartadd from "./Pages/CartAdd/Cartadd";
+import CartProduct from "./Pages/CartAdd/CartProduct/CartProduct";
 import Mypage from "./Pages/Mypage/Mypage";
 import modalshow from "./Pages/Modal/modal";
-import Cscenter from "./Pages/Cscenter/Cscenter";
+import Cscenter from "./Pages/CsCenter/Cscenter";
 
 class Routes extends Component {
   render() {
@@ -26,7 +26,7 @@ class Routes extends Component {
       <Router>
         <Banner />
         <Route exact path="/" component={Main} />
-        <Route path="/login" component={Login} />
+        <Route exact path="/login" component={Login} />
         <Route path="/product" component={Product} />
         <Route path="/login/forgotid" component={Forgotid} />
         <Route path="/login/forgotpwd" component={Forgotpwd} />
@@ -34,9 +34,9 @@ class Routes extends Component {
         <Route path="/mypage" component={Mypage} />
         <Route path="/cart" component={Cart} />
         <Route path="/cartadd" component={Cartadd} />
+        <Route path="/cartproduct" component={CartProduct} />
         <Route exact path="/Register" component={Register} />
         <Route path="/Register/registersuccess" component={Registersuccess} />
-        <Route path="/Shoesmenu" component={Shoesmenu} />
         <Route path="/Header" component={Header} />
         <Route path="/modal" component={modalshow} />
         <Route path="/cscenter" component={Cscenter} />

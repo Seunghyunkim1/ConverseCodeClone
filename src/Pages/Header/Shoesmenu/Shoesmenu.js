@@ -1,19 +1,34 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import "./Shoesmenu.scss";
 
 export class Shoesmenu extends Component {
   render() {
+    const isClicked = this.props.isClicked;
+    console.log(isClicked);
+
+    const style = isClicked ? { display: "block" } : { display: "none" };
+
     return (
-      <div className="Shoesmenu">
+      <div className="Shoesmenu" style={style}>
         <div className="main">
           <ul>
-            <li className="li-list"> 전체보기</li>
-            <li className="li-list"> 척테일러 올스타 </li>
-            <li className="li-list"> 척 70 </li>
-            <li className="li-list"> 원스타 </li>
-            <li className="li-list"> 잭퍼셀 </li>
-            <li className="li-list"> 프로레더 </li>
-            <li className="li-list"> 회원전용 </li>
+            <Link to="/category/shoes">
+              <li className="li-list"> 전체보기</li>
+            </Link>
+            <Link to="/category/chucktaylorallstar">
+              <li className="li-list"> 척테일러 올스타 </li>
+            </Link>
+            <Link to="/category/chuck70">
+              <li className="li-list"> 척 70 </li>
+            </Link>
+            <Link to="/category/onestar">
+              <li className="li-list"> 원스타 </li>
+            </Link>
+            <Link to="/category/jackpurcell">
+              <li className="li-list"> 잭퍼셀 </li>
+            </Link>
           </ul>
 
           <div className="recommend-item">

@@ -20,7 +20,7 @@ export class Cart extends Component {
               </p>
 
               <div className="first-buttonlogin">
-                <button className="click-login">쇼핑 계속 하기</button>
+                <button className="btn-2">쇼핑 계속 하기</button>
               </div>
             </div>
           </div>
