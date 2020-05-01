@@ -14,10 +14,7 @@ import Header from "./Pages/Header/Header";
 import Notmember from "./Pages/Notmembersearch/Notmembersearch";
 import Register from "./Pages/Register/Register";
 import Registersuccess from "./Pages/Registersuccess/Registersuccess";
-import CartAdded from "./Pages/Cart/CartAdded/CartAdded";
-import CartEmpty from "./Pages/Cart/CartEmpty/CartEmpty";
-import CartProduct from "./Pages/CartAdd/CartProduct/CartProduct";
-
+import Cart from "./Pages/Cart/Cart";
 import modalshow from "./Pages/Modal/modal";
 import Cscenter from "./Pages/CsCenter/Cscenter";
 import Mypage from "./Pages/Mypage/Mypage";
@@ -35,9 +32,7 @@ class Routes extends Component {
         <Route path="/login/forgotpwd" component={Forgotpwd} />
         <Route path="/login/Notmember" component={Notmember} />
         <Route path="/mypage" component={Mypage} />
-        <Route path="/cart/added" component={CartAdded} />
-        <Route path="/cart/empty" component={CartEmpty} />
-        <Route path="/cart/product" component={CartProduct} />
+        <Route path="/cart" component={Cart} />
         <Route exact path="/register" component={Register} />
         <Route
           exact

@@ -17,7 +17,6 @@ export class Cart extends Component {
   componentDidMount() {
     this.setState(
       {
-        // cart: res.cart,
         cart: [
           {
             name: "척 70 컨크리트 히트",

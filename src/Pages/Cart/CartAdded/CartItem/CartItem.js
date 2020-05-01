@@ -1,17 +1,11 @@
 import React, { Component } from "react";
 import Modal from "../../../Modal/modal";
-
 import "./CartItem.scss";
 
 export class CartItem extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      code: "",
-      size: "",
-      quantity: "",
-      price: "",
-    };
+  componentDidMount() {
+    const { price } = this.props.cartItem;
+    this.props.getTotalPrice(price);
   }
 
   render() {

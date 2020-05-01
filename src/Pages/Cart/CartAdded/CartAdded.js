@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import CartItem from "./CartItem/CartItem";
 import Plusimg from "../../../Images/CartAdd-plus.png";
 import Minusimg from "../../../Images/CartAdd-minus.png";
-
 import "./CartAdded.scss";
 
 export class CartAdded extends Component {
@@ -11,19 +10,19 @@ export class CartAdded extends Component {
     this.state = {
       clickbutton: [false, false],
       showModal: false,
-      amountSum: 0,
+      totalPrice: [],
     };
   }
 
-  // getAmountSum = (price) => {
-  //   let sum = this.state.amountSum;
+  getTotalPrice = (price) => {
+    const totalPrice = this.state.totalPrice;
+    totalPrice.push(price);
+    console.log(totalPrice);
 
-  //   sum += price;
-  //   console.log(price);
-  //   this.setState({
-  //     amountSum: sum,
-  //   });
-  // };
+    this.setState({
+      totalPrice: totalPrice,
+    });
+  };
 
   handleClick = (num) => {
     let arr = this.state.clickbutton;
@@ -34,12 +33,9 @@ export class CartAdded extends Component {
   };
 
   handleOpenModal = () => {
-    this.setState(
-      {
-        showModal: !this.state.showModal,
-      },
-      console.log("button")
-    );
+    this.setState({
+      showModal: !this.state.showModal,
+    });
   };
 
   handleCloseModal = () => {
@@ -52,7 +48,15 @@ export class CartAdded extends Component {
   };
 
   render() {
-    console.log("들어오심??", this.props.cart);
+    const { totalPrice } = this.state;
+
+    let totalCost = 0;
+    if (totalPrice.length > 0) {
+      totalCost = totalPrice.reduce((acc, cur) => {
+        return acc + cur;
+      });
+    }
+
     return (
       <div className="CartAdded">
         <div className="cart-wrap">
@@ -67,7 +71,7 @@ export class CartAdded extends Component {
                       handleOpenModal={this.handleOpenModal}
                       handleCloseModal={this.handleCloseModal}
                       cartItem={cartItem}
-                      // getAmountSum={this.getAmountSum}
+                      getTotalPrice={this.getTotalPrice}
                     />
                   );
                 })}
@@ -83,7 +87,7 @@ export class CartAdded extends Component {
               <div class="order-total-item">
                 <span class="label-align-center">상품금액</span>
                 <span class="value">
-                  <span class="sale"> 95,000원 </span>
+                  <span class="sale"> {totalCost}원 </span>
                 </span>
               </div>
               <div class="order-total-item">
@@ -98,7 +102,7 @@ export class CartAdded extends Component {
 
               <div class="order-total-highlight">
                 <span class="label flex flex-align-center">총 결제 금액</span>
-                <span class="value">95,000 원</span>
+                <span class="value">{totalCost}원</span>
               </div>
             </div>
             <div className="order-checkout">
