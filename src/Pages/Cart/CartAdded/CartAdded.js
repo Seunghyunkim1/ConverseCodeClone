@@ -52,7 +52,7 @@ export class CartAdded extends Component {
   };
 
   render() {
-    console.log(this.props.cart);
+    console.log("들어오심??", this.props.cart);
     return (
       <div className="CartAdded">
         <div className="cart-wrap">

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Registersuccess.scss";
 
 class Registersuccess extends Component {
@@ -20,7 +21,9 @@ class Registersuccess extends Component {
             </p>
 
             <div className="firstbutton-login">
-              <button className="click-login">지금 쇼핑하러 가기</button>
+              <Link to={"/"}>
+                <button className="click-login">지금 쇼핑하러 가기</button>
+              </Link>
             </div>
           </div>
         </div>
