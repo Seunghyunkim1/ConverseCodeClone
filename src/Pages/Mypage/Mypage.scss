@@ -1,211 +1,186 @@
 .Mypage {
-    display: flex;
+  display: flex;
 
+  .mypage-leftbox {
+    background-color: #e5e5e5;
+    width: 276px;
+    height: 844px;
+    padding: 80px 36px;
 
-    .mypage-leftbox {
+    .mypage-info {
+      display: flex;
+      align-items: center;
+      width: 180px;
 
-        background-color: #e5e5e5;
-        width: 276px;
-        height: 844px;
-        padding: 80px 36px;
+      .mypage-img {
+        width: 25px;
+        height: 25px;
+        margin-right: 10px;
+      }
 
-        .mypage-info {
-            display: flex;
-            align-items: center;
-            width: 180px;
-
-
-            .mypage-img {
-                width: 25px;
-                height: 25px;
-                margin-right: 30px;
-
-            }
-
-            .mypage-name {
-                .mypage-span {
-                    padding-right: 20px;
-                }
-            }
+      .mypage-name {
+        .mypage-span {
+          padding-right: 20px;
         }
-
-        .customer-nav-allgroup {
-
-
-            .customer-nav {
-                display: flex;
-                margin-top: 50px;
-                font-weight: bold;
-                font-size: 17px;
-            }
-
-            .customer-nav-list {
-                margin-top: 30px;
-            }
-
-            .customer-li-list {
-                margin-top: 15px;
-                font-size: 14px;
-            }
-        }
-
-        .mypage-logout {
-            margin-top: 35px;
-            font-size: 14px;
-            line-height: 1;
-            letter-spacing: -.025em;
-            color: #9b9b9b;
-        }
-
+      }
     }
 
-    .mypage-right {
+    .customer-nav-allgroup {
+      .customer-nav {
+        display: flex;
+        margin-top: 50px;
+        font-weight: bold;
+        font-size: 17px;
+      }
 
+      .customer-nav-list {
+        margin-top: 30px;
+      }
 
-
-        .mypage-right-topall {
-
-
-            .mypage-right-topboder {
-                display: flex;
-                justify-content: center;
-                margin: 150px 150px 50px 200px;
-                // width: 724px;
-                // height: 74px;
-                border: 1px solid #e5e5e5;
-                font-size: 18px;
-
-
-
-                .mypage-right-topbox {
-                    width: 300px;
-                    height: 100px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-
-                    .mypage-heartimg {
-                        width: 15px;
-                        height: 15px;
-                        margin-right: 10px;
-                    }
-
-                    .mypage-promotiontimg {
-                        width: 15px;
-                        height: 15px;
-                        margin-right: 10px;
-                    }
-
-                    .mypage-rightspan {
-                        margin-right: 8px;
-                        margin-left: 7px;
-                    }
-
-                    .mypage-amount {
-                        color: blue;
-                    }
-
-                    .mypage-line {
-
-                        border-right: 1px solid #e5e5e5;
-                        height: 25px;
-                        margin-left: 50px;
-                    }
-
-                    .mypage-comentimg {
-                        width: 20px;
-                        height: 20px;
-                    }
-                }
-            }
-
-
-        }
-
-        .customer-content-section {
-            width: 1452px;
-
-
-            .customer-content-ptag {
-                margin-left: 200px;
-                font-size: 18px;
-                font-weight: 600;
-                line-height: 1;
-                letter-spacing: -.025em;
-                color: #000000;
-            }
-        }
-
-        .delivery-status {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            border: 1px solid black;
-            background-color: #f4f4f4;
-            width: 1102px;
-            height: 86px;
-            margin-top: 30px;
-            margin-left: 200px;
-
-            .delivery-content {
-                width: 247px;
-                height: 46px;
-                border: 1px solid black;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-
-                .delivery-span {
-                    font-size: 14px;
-                    font-weight: 600;
-                    line-height: 1;
-                    letter-spacing: -.025em;
-                    color: #000000;
-                }
-
-                .delivery-spanamount {
-                    font-size: 14px;
-                    font-weight: 600;
-                    line-height: 1;
-                    color: #00c3d7;
-
-                }
-            }
-
-            .first-buttonlogin {
-                display: flex;
-
-                .click-login {
-
-                    width: 244px;
-                    height: 45px;
-                    line-height: 14px;
-                    background-color: black;
-                    color: white;
-                    font-weight: bold;
-                    font-size: 16px;
-                    cursor: pointer;
-                    border: 0;
-                }
-            }
-        }
-
-
+      .customer-li-list {
+        margin-top: 15px;
+        font-size: 14px;
+      }
     }
 
-    .product-list {
-        width: 1452px;
-        height: 388px;
-        padding: 120px 0;
-        text-align: center;
+    .mypage-logout {
+      margin-top: 35px;
+      font-size: 14px;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      color: #9b9b9b;
+    }
+  }
+
+  .mypage-right {
+    .mypage-right-topall {
+      .mypage-right-topboder {
+        display: flex;
+        justify-content: center;
+        margin: 85px 150px 50px 200px;
+        // width: 724px;
+        // height: 74px;
+        border: 1px solid #e5e5e5;
+        font-size: 18px;
+
+        .mypage-right-topbox {
+          width: 300px;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .mypage-heartimg {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+          }
+
+          .mypage-promotiontimg {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+          }
+
+          .mypage-rightspan {
+            margin-right: 8px;
+            margin-left: 7px;
+          }
+
+          .mypage-amount {
+            color: blue;
+          }
+
+          .mypage-line {
+            border-right: 1px solid #e5e5e5;
+            height: 25px;
+            margin-left: 50px;
+          }
+
+          .mypage-comentimg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    .customer-content-section {
+      width: 1452px;
+
+      .customer-content-ptag {
+        margin-left: 200px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1;
+        letter-spacing: -0.025em;
+        color: #000000;
+      }
+    }
+
+    .delivery-status {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border: 1px solid black;
+      background-color: #f4f4f4;
+      width: 1102px;
+      height: 86px;
+      margin-top: 30px;
+      margin-left: 200px;
+
+      .delivery-content {
+        width: 247px;
+        height: 46px;
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-around;
         align-items: center;
 
-        .product-img {
-            width: 150px;
-            height: 150px;
+        .delivery-span {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1;
+          letter-spacing: -0.025em;
+          color: #000000;
         }
+
+        .delivery-spanamount {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 1;
+          color: #00c3d7;
+        }
+      }
+
+      .first-buttonlogin {
+        display: flex;
+
+        .click-login {
+          width: 244px;
+          height: 45px;
+          line-height: 14px;
+          background-color: black;
+          color: white;
+          font-weight: bold;
+          font-size: 16px;
+          cursor: pointer;
+          border: 0;
+        }
+      }
     }
+  }
 
+  .product-list {
+    width: 1452px;
+    height: 388px;
+    padding: 120px 0;
+    text-align: center;
+    align-items: center;
 
-
+    .product-img {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }

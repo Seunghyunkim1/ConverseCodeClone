@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import { API_SE_URL } from "../../../Constants";
+
 import filterImage from "../../../Images/Filter-nav-left.png";
 //import arrowdown from "../../../Images/filter-nav-right.png";
 import minus from "../../../Images/Category-minus.png";
@@ -42,7 +44,7 @@ class CategorySidebar extends Component {
   };
 
   componentDidMount() {
-    fetch(`http://10.58.0.199:8000/product/filter/shoes`)
+    fetch(`${API_SE_URL}/product/filter/shoes`)
       .then((res) => res.json())
       .then((res) => {
         console.log("kkkkk", res);
@@ -54,7 +56,7 @@ class CategorySidebar extends Component {
 
   handleGenderSelect = (gender) => {
     fetch(
-      `http://10.58.0.199:8000/product/category/shoes?gender=${decodeURIComponent(
+      `${API_SE_URL}/product/category/shoes?gender=${decodeURIComponent(
         gender
       )}`
     )
@@ -65,13 +67,13 @@ class CategorySidebar extends Component {
   handleColorSelect = (e, colorCode) => {
     e.preventDefault();
     const qsCode = colorCode.slice(1); // #18228 => 18228
-    fetch(`http://10.58.0.199:8000/product/category/shoes?color=${qsCode}`)
+    fetch(`${API_SE_URL}/product/category/shoes?color=${qsCode}`)
       .then((res) => res.json())
       .then((res) => this.props.handleData(res.product));
   };
 
   handleSizeSelect = (size) => {
-    fetch(`http://10.58.0.199:8000/product/category/shoes?size=${size}`)
+    fetch(`${API_SE_URL}/product/category/shoes?size=${size}`)
       .then((res) => res.json())
       .then((res) => this.props.handleData(res.product));
   };

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+
+import { API_SE_URL, API_HO_URL } from "../../Constants";
+
 import filterImage from "../../Images/Filter-nav-left.png";
-//import arrowdown from "../../Images/filter-nav-right.png";
 import minus from "../../Images/Category-minus.png";
 import plus from "../../Images/Category-plus.png";
 import highshoe from "../../Images/Highshoe.png";
@@ -26,7 +28,7 @@ class Category extends Component {
 
   componentDidMount() {
     console.log("comunt");
-    fetch(`http://10.58.0.199:8000/product/category/shoes`)
+    fetch(`${API_SE_URL}/product/category/shoes`)
       // fetch("http://10.58.0.199:8000/product/category/onestar")
       .then((res) => res.json())
       // .then((res) => {

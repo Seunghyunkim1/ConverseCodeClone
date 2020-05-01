@@ -14,7 +14,7 @@ export class Mypage extends Component {
               />
             </div>
             <div className="mypage-name">
-              <span className="mypage-span"> 송은우 고객님 </span>
+              <span className="mypage-span"> 위코드님 </span>
             </div>
           </div>
 
