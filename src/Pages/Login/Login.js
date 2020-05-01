@@ -33,11 +33,8 @@ export class Login extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        // console.log("res", res);
-        // console.log("token: ", res.access_token);
-        // console.log("res.message", res.Message);
         if (res.access_token) {
-          localStorage.setItem("token", res.access_token);
+          localStorage.setItem("access_token", res.access_token);
           this.props.history.push("/");
         } else if (res.Message === "INVALID_USER") {
           alert("아이디 혹은 비밀번호가 잘못 입력되었습니다.");

@@ -91,7 +91,6 @@ export class Header extends Component {
                   </div>
 
                   <div className="search-box">
-                    <span className="ptag-search">검색</span>
                     <image
                       className="search-img"
                       src="https://image.flaticon.com/icons/svg/101/101826.svg"
