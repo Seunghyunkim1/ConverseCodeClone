@@ -1,61 +1,29 @@
 import React from "react";
 import "./modal.scss";
-import Slider from "react-slick";
-
 import Plusimg from "../../Images/CartAdd-plus.png";
 import Minusimg from "../../Images/CartAdd-minus.png";
 
 const Modal = (props) => {
-  const settings = {
-    className: "modal-img",
-    dots: true,
-    infinite: true,
-    centerMode: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    variableWidth: true,
-  };
   return (
     <React.Fragment>
       <div className="Modal-overlay">
         <div className="Modal" onClick={props.closeModal}>
           <div className="content">
-            <Slider {...settings}>
-              <div
-                style={{
-                  width: 300,
-                  height: 550,
-                  backgroundSize: "300px 550px",
-                  backgroundImage:
-                    "url('https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse=')",
-                }}
-              />
-              <div
-                style={{
-                  width: 300,
-                  height: 550,
-                  backgroundSize: "300px 550px",
-                  backgroundImage:
-                    "url('https://image.converse.co.kr/cmsstatic/product/167708C_167708C_3.jpg?browse=')",
-                }}
-              />
-
-              {/* <img
-                className="modal-img"
-                src="https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse="
-                alt=""
-              /> */}
-            </Slider>
+            <div
+              style={{
+                width: 280,
+                height: 470,
+                backgroundSize: "280px 470px",
+                backgroundImage:
+                  "url('https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse=')",
+              }}
+            />
           </div>
           <div className="modal-content">
             <div className="product-name">
               <h1 className="product-detail-name">
                 척 70 아카이브 프린트 스타 앤 스트라이프
               </h1>
-              {/* <button className="close-modal" onClick={this.handleCloseModal}>
-              닫기
-            </button> */}
             </div>
 
             <div className="product-price">

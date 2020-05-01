@@ -1,31 +1,86 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
+import CartEmpty from "./CartEmpty/CartEmpty";
+import CartAdded from "./CartAdded/CartAdded";
+
 import "./Cart.scss";
 
 export class Cart extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cart: [] && false,
+    };
+  }
+
+  componentDidMount() {
+    this.setState(
+      {
+        cart: [
+          {
+            name: "척 70 컨크리트 히트",
+            url:
+              "https://image.converse.co.kr/cmsstatic/product/167677C_167677C_primary.jpg?gallery=",
+            color_name: "일렉트릭블러쉬",
+            size: "245",
+            quantity: 3,
+            price: 95000,
+          },
+          {
+            name: "척 70 컨크리트 히트",
+            url:
+              "https://image.converse.co.kr/cmsstatic/product/167678C_167678C_primary.jpg?gallery=",
+            color_name: "화이트",
+            size: "225",
+            quantity: 2,
+            price: 89000,
+          },
+          {
+            name: "척테일러 올스타 컷어웨이",
+            url:
+              "https://image.converse.co.kr/cmsstatic/product/150249C_150249C_primary.jpg?gallery=",
+            color_name: "네이비",
+            size: "225",
+            quantity: 2,
+            price: 45000,
+          },
+          {
+            name: "척테일러 올스타 컷어웨이",
+            url:
+              "https://image.converse.co.kr/cmsstatic/product/150247C_150247C_primary.jpg?gallery=",
+            color_name: "블랙",
+            size: "Free Size",
+            quantity: 1,
+            price: 45000,
+          },
+        ],
+      },
+      () => console.log(this.state.cart)
+    );
+
+    fetch("/cart")
+      .then((res) => res.json())
+      .then((res) =>
+        this.setState(
+          {
+            // cart: res.cart,
+            cart: [{ code: "161723C", size: "220", quantity: 3 }],
+          },
+          () => console.log(this.state.cart)
+        )
+      );
+  }
+
   render() {
     return (
-      <div className="Cart">
-        <div className="cart-wrap">
-          <div className="cart-empty">
-            <div className="cart-name">
-              <p className="cart-list"> 장바구니 (0) </p>
-              <div className="cart-bottomline"></div>
-            </div>
-
-            <div className="cart-emptycontent">
-              <p className="in-nothing"> 장바구니에 담긴 상품이 없습니다. </p>
-              <p className="in-nothingcontent">
-                척테일러, 척 70, 잭퍼셀, 원스타 등 지금 컨버스의 다양한 상품을
-                찾아보세요.
-              </p>
-
-              <div className="first-buttonlogin">
-                <button className="btn-2">쇼핑 계속 하기</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <>
+        {this.state.cart && this.state.cart.length > 0 ? (
+          <CartAdded cart={this.state.cart} />
+        ) : (
+          <CartEmpty />
+        )}
+      </>
     );
   }
 }
