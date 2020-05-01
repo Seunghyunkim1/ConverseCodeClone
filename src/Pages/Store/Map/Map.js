@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { RenderAfterNavermapsLoaded, NaverMap } from "react-naver-maps";
 
+import Markers from "./Markers/Markers";
+
 import "./Map.scss";
 
 class Map extends Component {
@@ -12,6 +14,8 @@ class Map extends Component {
   }
 
   render() {
+    // const { name, longitude, latitude } = this.props.stores;
+
     return (
       <div className="Map">
         <div className="wrapper">
@@ -26,9 +30,11 @@ class Map extends Component {
                 width: "100%",
                 height: "100%",
               }}
-              defaultCenter={{ lat: 37.3595704, lng: 127.105399 }}
+              defaultCenter={{ lat: 37.5146602, lng: 126.9809533 }}
               defaultZoom={10}
-            />
+            >
+              <Markers stores={this.props.stores} />
+            </NaverMap>
           </RenderAfterNavermapsLoaded>
         </div>
       </div>

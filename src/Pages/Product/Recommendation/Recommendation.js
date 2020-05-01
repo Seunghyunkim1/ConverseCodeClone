@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./Recommendation.scss";
 
@@ -11,90 +12,20 @@ class Recommendation extends Component {
         </div>
         <div className="container">
           <ul className="grid">
-            <li className="grid-item">
-              <div className="wrapper">
-                <a className="url">
-                  <div className="image">
-                    <img
-                      src="https://image.converse.co.kr/cmsstatic/product/M9160_M9160_primary.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-                  <div className="image">
-                    <img
-                      src="https://image.converse.co.kr/cmsstatic/product/M9160_M9160_hover.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-                </a>
-                <div className="badges">
-                  <span className="text">BEST SELLER</span>
+            {this.props.recommendations.map((recommendation) => (
+              <li className="grid-item">
+                <div className="wrapper">
+                  <a className="url" href={`/product/${recommendation.code}`}>
+                    <div className="image">
+                      <img src={recommendation.url} alt="" />
+                    </div>
+                    <div className="image">
+                      <img src={recommendation.hover} alt="" />
+                    </div>
+                  </a>
                 </div>
-              </div>
-            </li>
-            <li className="grid-item">
-              <div className="wrapper">
-                <a className="url">
-                  <div className="image">
-                    <img
-                      src="https://image.converse.co.kr/cmsstatic/product/M9160_M9160_primary.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-                  <div className="image">
-                    <img
-                      src="https://image.converse.co.kr/cmsstatic/product/M9160_M9160_hover.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-                </a>
-                <div className="badges">
-                  <span className="text">BEST SELLER</span>
-                </div>
-              </div>
-            </li>
-            <li className="grid-item">
-              <div className="wrapper">
-                <a className="url">
-                  <div className="image">
-                    <img
-                      src="https://image.converse.co.kr/cmsstatic/product/M9160_M9160_primary.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-                  <div className="image">
-                    <img
-                      src="https://image.converse.co.kr/cmsstatic/product/M9160_M9160_hover.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-                </a>
-                <div className="badges">
-                  <span className="text">BEST SELLER</span>
-                </div>
-              </div>
-            </li>
-            <li className="grid-item">
-              <div className="wrapper">
-                <a className="url">
-                  <div className="image">
-                    <img
-                      src="https://image.converse.co.kr/cmsstatic/product/M9160_M9160_primary.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-                  <div className="image">
-                    <img
-                      src="https://image.converse.co.kr/cmsstatic/product/M9160_M9160_hover.jpg?browse"
-                      alt=""
-                    />
-                  </div>
-                </a>
-                <div className="badges">
-                  <span className="text">BEST SELLER</span>
-                </div>
-              </div>
-            </li>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

@@ -6,10 +6,12 @@ import "./Promo.scss";
 
 class Promo extends Component {
   render() {
-    // console.log("promo", this.props.promos);
     return (
       <div className="Promo">
-        <PromoItem promos={this.props.promos} />
+        <PromoItem
+          promos={this.props.promos}
+          currentNum={this.props.currentNum}
+        />
       </div>
     );
   }

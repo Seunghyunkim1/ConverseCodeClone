@@ -11,11 +11,13 @@ class DetailContainer extends Component {
   render() {
     return (
       <div className="DetailContainer">
-        {/* intro, review scss 추가 */}
-        <Introduction />
-        <Review />
-        <Community />
-        <Information />
+        <Introduction introduction={this.props.introduction} />
+        <Review
+          overall_review={this.props.overall_review}
+          reviews={this.props.reviews}
+        />
+        <Community instagram={this.props.instagram} />
+        <Information information={this.props.information} />
       </div>
     );
   }

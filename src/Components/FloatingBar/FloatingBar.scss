@@ -1,47 +1,75 @@
+@import "../../Styles/Media.scss";
+
 .FloatingBar {
-    z-index: 1;
-    position: fixed;
-    right: 0;
+  @media #{$mobile-l} {
+    bottom: 16px;
+  }
+  @media #{$tablet-s} {
     bottom: 50px;
-    overflow: hidden;
+  }
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  overflow: hidden;
 
-    .anchor {
-        height: 80px;
-        border-radius: 40px 0 0 40px;
-        padding: 0 10px 0 20px;
-        -webkit-transform: translateX(calc(100% - 70px));
-        transform: translateX(calc(100% - 70px));
-        -ms-transform: translateX(100%) translateX(-70px);
-        -webkit-transition: -webkit-transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1);
-        transition: -webkit-transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1);
-        transition: transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1);
-        transition: transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1), -webkit-transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1);
-        //768px 이상
-        display: flex;
-        align-items: center;
-        color: #ffffff;
-        background-color: #000000;
+  .anchor {
+    @media #{$mobile-l} {
+      padding-left: 15px;
+      padding-right: 10px;
+      height: 50px;
+      border-radius: 25px 0 0 25px;
+    }
+    @media #{$tablet-s} {
+      height: 80px;
+      border-radius: 40px 0 0 40px;
+      padding: 0 10px 0 20px;
+      -webkit-transform: translateX(calc(100% - 70px));
+      transform: translateX(calc(100% - 70px));
+      -ms-transform: translateX(100%) translateX(-70px);
+    }
+    -webkit-transition: -webkit-transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1);
+    transition: -webkit-transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1);
+    transition: transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1);
+    transition: transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1),
+      -webkit-transform 0.32s cubic-bezier(0.4, 0.9, 0.3, 1);
+    //768px 이상
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background-color: #000000;
 
-        .icon {
-            margin-right: 10px;
-            font-size: 40px;
-            //768px 이상
-            display: inline-block;
-            width: 1em;
-            height: 1em;
-            fill: currentColor;
-        }
-
-        .content {
-            margin: 0;
-            font-size: 14px;
-            font-weight: 600;
-            line-height: 20px;
-            //768px 이상
-        }
+    .icon {
+      @media #{$mobile-l} {
+        font-size: 22px;
+      }
+      @media #{$tablet-s} {
+        font-size: 40px;
+      }
+      margin-right: 10px;
+      //768px 이상
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      fill: currentColor;
     }
 
-    .anchor:hover {
-        //on work
+    .content {
+      @media #{$mobile-l} {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 16px;
+      }
+      margin: 0;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 20px;
+      color: #ffffff;
+      //768px 이상
     }
+  }
+
+  .anchor:hover {
+    transform: translateX(0);
+  }
 }

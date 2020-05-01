@@ -4,6 +4,8 @@ import "./Search.scss";
 
 class Search extends Component {
   render() {
+    const { checked, handleCheck } = this.props;
+
     return (
       <div className="Search">
         <form className="search-form" method="GET" action="/store">
@@ -11,6 +13,7 @@ class Search extends Component {
             <div className="input-wrapper">
               <input
                 className="input-store"
+                onChange={this.props.handleChange}
                 name="input-store"
                 type="text"
                 placeholder="매장명 또는 주소 입력"
@@ -27,6 +30,8 @@ class Search extends Component {
               <input
                 className="check all-store"
                 type="checkbox"
+                checked={checked["all"]}
+                onChange={handleCheck}
                 value="all"
                 name="all-store"
               ></input>
@@ -36,6 +41,8 @@ class Search extends Component {
               <input
                 className="check item-store"
                 type="checkbox"
+                checked={checked["item"]}
+                onChange={handleCheck}
                 value="item"
                 name="item-store"
               ></input>
@@ -45,6 +52,8 @@ class Search extends Component {
               <input
                 className="check mall-store"
                 type="checkbox"
+                checked={checked["mall"]}
+                onChange={handleCheck}
                 value="mall"
                 name="mall-store"
               ></input>

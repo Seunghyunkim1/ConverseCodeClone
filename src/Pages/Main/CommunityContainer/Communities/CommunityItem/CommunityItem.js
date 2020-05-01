@@ -4,32 +4,30 @@ import "./CommunityItem.scss";
 
 class CommunityItem extends Component {
   render() {
+    const {
+      id,
+      thumbnail,
+      profile_image,
+      user,
+      created_at,
+    } = this.props.instagram;
+
     return (
       <div className="CommunityItem">
         <div className="item-wrapper">
-          <img
-            className="thumbnail"
-            src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/p640x640/83792428_216959489492171_5411127321792548876_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com&amp;_nc_cat=111&amp;_nc_ohc=3ipjReqTu40AX8LATAb&amp;oh=dbb765542375ecf15974d62a80b3b93f&amp;oe=5EC70F2D"
-            alt="@hi_yona1"
-            title="@hi_yona1"
-          />
+          <img className="thumbnail" src={thumbnail} alt={user} title={user} />
           <div className="overlay">
             <div className="user">
-              <img
-                className="profile"
-                src="https://scontent-nrt1-1.cdninstagram.com/v/t51.2885-19/s150x150/73271953_392606438311429_3413950532996300800_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com&amp;_nc_ohc=Y6v4R0DbR3UAX9e3m6W&amp;oh=9052dfc5495ee8ba2580f4668951fbce&amp;oe=5EC660D3"
-                alt="@underexz"
-              />
+              <img className="profile" src={profile_image} alt="@underexz" />
               <div className="info">
-                <span className="user-name">hi_yona1</span>
-                <span className="time">2 months ago</span>
+                <span className="user-name">{user}</span>
+                <span className="time">{created_at}</span>
               </div>
               <div className="cover"></div>
               <div className="tag-icon">
                 <i></i>
               </div>
             </div>
-            <div className="hover">{/* 애니메이션 전환? */}</div>
           </div>
         </div>
       </div>

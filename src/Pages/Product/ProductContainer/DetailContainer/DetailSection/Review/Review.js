@@ -9,10 +9,10 @@ import "./Review.scss";
 export class Review extends Component {
   render() {
     return (
-      <div className="detail-section">
+      <div className="Review">
         <div className="review-wrapper">
           <div className="head">
-            <h3 className="title">REVIEW(3)</h3>
+            <h3 className="title">REVIEW(1)</h3>
             <div className="arrows">
               <button className="arrow right">
                 <img src={arrow_right} alt="arrow right" />
@@ -36,7 +36,7 @@ export class Review extends Component {
                       <img className="star" src={star} alt="" />
                     </div>
                   </div>
-                  <p className="description">2개의 상품리뷰가 있습니다.</p>
+                  <p className="description">1개의 상품리뷰가 있습니다.</p>
                   <div className="bar color">
                     <p className="type">컬러</p>
                     <div className="range">

@@ -1,111 +1,138 @@
+@import "../../../../../Styles/Media.scss";
+
 .ContentForFour {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  max-height: 840px;
+
+  .product {
     position: relative;
-    display: inline-block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     width: 100%;
-    // min-width: 50%;
-    // width: 538px;
-    height: 716px;
+    height: 100%;
+    object-fit: cover;
+    font-family: "object-fit: cover;";
 
-    background-color: #f37cbd;
-
-    .product {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        font-family: "object-fit: cover;";
-
-        .product-img {
-            // display: block;
-            display: contents;
-            border: 0px; //? border 안 없어짐
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            font-family: "object-fit: cover;";
-        }
+    .product-img {
+      display: block;
+      border: 0px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      font-family: "object-fit: cover;";
     }
+  }
 
-    .tile-overlay {
-        z-index: 0;
-        padding: 2.0833vw; 
-        background-color: transparent; //768px 이상
-        position: absolute;
-        top: 0;
-        left: 0;
-        // padding: 30px;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .placement {
-        display: flex;
-        //flex-direction = column
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-
-    .flex-align-start {
-        -webkit-box-align: start;
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-        align-items: flex-start;        
-    }
-
-    .flex-justify-start {
-        -webkit-box-pack: start;
-        -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-    }
-
-    .flex-justify-end {
-        -webkit-box-pack: end;
-        -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-    }
-
-    .text-align-left {
-        text-align: left;
-    }
-
+  .tile-overlay {
+    z-index: 0;
+    padding: 2.0833vw;
+    background-color: transparent; //768px 이상
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 
     .heading {
-        line-height: 1.2222em;
-        font-size: calc( 30px + 1.25*(100vw - 767px)/42.0625); //767px이하 30px
+      @media #{$tablet-s} {
+        margin-bottom: 0.9722vw;
+      }
+      margin-bottom: 14px;
+      line-height: 1.2222em;
+      font-size: calc(30px + 1.25 * (100vw - 767px) / 42.0625); //767px이하 30px
 
-        .text-bold {
-            color: white;
-            font-weight: 700;
-        }
-    }
-    
-
-    .display-hover {
-        opacity: 0; //768px 이상
-        z-index: 1;
-        background-color: #55555599;
-        pointer-events: auto;
-        -webkit-transition: opacity 0.6s cubic-bezier(0.4, 0.9, 0.3, 1), background-color 0.6s cubic-bezier(0.4, 0.9, 0.3, 1);
-        transition: opacity 0.6s cubic-bezier(0.4, 0.9, 0.3, 1), background-color 0.6s cubic-bezier(0.4, 0.9, 0.3, 1);
+      .text-bold {
+        color: white;
+        font-weight: 700;
+      }
     }
 
-    .display-hover:hover {
-        opacity: 1;
+    .body {
+      @media #{$tablet-s} {
+        margin-bottom: 0.9722vw;
+        font-size: calc(13px + 0.25 * (100vw - 767px) / 42.0625);
+        width: 65%;
+      }
+      width: 100%;
+      line-height: 1.3725em;
+      margin-bottom: 0 0 14px;
+      font-size: 13px;
+      color: #ffffff;
+      word-break: break-word;
+      overflow-wrap: break-word;
     }
+  }
+
+  .placement {
+    display: flex;
+    //flex-direction = column
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .flex-align-start {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .flex-align-end {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .flex-justify-start {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .flex-justify-end {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .text-align-left {
+    text-align: left;
+  }
+
+  .text-align-right {
+    text-align: right;
+  }
+
+  .display-hover {
+    opacity: 0; //768px 이상
+    z-index: 1;
+    background-color: #00000099;
+    pointer-events: auto;
+    -webkit-transition: opacity 0.6s cubic-bezier(0.4, 0.9, 0.3, 1),
+      background-color 0.6s cubic-bezier(0.4, 0.9, 0.3, 1);
+    transition: opacity 0.6s cubic-bezier(0.4, 0.9, 0.3, 1),
+      background-color 0.6s cubic-bezier(0.4, 0.9, 0.3, 1);
+  }
+
+  .display-hover:hover {
+    opacity: 1;
+  }
 }

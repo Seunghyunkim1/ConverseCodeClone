@@ -1,93 +1,143 @@
 .ContentForOne {
-    display: inline-block;
-    position: relative;
-    width: 50%;
-    // min-width: 25%;
-    // width: 286px;
-    height: 356px;
-    font-size: 14px;
-    background-color: skyblue;
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  max-height: 450px;
+  font-size: 14px;
 
-    .product-wish {
-        position: absolute;
-        top: 2.0833vw;  // 768px 이하 시 30px or 14px
-        left: 2.0833vw; // 768px 이하 시 30px or 14px
-        width: 44px;
-        height: 44px;
-        font-size: 18px;
-        color: #000000;
+  .product-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: "object-fit: cover;";
+
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+
+  .product-img-in {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    font-family: "object-fit: cover;";
+
+    img,
+    video {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+
+  .hover {
+    opacity: 0;
+    -webkit-transition: opacity 426ms cubic-bezier(0.4, 0.9, 0.3, 1),
+      visibility 426ms cubic-bezier(0.4, 0.9, 0.3, 1);
+    transition: opacity 426ms cubic-bezier(0.4, 0.9, 0.3, 1),
+      visibility 426ms cubic-bezier(0.4, 0.9, 0.3, 1);
+  }
+
+  .hover:hover {
+    opacity: 1;
+  }
+
+  .product-wish {
+    position: absolute;
+    top: 2.0833vw; // 768px 이하 시 30px or 14px
+    left: 2.0833vw; // 768px 이하 시 30px or 14px
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    color: #000000;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 213ms
+      cubic-bezier(0.4, 0.9, 0.3, 2.25);
+    transition: -webkit-transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25);
+    transition: transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25);
+    transition: transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25),
+      -webkit-transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25);
+
+    .wish-action {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .remove {
         -webkit-transform: scale(1);
         transform: scale(1);
-        -webkit-transition: -webkit-transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25);
-        transition: -webkit-transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25);
-        transition: transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25);
-        transition: transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25), -webkit-transform 213ms cubic-bezier(0.4, 0.9, 0.3, 2.25);
-    
+        -webkit-transition: -webkit-transform 213ms ease-in-out;
+        transition: -webkit-transform 213ms ease-in-out;
+        transition: transform 213ms ease-in-out;
+        transition: transform 213ms ease-in-out,
+          -webkit-transform 213ms ease-in-out;
+      }
 
-        .wish-action {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .remove {
-                -webkit-transform: scale(1);
-                transform: scale(1);
-                -webkit-transition: -webkit-transform 213ms ease-in-out;
-                transition: -webkit-transform 213ms ease-in-out;
-                transition: transform 213ms ease-in-out;
-                transition: transform 213ms ease-in-out,-webkit-transform 213ms ease-in-out;
-            }
-
-            .remove:not(.self-active) {
-                -webkit-transform: scale(0);
-                transform: scale(0);
-            }
-        }
+      .remove:not(.self-active) {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
     }
+  }
 
-    .product-badges {
-        position: absolute;
-        top: 2.0833vw;  // 768px 이하 시 30 or 14 px
-        right: 2.0833vw; // 768px 이하 시 30 or 14 px
+  .product-badges {
+    position: absolute;
+    top: 2.0833vw;
+    right: 2.0833vw;
 
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 
-        .badges-text {
-            display: -webkit-inline-box;
-            display: -webkit-inline-flex;
-            display: -ms-inline-flexbox;
-            display: inline-flex;
-            font-size: 14px;
-            line-height: 1.2;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
+    .badges-text {
+      display: -webkit-inline-box;
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      font-size: 14px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      font-weight: 700;
     }
+  }
 
-    .product-detail {
-        position: absolute;
-        bottom: 2.0833vw;   // 768px 이하 시 30px
-        left: 2.0833vw;     // 768px 이하 시 30px
-        max-width: calc( 100% - 4.16666vw); // 768 이하 시 calc(100% - 60px)
-        line-height: 1.3333em;
-        font-size: 14px;
-        letter-spacing: -.025em;
-        word-break: keep-all;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
+  .product-detail {
+    position: absolute;
+    bottom: 8%;
+    left: 11%;
+    max-width: calc(100% - 4.16666vw);
+    line-height: 1.3333em;
+    font-size: 15px;
+    letter-spacing: -0.025em;
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 
-        .price {
-            margin-top: 4px;
-        }
+    .price {
+      margin-top: 4px;
     }
-
-
+  }
 }

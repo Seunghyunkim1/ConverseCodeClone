@@ -27,8 +27,9 @@ class Routes extends Component {
       <Router>
         <Banner />
         <Route exact path="/" component={Main} />
-        <Route path="/login" component={Login} />
-        <Route path="/product" component={Product} />
+        <Route exact path="/login" component={Login} />
+        {/* <Route exact path="/product" component={Product} /> */}
+        <Route path="/product/:id" component={Product} />
         <Route path="/login/forgotid" component={Forgotid} />
         <Route path="/login/forgotpwd" component={Forgotpwd} />
         <Route path="/login/Notmember" component={Notmember} />

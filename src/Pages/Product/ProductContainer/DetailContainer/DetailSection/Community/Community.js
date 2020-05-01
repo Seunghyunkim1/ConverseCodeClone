@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 
+import Instagram from "./Instagram/Instagram";
+
 import "./Community.scss";
 
 class Community extends Component {
@@ -16,7 +18,13 @@ class Community extends Component {
               </span>
             </p>
           </div>
-          <div className="instagram">인스타그램</div>
+          <div className="instagram">
+            {this.props.instagram.map((instagram, index) => {
+              if (index < 3) {
+                return <Instagram instagram={instagram} />;
+              }
+            })}
+          </div>
         </div>
       </div>
     );

@@ -1,24 +1,40 @@
 import React, { Component } from "react";
 
-import Contents from "./Contents/Contents";
+import ContentFull from "./Contents/ContentFull/ContentFull";
+import ContentHalf from "./Contents/ContentHalf/ContentHalf";
 import ContentNav from "./ContentNav/ContentNav";
 
 import "./ContentsContainer.scss";
 
 class ContentsContainer extends Component {
-  render() {
-    // console.log("Container", this.props.contents);
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      contents: [] && false,
+    };
+  }
+
+  componentDidMount() {
+    this.setState({
+      contents: this.props.contents,
+    });
+  }
+
+  render() {
     return (
       <div className="ContentsContainer">
-        {this.props.contents.map((content) => {
-          if (content.length > 0) {
-            if (content[0].type === 5)
-              //CHOOSE YOUR ICON 별도 처리
-              return <ContentNav contents={content} />;
-            return <Contents contents={content} />;
-          }
-        })}
+        {this.state.contents &&
+          this.state.contents.map((content, index) => {
+            if (index === 2) return <ContentNav />;
+            if (content.length > 0) {
+              if (content[0].size === 8) {
+                return <ContentFull contents={content} />;
+              } else if (content[0].size <= 4) {
+                return <ContentHalf contents={content} />;
+              }
+            }
+          })}
       </div>
     );
   }
