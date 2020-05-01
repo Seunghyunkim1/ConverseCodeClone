@@ -6,21 +6,13 @@ import "./Communities.scss";
 
 class Communities extends Component {
   render() {
-    const communities = this.props.Communities;
-
     return (
       <div className="Communities">
-        <CommunityItem />
-        <CommunityItem />
-        <CommunityItem />
-        <CommunityItem />
-        <CommunityItem />
-        <CommunityItem />
-        {/* 더보기 생략
-            <div className="footer">
-
-            </div> 
-        */}
+        {this.props.instagrams.map((instagram, index) => {
+          if (index < 8) {
+            return <CommunityItem instagram={instagram} />;
+          }
+        })}
       </div>
     );
   }

@@ -4,16 +4,12 @@ import Communities from "./Communities/Communities";
 import "./CommunityContainer.scss";
 
 class CommunityContainer extends Component {
-  state = {
-    communities: [],
-  };
-
   render() {
     return (
       <div className="CommunityContainer">
         <div className="community-wrapper">
           <p className="title">CONVERSE COMMUNITY</p>
-          <Communities communities={this.state.communities} />
+          <Communities instagrams={this.props.instagrams} />
         </div>
       </div>
     );

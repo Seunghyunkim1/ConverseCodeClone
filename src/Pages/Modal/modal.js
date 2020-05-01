@@ -3,16 +3,20 @@ import "./modal.scss";
 import Plusimg from "../../Images/Cartadd-plus.png";
 import Minusimg from "../../Images/Cartadd-minus.png";
 
-const Modal = () => {
+const Modal = (props) => {
   return (
     <React.Fragment>
       <div className="Modal-overlay">
-        <div className="Modal">
+        <div className="Modal" onClick={props.closeModal}>
           <div className="content">
-            <img
-              className="modal-img"
-              src="https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse="
-              alt=""
+            <div
+              style={{
+                width: 280,
+                height: 470,
+                backgroundSize: "280px 470px",
+                backgroundImage:
+                  "url('https://image.converse.co.kr/cmsstatic/product/167708C_167708C_primary.jpg?browse=')",
+              }}
             />
           </div>
           <div className="modal-content">
@@ -20,9 +24,6 @@ const Modal = () => {
               <h1 className="product-detail-name">
                 척 70 아카이브 프린트 스타 앤 스트라이프
               </h1>
-              {/* <button className="close-modal" onClick={this.handleCloseModal}>
-              닫기
-            </button> */}
             </div>
 
             <div className="product-price">

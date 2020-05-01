@@ -1,22 +1,51 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./ContentForOne.scss";
 
 class ContentForOne extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      url: "" && false,
+      hover: "" && false,
+    };
+  }
+
+  componentDidMount() {
+    const url = this.props.content.url;
+    const hover = this.props.content.hover;
+
+    this.setState({
+      url: url,
+      hover: hover,
+    });
+  }
+
   render() {
-    // console.log("one", this.props.content);
-    const { img, name, price, badges } = this.props.content;
+    const { name, code, price, url, hover } = this.props.content;
 
     return (
       <div className="ContentForOne">
-        <a className="product-url" href="/">
+        <Link className="product-url" to={`product/${code}`}>
           <div className="product-img">
-            <img src={img} alt="" />
+            {url.endsWith("mp4") ? (
+              <video autoPlay loop controls>
+                <source src={url} type="video/mp4" />
+              </video>
+            ) : (
+              <img src={url} alt="" />
+            )}
           </div>
-          <div className="product-img">
-            <img src={img} alt="" />
+          <div className="product-img-in hover">
+            {this.state.hover ? (
+              <img src={hover} alt="" />
+            ) : (
+              <img src={url} alt="" />
+            )}
           </div>
-        </a>
+        </Link>
         <div className="product-wish">
           <a className="wish-action add" href="#add">
             {" "}
@@ -24,11 +53,6 @@ class ContentForOne extends Component {
           <a className="wish-action remove" href="#remove">
             {" "}
           </a>
-        </div>
-        <div className="product-badges">
-          {badges.map((badge) => (
-            <span className="badges-text">{badge}</span>
-          ))}
         </div>
         <div className="product-detail">
           <p calssName="name">

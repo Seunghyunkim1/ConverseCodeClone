@@ -31,7 +31,7 @@ export class NotMemberSearch extends Component {
             </form>
 
             <div className="first-buttonlogin">
-              <button className="click-login">주문 조회하기</button>
+              <button className="btn-2">주문 조회하기</button>
             </div>
           </form>
         </div>

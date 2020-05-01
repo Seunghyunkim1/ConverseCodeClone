@@ -1,0 +1,61 @@
+@import "../../../../../../Styles/Media.scss";
+
+.Introduction {
+  @media #{$mobile-l} {
+    padding-bottom: 32px;
+  }
+  @media #{$tablet-s} {
+    margin-top: 34px;
+    padding-bottom: 70px;
+  }
+
+  padding-top: 40px;
+  border-top: 1px solid #e5e5e5;
+  -webkit-transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+  transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
+
+  .detail-content {
+    max-height: 448px; // section:not(.active)?
+    overflow: hidden;
+
+    .title {
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 21px;
+      margin: 14px 0;
+    }
+
+    .image {
+      // text-align: center;
+    }
+  }
+
+  //hidden - visible, more - less
+  .detail-toggle {
+    @media #{$mobile-l} {
+      margin-top: 24px;
+    }
+    @media #{$tablet-s} {
+      margin-top: 40px;
+    }
+
+    display: inline-block;
+    position: relative;
+    color: #757575;
+
+    .more {
+      display: inline-block;
+    }
+
+    .less {
+      display: none;
+    }
+
+    .underline {
+      text-decoration: underline;
+    }
+  }
+}

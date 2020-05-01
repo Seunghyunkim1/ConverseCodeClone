@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./ContentNavItem.scss";
 
@@ -8,10 +9,12 @@ class ContentNavItem extends Component {
     return this.props.items.map((item) => {
       return (
         <div className="ContentNavItem">
-          <a className="item-photo">
+          <Link className="item-photo" to={`category/${item.name}`}>
             <img src={item.img} alt="" />
-          </a>
-          <a className="item-title">{item.title}</a>
+          </Link>
+          <Link className="item-title" to={`category/${item.name}`}>
+            {item.title}
+          </Link>
         </div>
       );
     });
