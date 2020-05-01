@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./Cscenter.scss";
 import Plusimg from "../../Images/Cartadd-plus.png";
 import Minusimg from "../../Images/Cartadd-minus.png";
 
-export class Cscenter extends Component {
+export class CsCenter extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -51,9 +52,11 @@ export class Cscenter extends Component {
           </div>
 
           <div className="customer-nav-allgroup">
-            <div className="customer-nav">
-              <span> 매장 안내 </span>
-            </div>
+            <Link to={"/store"}>
+              <div className="customer-nav">
+                <span> 매장 안내 </span>
+              </div>
+            </Link>
           </div>
         </div>
         <div className="mypage-right">
@@ -347,4 +350,4 @@ export class Cscenter extends Component {
     );
   }
 }
-export default Cscenter;
+export default CsCenter;

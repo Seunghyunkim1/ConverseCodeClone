@@ -63,21 +63,20 @@
             margin-top: 30px;
 
             .entry-field {
-                width: 840px;
-                height: 625px;
+                width: 700px;
+                // height: 625px;
                 border: 0;
-                margin-left: 120px;
                 margin-top: 50px;
             }
         }
 
         .button-login {
-            display: flex;
+
 
             .kakao-login {
                 display: flex;
                 justify-content: center;
-                margin: 20px auto;
+                margin: 0 0 30px 200px;
                 border: 0;
                 width: 384px;
                 height: 52px;
@@ -135,18 +134,16 @@
             .or-span {
                 display: flex;
                 align-items: center;
-                margin-left: 230px;
+                margin-left: 200px;
             }
         }
 
         .account-signup {
-            margin-left: 230px;
+            margin-left: 200px;
         }
 
         .need-info {
-
             margin-top: 40px;
-
         }
 
         .input-email {
@@ -158,7 +155,12 @@
             background-color: #ffffff;
             margin-top: 10px;
             padding: 20px;
+        }
 
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
 
         .field-name {
@@ -167,15 +169,16 @@
             color: gray;
         }
 
-        .mail-femail {
+        .male-female {
             border: 1px solid #e5e5e5;
             display: flex;
             background-color: #f4f4f4;
             width: 384px;
-            margin-left: 230px;
+            margin-left: 200px;
             margin-top: 10px;
 
-            .femail {
+            .choosed-gender {
+
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -183,10 +186,23 @@
                 width: 192px;
                 height: 48px;
                 font-size: 14px;
+                border: 1px solid black;
+                cursor: pointer;
+            }
+
+            .female {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #9b9b9b;
+                width: 192px;
+                height: 48px;
+                font-size: 14px;
+                cursor: pointer;
 
             }
 
-            .mail {
+            .male {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -198,8 +214,7 @@
         }
 
         .agree-field {
-            width: 600px;
-            height: 625px;
+            width: 650px;
             margin: 70px 0;
             border-left: 1px solid #e5e5e5;
 
@@ -268,16 +283,17 @@
                 margin-top: 10px;
                 font-size: 13px;
 
+                .field-firstrow {
+                    display: flex;
+                }
+
+                .field-atag {
+                    padding-right: 50px;
+                }
+
+
             }
 
-            .field-firstrow {
-                display: flex;
-
-            }
-
-            .field-atag {
-                padding-right: 50px;
-            }
 
             .choose-email {
                 width: 499px;
@@ -285,32 +301,60 @@
                 margin-top: 10px;
                 font-size: 13px;
 
+                .email {
+                    display: flex;
+                    margin-bottom: 10px;
+
+                }
+
+                .field-firstrow {
+                    display: flex;
+                }
+
             }
 
-            .email {
-                display: flex;
-                margin-bottom: 10px;
 
+
+            .first-buttonlogin {
+
+
+                // .click-login {
+                //     // margin: 20px 0 0 100px;
+                //     // width: 455px;
+                //     // height: 50px;
+                //     // line-height: 14px;
+                //     // background-color: black;
+                //     // color: white;
+                //     font-weight: bold;
+                //     font-size: 16px;
+                //     cursor: pointer;
+
+                .btn-2 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 20px 0 0 100px;
+                    background: black;
+                    border: 1px solid black;
+                    box-shadow: 0 2px 0 black, 2px 4px 6px black;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    transition: all 0.15s linear;
+                    color: white;
+                    width: 450px;
+                    height: 52px;
+                }
+
+                .btn-2:hover {
+                    background: white;
+                    border: 1px solid black;
+                    box-shadow: 1px 1px 2px white;
+                    color: black;
+
+                }
             }
-
         }
 
-        .first-buttonlogin {
-            display: flex;
-            margin-top: 20px;
 
-            .click-login {
-                margin: 20px 0 0 100px;
-                width: 455px;
-                height: 50px;
-                line-height: 14px;
-                background-color: black;
-                color: white;
-                font-weight: bold;
-                font-size: 16px;
-                cursor: pointer;
-                border: 0;
-            }
-        }
     }
 }

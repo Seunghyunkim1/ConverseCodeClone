@@ -1,0 +1,27 @@
+{
+    "cartData": [{
+            "name": "척 70 아카이브",
+            "color": "블랙",
+            "size": 270,
+            "amount": 1,
+            "price": 95000,
+            "img": "url"
+        },
+        {
+            "name": "척 70 아카이브",
+            "color": "블랙",
+            "size": 270,
+            "amount": 1,
+            "price": 95000,
+            "img": "url"
+        },
+        {
+            "name": "척 70 아카이브",
+            "color": "블랙",
+            "size": 270,
+            "amount": 1,
+            "price": 95000,
+            "img": "url"
+        }
+    ]
+}

@@ -12,8 +12,6 @@ class Main extends Component {
     this.state = {
       contents: [] && false,
       instagrams: [] && false,
-      // contentsOne: [] && false,
-      // isReady: false,
     };
   }
 
@@ -27,41 +25,7 @@ class Main extends Component {
         });
       });
   }
-  /*
-  getContentsOne(content) {
-    const contentsOne = this.state.contentsOne || [];
-    fetch("http://10.58.7.60:8000/", {
-      method: "POST",
-      body: JSON.stringify(content),
-    })
-      .then((res) => res.json())
-      .then((res) => contentsOne.push(res));
 
-    this.setState(
-      {
-        contentsOne: contentsOne,
-      },
-      () => console.log("one", contentsOne)
-    );
-  }
-
-  insertOneToContents() {
-    const contents = this.state.contents || [];
-    const contentsOne = this.state.contentsOne;
-    let oneIndex = 0;
-
-    console.log("before", contents);
-    console.log("one", contentsOne);
-
-    contents.map((content, index) => {
-      if (content.size === 1) {
-        contents.splice(index, index + 1, contentsOne[oneIndex++]);
-      }
-    });
-
-    console.log("after", contents);
-  }
-*/
   makeGroup(contents) {
     let section = [];
     let dividedContents = [];
@@ -75,7 +39,6 @@ class Main extends Component {
             dividedContents.push([content]);
           } else if (sum + content.size <= 4) {
             if (content.size === 1) {
-              console.log("ck", content);
               section.push(content);
               if (content.one !== undefined) {
                 this.getContentsOne(content);

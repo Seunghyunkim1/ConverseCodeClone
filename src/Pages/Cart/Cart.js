@@ -1,31 +1,51 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
+import { SERVICE_CART_URL, CART_URL } from "../../Config";
+
+import CartEmpty from "./CartEmpty/CartEmpty";
+import CartAdded from "./CartAdded/CartAdded";
+
 import "./Cart.scss";
 
 export class Cart extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      cart: [] && false,
+    };
+  }
+
+  componentDidMount() {
+    let token = localStorage.getItem("access_token");
+
+    fetch(`${SERVICE_CART_URL}`, {
+      headers: {
+        Authorization: token,
+      },
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((res) =>
+        this.setState(
+          {
+            // cart: res.cart,
+            cart: res.cart_list[0],
+          },
+          () => console.log(this.state.cart)
+        )
+      );
+  }
+
   render() {
     return (
-      <div className="Cart">
-        <div className="cart-wrap">
-          <div className="cart-empty">
-            <div className="cart-name">
-              <p className="cart-list"> 장바구니 (0) </p>
-              <div className="cart-bottomline"></div>
-            </div>
-
-            <div className="cart-emptycontent">
-              <p className="in-nothing"> 장바구니에 담긴 상품이 없습니다. </p>
-              <p className="in-nothingcontent">
-                척테일러, 척 70, 잭퍼셀, 원스타 등 지금 컨버스의 다양한 상품을
-                찾아보세요.
-              </p>
-
-              <div className="first-buttonlogin">
-                <button className="click-login">쇼핑 계속 하기</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <>
+        {this.state.cart && this.state.cart.length > 0 ? (
+          <CartAdded cart={this.state.cart} />
+        ) : (
+          <CartEmpty />
+        )}
+      </>
     );
   }
 }

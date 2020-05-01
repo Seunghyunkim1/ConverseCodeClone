@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./Forgotusername.scss";
+import "./ForgotPassword.scss";
 
-export class Forgotusername extends Component {
+export class ForgotPassword extends Component {
   render() {
     return (
-      <div className="Forgotusername">
+      <div className="ForgotPassword">
         <form className="id-form">
           <div className="idpwd-form">
             <div className="id-pwd">
@@ -24,12 +24,12 @@ export class Forgotusername extends Component {
                 <div className="speech-bubble">
                   <img
                     src="https://image.flaticon.com/icons/svg/2462/2462844.svg"
-                    className="speech-bubbleimg"
+                    className="speech-bubblimg"
                     alt=""
                   />
                 </div>
-                <div className="kakao-loginimg">
-                  <p class="kakaologin-name"> 카카오 계정으로 1초 로그인 </p>
+                <div className="kakao-loginimg ">
+                  <p class="kakao-loginname"> 카카오 계정으로 1초 로그인 </p>
                 </div>
               </button>
             </div>
@@ -46,23 +46,15 @@ export class Forgotusername extends Component {
                 <input
                   className="input-id"
                   type="text"
-                  placeholder="전화번호를 입력하세요"
-                />
-              </div>
-
-              <div className="field-secondlabel">
-                <input
-                  className="input-pwd"
-                  type="password"
-                  placeholder="이름을 입력하세요"
+                  placeholder="아이디를 입력하세요 (이메일형식)"
                 />
               </div>
             </form>
 
             <div className="first-buttonlogin">
-              <button className="login-click">다음</button>
+              <button className="btn-2">다음</button>
             </div>
-            <div className="NotMember">
+            <div className="not-member">
               <a href="/#" className="find-idpwdlink">
                 로그인으로 돌아가기
               </a>
@@ -73,4 +65,4 @@ export class Forgotusername extends Component {
     );
   }
 }
-export default Forgotusername;
+export default ForgotPassword;

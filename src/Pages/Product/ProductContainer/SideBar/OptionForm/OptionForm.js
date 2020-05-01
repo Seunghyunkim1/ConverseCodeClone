@@ -80,10 +80,10 @@ class OptionForm extends Component {
     let check = this.isSizeSelected(this.state.sizeCheck);
     if (!check) e.preventDefault();
 
-    localStorage.setItem(
-      "access_token",
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2fQ.XJDePJuHoEMAOrEO0nZekln6hCqEuftXxIfmr2n-c4E"
-    );
+    // localStorage.setItem(
+    //   "access_token",
+    //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2fQ.XJDePJuHoEMAOrEO0nZekln6hCqEuftXxIfmr2n-c4E"
+    // );
 
     let token = localStorage.getItem("access_token");
 

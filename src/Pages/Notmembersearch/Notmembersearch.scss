@@ -65,16 +65,25 @@
         .first-buttonlogin {
             display: flex;
 
-            .click-login {
-                width: 534px;
-                height: 50px;
-                line-height: 14px;
-                background-color: black;
-                color: white;
+            .btn-2 {
+
+                background: black;
+                border: 1px solid black;
+                box-shadow: 0 2px 0 black, 2px 4px 6px black;
                 font-weight: bold;
-                font-size: 16px;
-                cursor: pointer;
-                border: 0;
+                letter-spacing: 1px;
+                transition: all 0.15s linear;
+                color: white;
+                width: 456px;
+                height: 50px;
+            }
+
+            .btn-2:hover {
+                background: white;
+                border: 1px solid black;
+                box-shadow: 1px 1px 2px white;
+                color: black;
+
             }
         }
     }

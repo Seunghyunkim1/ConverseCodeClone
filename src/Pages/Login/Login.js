@@ -2,32 +2,74 @@ import React, { Component } from "react";
 import "./Login.scss";
 
 export class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      password: "",
+    };
+  }
+
+  handleId = (e) => {
+    // console.log(e.target.value)
+    this.setState({
+      email: e.target.value,
+    });
+  };
+
+  handlePwd = (e) => {
+    this.setState({
+      password: e.target.value,
+    });
+  };
+
+  login = () => {
+    fetch("http://10.58.7.60:8000/account/login", {
+      method: "post",
+      body: JSON.stringify({
+        email: this.state.email,
+        password: this.state.password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        // console.log("res", res);
+        // console.log("token: ", res.access_token);
+        // console.log("res.message", res.Message);
+        if (res.access_token) {
+          localStorage.setItem("token", res.access_token);
+          this.props.history.push("/");
+        } else if (res.Message === "INVALID_USER") {
+          alert("아이디 혹은 비밀번호가 잘못 입력되었습니다.");
+        } else if (res.Message === "INVLALID_KEY") {
+          alert("JSON 키에러");
+        }
+      });
+  };
+
   render() {
     return (
       <div className="Login">
-        <div className="accountauth-content">
-          <div className="account-authhead">
-            <h1 className="account-authcontenttitle"> 로그인 </h1>
-          </div>
-
-          <form className="login-form">
-            <div className="field-firstlabel">
+        <div className="container">
+          <h1 className="title">로그인</h1>
+          <form className="id_pw_form">
+            <div className="id_input">
               <input
-                className="input-id"
+                onChange={this.handleId}
                 type="text"
                 placeholder="이메일 형태로 입력해주세요"
               />
             </div>
 
-            <div className="field-secondlabel">
+            <div className="pw_input">
               <input
-                className="input-pwd"
+                onChange={this.handlePwd}
                 type="password"
-                placeholder="비밀번호(영문/숫자/특수문자 조합 8자이상"
+                placeholder="비밀번호(영문/숫자/특수문자 조합 8자이상)"
               />
             </div>
 
-            <div className="login-info">
+            <div className="login-option">
               <div className="account-tools">
                 <label className="i-checkbox" />
                 <input
@@ -38,29 +80,25 @@ export class Login extends Component {
               </div>
 
               <div className="find-idpwd">
-                <a href="#" className="find-idpwdlink">
-                  아이디/비밀번호찾기
-                </a>
+                <div className="find-idpwdlink">아이디/비밀번호찾기</div>
               </div>
             </div>
           </form>
 
-          <div className="first-buttonlogin">
-            <button className="click-login">로그인</button>
+          <div className="login_btn">
+            <button onClick={this.login}>로그인</button>
           </div>
 
-          <div className="button-login">
-            <button className="kakao-login">
-              <div className="speech-bubble">
+          <div className="kakao_login">
+            <button>
+              <div className="speech_icon">
                 <img
                   src="https://image.flaticon.com/icons/svg/2462/2462844.svg"
                   className="speech-bubblimg"
                   alt=""
                 />
               </div>
-              <div className="kakao-loginimg">
-                <p class="kakao-loginname"> 카카오 계정으로 1초 로그인 </p>
-              </div>
+              <div className="kakao_text">카카오 계정으로 1초 로그인</div>
             </button>
           </div>
 
@@ -78,16 +116,16 @@ export class Login extends Component {
             </div>
           </div>
 
-          <div className="login-eventinfo">
-            <div className="event-img">
+          <div className="event">
+            <div className="img">
               <img
                 src="https://image.flaticon.com/icons/svg/548/548427.svg"
                 alt=""
               />
             </div>
 
-            <div className="event-info">
-              <p className="event-infoptag">
+            <div className="info">
+              <p>
                 지금 회원으로 가입하시고, 특별한 멤버십 혜택과 <br></br>다양한
                 회원 전용 상품을 만나보세요.
               </p>
