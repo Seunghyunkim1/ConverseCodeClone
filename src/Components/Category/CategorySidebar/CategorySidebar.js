@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 
-import { API_SE_URL } from "../../../Constants";
+import { API_AWS_URL } from "../../../Constants";
 
-import filterImage from "../../../Images/Filter-nav-left.png";
-//import arrowdown from "../../../Images/filter-nav-right.png";
 import minus from "../../../Images/Category-minus.png";
 import plus from "../../../Images/Category-plus.png";
 import highshoe from "../../../Images/Highshoe.png";
@@ -11,7 +9,6 @@ import lowshoe from "../../../Images/Lowshoe.png";
 import midshoe from "../../../Images/Midshoe.png";
 import flatformshoe from "../../../Images/Flatformshoe.png";
 import slipshoe from "../../../Images/Slipshoe.png";
-import hearticon from "../../../Images/Heart-icon.png";
 
 import "./CategorySidebar.scss";
 
@@ -44,7 +41,7 @@ class CategorySidebar extends Component {
   };
 
   componentDidMount() {
-    fetch(`${API_SE_URL}/product/filter/shoes`)
+    fetch(`${API_AWS_URL}/product/filter/shoes`)
       .then((res) => res.json())
       .then((res) => {
         console.log("kkkkk", res);
@@ -56,7 +53,7 @@ class CategorySidebar extends Component {
 
   handleGenderSelect = (gender) => {
     fetch(
-      `${API_SE_URL}/product/category/shoes?gender=${decodeURIComponent(
+      `${API_AWS_URL}/product/category/shoes?gender=${decodeURIComponent(
         gender
       )}`
     )
@@ -67,13 +64,13 @@ class CategorySidebar extends Component {
   handleColorSelect = (e, colorCode) => {
     e.preventDefault();
     const qsCode = colorCode.slice(1); // #18228 => 18228
-    fetch(`${API_SE_URL}/product/category/shoes?color=${qsCode}`)
+    fetch(`${API_AWS_URL}/product/category/shoes?color=${qsCode}`)
       .then((res) => res.json())
       .then((res) => this.props.handleData(res.product));
   };
 
   handleSizeSelect = (size) => {
-    fetch(`${API_SE_URL}/product/category/shoes?size=${size}`)
+    fetch(`${API_AWS_URL}/product/category/shoes?size=${size}`)
       .then((res) => res.json())
       .then((res) => this.props.handleData(res.product));
   };
@@ -84,7 +81,6 @@ class CategorySidebar extends Component {
 
     const genderCategory = this.state.dataForSiderbar.filter.gender.map(
       (el) => {
-        console.log("yyyy", el);
         return (
           <div className="inside1">
             <a

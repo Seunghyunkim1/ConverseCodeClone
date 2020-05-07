@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { API_AWS_URL } from "../../Constants";
+
 import "./Login.scss";
 
 export class Login extends Component {
@@ -11,7 +13,6 @@ export class Login extends Component {
   }
 
   handleId = (e) => {
-    // console.log(e.target.value)
     this.setState({
       email: e.target.value,
     });
@@ -24,7 +25,7 @@ export class Login extends Component {
   };
 
   login = () => {
-    fetch("http://10.58.7.60:8000/account/login", {
+    fetch(`${API_AWS_URL}/account/login`, {
       method: "post",
       body: JSON.stringify({
         email: this.state.email,
