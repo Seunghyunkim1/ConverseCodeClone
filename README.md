@@ -1,68 +1,29 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Wecode 7기 1차 프로젝트 Converse Front-end Repository
+### 프로젝트 소개
+Converse Korea Official Store [컨버스 코리아 공식 스토어](https://www.converse.co.kr/) clone project
 
-## Available Scripts
+### 개발 인원 및 기간
+- 기간 : 2020.04.20 - 2020.05.01 (약 2주)
+- 개발 인원 : 프론트엔드 [Gwangmin kim](https://github.com/kkm8314), [HeejunShon](https://github.com/HeejunShon), [Seunghyunkim1](https://github.com/Seunghyunkim1) 백엔드 [ensia96](https://github.com/ensia96), [sungjun-jin](https://github.com/sungjun-jin)
+- 백엔드 [Repository](https://github.com/wecode-bootcamp-korea/Converse-backend)
 
-In the project directory, you can run:
+### 데모 영상
+[![Converse Demo](https://images.velog.io/images/sungjun-jin/post/27aa7f02-baca-4e88-acc3-e9dc1b8fd46d/image.png)](https://www.youtube.com/watch?v=0dYvqMhCsy8&feature=youtube)
+---
+### 기술
+- React.js
+- JavasSript
+- Scss
+- HTML, CSS
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### 구현 페이지, 컴포넌트
+- 메인 페이지 (with React Components)
+- Banner 및 Header
+- 회원가입 / 로그인
+- JSON Web Token을 활용한 access token 발행
+- 제품 카테고리
+- 사이즈, 색상별 제품 필터링
+- 제품 상세보기 (with Responsive Web)
+- 회원별 장바구니 등록 및 목록 가져오기
+- 컨버스 매장정보 보기 (with NaverMap API)
+- AWS 백엔드 API 이용
