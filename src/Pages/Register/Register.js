@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { isCompositeComponent } from "react-dom/test-utils";
+
+import { API_AWS_URL } from "../../Constants";
+
 import HeaderImg from "../../Images/converseheader.jpg";
 import "./Register.scss";
 
@@ -66,7 +69,6 @@ class Register extends Component {
   };
 
   inputEmailconfirm = (e) => {
-    // console.log("e.target.value", e.target.value);
     if (e.target.value === "on") {
       this.setState({
         email_confirm: 1,
@@ -104,7 +106,7 @@ class Register extends Component {
   // };
 
   register = () => {
-    fetch("http://10.58.7.60:8000/account/register", {
+    fetch(`${API_AWS_URL}/account/register`, {
       method: "post",
       body: JSON.stringify({
         email: this.state.email,
@@ -145,7 +147,6 @@ class Register extends Component {
 
   render() {
     const { gender } = this.state;
-    // console.log("this.state", this.state);
     return (
       <div className="Register">
         <div className="signup-header">

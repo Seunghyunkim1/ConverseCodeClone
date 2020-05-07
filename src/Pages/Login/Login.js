@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { API_AWS_URL } from "../../Constants";
+
 import "./Login.scss";
 
 export class Login extends Component {
@@ -11,7 +13,6 @@ export class Login extends Component {
   }
 
   handleId = (e) => {
-    // console.log(e.target.value)
     this.setState({
       email: e.target.value,
     });
@@ -24,7 +25,7 @@ export class Login extends Component {
   };
 
   login = () => {
-    fetch("http://10.58.7.60:8000/account/login", {
+    fetch(`${API_AWS_URL}/account/login`, {
       method: "post",
       body: JSON.stringify({
         email: this.state.email,
@@ -33,11 +34,8 @@ export class Login extends Component {
     })
       .then((res) => res.json())
       .then((res) => {
-        // console.log("res", res);
-        // console.log("token: ", res.access_token);
-        // console.log("res.message", res.Message);
         if (res.access_token) {
-          localStorage.setItem("token", res.access_token);
+          localStorage.setItem("access_token", res.access_token);
           this.props.history.push("/");
         } else if (res.Message === "INVALID_USER") {
           alert("아이디 혹은 비밀번호가 잘못 입력되었습니다.");

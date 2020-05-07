@@ -16,6 +16,16 @@ class Card extends Component {
     };
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log("next", nextProps);
+    this.setState({
+      isActive: false,
+      activeColor: "",
+      defImg: nextProps.category.color_list[0],
+      showImage: nextProps.category.color_list[0].image,
+    });
+  }
+
   handleMouseOver = (ev) => {
     this.setState({
       isActive: true,
@@ -60,7 +70,6 @@ class Card extends Component {
 
   render() {
     const { category } = this.props;
-    console.log("gkgkk", this.props);
 
     return (
       <div

@@ -44,6 +44,7 @@ class Routes extends Component {
         <Route path="/cscenter" component={Cscenter} />
         <Route path="/category" component={Category} />
         <Route path="/store" component={Store} />
+        <Footer />
         <Route path="/footer" component={Footer} />
       </Router>
     );

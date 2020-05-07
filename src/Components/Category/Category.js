@@ -1,14 +1,7 @@
 import React, { Component } from "react";
+import { CATEGORY_URL } from "../../Config";
+
 import filterImage from "../../Images/Filter-nav-left.png";
-//import arrowdown from "../../Images/filter-nav-right.png";
-import minus from "../../Images/Category-minus.png";
-import plus from "../../Images/Category-plus.png";
-import highshoe from "../../Images/Highshoe.png";
-import lowshoe from "../../Images/Lowshoe.png";
-import midshoe from "../../Images/Midshoe.png";
-import flatformshoe from "../../Images/Flatformshoe.png";
-import slipshoe from "../../Images/Slipshoe.png";
-import hearticon from "../../Images/Heart-icon.png";
 import CategorySidebar from "../Category/CategorySidebar/CategorySidebar";
 import CategoryBottomRight from "../Category/CategoryBottomRight/CategoryBottomRight";
 import "./Category.scss";
@@ -25,21 +18,12 @@ class Category extends Component {
   }
 
   componentDidMount() {
-    console.log("comunt");
-    fetch(`http://10.58.0.199:8000/product/category/shoes`)
-      // fetch("http://10.58.0.199:8000/product/category/onestar")
+    fetch(`${CATEGORY_URL}`)
       .then((res) => res.json())
-      // .then((res) => {
-      //   console.log(res);
-      // });
-
       .then((res) =>
-        this.setState(
-          {
-            category: res.product,
-          },
-          () => console.log("asdasd", this.state.category)
-        )
+        this.setState({
+          category: res.product,
+        })
       );
   }
 
@@ -67,9 +51,6 @@ class Category extends Component {
   };
 
   render() {
-    console.log("render");
-    // console.log("dddd", {this.category});
-
     return (
       <div className="Category">
         {/* {this.state.mouseOverShow ? (

@@ -31,7 +31,7 @@ class ContentForOne extends Component {
         <Link className="product-url" to={`product/${code}`}>
           <div className="product-img">
             {url.endsWith("mp4") ? (
-              <video autoPlay loop controls>
+              <video autoPlay loop>
                 <source src={url} type="video/mp4" />
               </video>
             ) : (

@@ -1,4 +1,5 @@
 .Header {
+  z-index: 3000;
   display: flex;
   position: relative;
   background-color: #ffffff;
@@ -61,7 +62,7 @@
 
         .navright-all {
           display: flex;
-          width: 350px;
+          width: 152px;
           justify-content: space-between;
 
           .nav-right {

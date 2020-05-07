@@ -17,36 +17,32 @@ export class Cart extends Component {
   }
 
   componentDidMount() {
-    let token = localStorage.getItem("access_token");
+    console.log("cart");
+    setTimeout(() => {
+      let token = localStorage.getItem("access_token");
 
-    fetch(`${SERVICE_CART_URL}`, {
-      headers: {
-        Authorization: token,
-      },
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((res) =>
-        this.setState(
-          {
-            // cart: res.cart,
-            cart: res.cart_list[0],
-          },
-          () => console.log(this.state.cart)
-        )
-      );
+      fetch(`${SERVICE_CART_URL}`, {
+        headers: {
+          Authorization: token,
+        },
+        method: "GET",
+      })
+        .then((res) => res.json())
+        .then((res) =>
+          this.setState(
+            {
+              cart: res.cart_list,
+            },
+            () => console.log(this.state.cart)
+          )
+        );
+    }, 100);
   }
 
   render() {
-    return (
-      <>
-        {this.state.cart && this.state.cart.length > 0 ? (
-          <CartAdded cart={this.state.cart} />
-        ) : (
-          <CartEmpty />
-        )}
-      </>
-    );
+    const { cart } = this.state;
+
+    return <>{cart && <CartAdded cart={this.state.cart} />}</>;
   }
 }
 export default Cart;

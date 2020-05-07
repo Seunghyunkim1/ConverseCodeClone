@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import "./Header.scss";
 import Shoesmenu from "./Shoesmenu/Shoesmenu";
-
-// import myPageIcon from '/image/icon.png';
+import "./Header.scss";
 
 export class Header extends Component {
   constructor(props) {
@@ -13,10 +11,10 @@ export class Header extends Component {
       isClicked: false,
     };
 
-    this.clickShoes = this.clickShoes.bind(this);
+    this.onClickShoes = this.onClickShoes.bind(this);
   }
 
-  clickShoes(e) {
+  onClickShoes() {
     this.setState({
       isClicked: !this.state.isClicked,
     });
@@ -42,13 +40,13 @@ export class Header extends Component {
                       <nav className="nav-content">
                         <ul className="ul-name">
                           <li className="li-name">
-                            <button onClick={this.clickShoes}>신발</button>
+                            <button onClick={this.onClickShoes}>신발</button>
                           </li>
                           <li className="li-name">
-                            <button onClick={this.clickShoes}>의류</button>
+                            <button onClick={this.onClickShoes}>의류</button>
                           </li>
                           <li className="li-name">
-                            <button onClick={this.clickShoes}>아동</button>
+                            <button onClick={this.onClickShoes}>아동</button>
                           </li>
                         </ul>
                       </nav>
@@ -91,7 +89,6 @@ export class Header extends Component {
                   </div>
 
                   <div className="search-box">
-                    <span className="ptag-search">검색</span>
                     <image
                       className="search-img"
                       src="https://image.flaticon.com/icons/svg/101/101826.svg"
