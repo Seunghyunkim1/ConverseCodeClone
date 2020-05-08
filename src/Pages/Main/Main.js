@@ -27,41 +27,29 @@ class Main extends Component {
   }
 
   makeGroup(contents) {
-    let section = [];
-    let dividedContents = [];
+    let devidedContents = [];
+    let sectionHalf = [];
     let sum = 0;
 
     contents.forEach((contents) => {
-      contents.map((content, index) => {
-        if (content.size !== undefined) {
-          if (content.size >= 4) {
-            //size 4 이상, 독자 Contents 차지
-            dividedContents.push([content]);
-          } else if (sum + content.size <= 4) {
-            if (content.size === 1) {
-              section.push(content);
-              if (content.one !== undefined) {
-                this.getContentsOne(content);
-                sum += Number(content.one);
-              } else {
-                sum += content.size;
-              }
-            } else {
-              section.push(content);
-              sum += content.size;
-            }
-            if (sum === 4) {
-              dividedContents.push(section);
-              sum = 0;
-              section = [];
-            }
+      contents.map((content) => {
+        if (content.size >= 4) {
+          //size 4 이상, 독자 sectionHalf 차지
+          sectionHalf.push([content]);
+        } else if (sum + content.size <= 4) {
+          devidedContents.push(content);
+          sum += content.size;
+          if (sum === 4) {
+            sectionHalf.push(devidedContents);
+            sum = 0;
+            devidedContents = [];
           }
         }
       });
     });
 
     this.setState({
-      contents: Array.from(dividedContents),
+      contents: Array.from(sectionHalf),
     });
   }
 

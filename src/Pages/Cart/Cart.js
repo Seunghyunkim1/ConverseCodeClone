@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
-import { SERVICE_CART_URL, CART_URL } from "../../Config";
+import { SERVICE_CART_URL } from "../../Config";
 
 import CartEmpty from "./CartEmpty/CartEmpty";
 import CartAdded from "./CartAdded/CartAdded";
