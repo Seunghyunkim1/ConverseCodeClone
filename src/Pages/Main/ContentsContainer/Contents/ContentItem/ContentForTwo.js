@@ -13,7 +13,7 @@ class ContentForTwo extends Component {
         <div className="product">
           <div className="product-img">
             {url.endsWith("mp4") ? (
-              <video autoPlay loop>
+              <video autoPlay loop muted>
                 <source src={url} type="video/mp4" />
               </video>
             ) : (
@@ -22,9 +22,6 @@ class ContentForTwo extends Component {
           </div>
         </div>
         <div className="tile-overlay">
-          {/* {badges.map((badge) => (
-            <p className="badges-text">{badge}</p>
-          ))} */}
           <p className="title">{title}</p>
           <p className="description">{description}</p>
           <a className="link">
