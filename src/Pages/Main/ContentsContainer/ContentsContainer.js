@@ -26,13 +26,20 @@ class ContentsContainer extends Component {
       <div className="ContentsContainer">
         {this.state.contents &&
           this.state.contents.map((content, index) => {
-            if (index === 2) return <ContentNav />;
-            if (content.length > 0) {
-              if (content[0].size === 8) {
-                return <ContentFull contents={content} />;
-              } else if (content[0].size <= 4) {
-                return <ContentHalf contents={content} />;
-              }
+            if (content[0].size === 8) {
+              return (
+                <>
+                  {index === 2 ? <ContentNav /> : ""}
+                  <ContentFull contents={content} />
+                </>
+              );
+            } else if (content[0].size <= 4) {
+              return (
+                <>
+                  {index === 2 ? <ContentNav /> : ""}
+                  <ContentHalf contents={content} />
+                </>
+              );
             }
           })}
       </div>

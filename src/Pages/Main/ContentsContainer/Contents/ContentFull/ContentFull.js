@@ -5,7 +5,6 @@ import "./ContentFull.scss";
 
 class ContentFull extends Component {
   render() {
-    console.log("four", this.props.contents);
     const {
       code,
       url,
