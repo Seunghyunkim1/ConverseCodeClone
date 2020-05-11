@@ -25,11 +25,7 @@ class Store extends Component {
   componentDidMount() {
     fetch(`${STORE_URL}`)
       .then((res) => res.json())
-      .then((res) =>
-        this.setState({ stores: res.stores }, () =>
-          console.log(this.state.stores)
-        )
-      );
+      .then((res) => this.setState({ stores: res.stores }));
   }
 
   handleChange(e) {
@@ -41,21 +37,15 @@ class Store extends Component {
   handleCheck(e) {
     const checked = this.state.checked;
     checked[e.target.value] = e.target.checked;
-    console.log(e.target.value);
     if (checked[e.target.value] === "true" || checked["all"] === true) {
       for (let key in checked) {
         key === e.target.value ? (checked[key] = true) : (checked[key] = false);
       }
     }
 
-    this.setState(
-      {
-        checked: checked,
-      },
-      () => {
-        console.log(checked);
-      }
-    );
+    this.setState({
+      checked: checked,
+    });
   }
 
   render() {

@@ -14,8 +14,6 @@ class Map extends Component {
   }
 
   render() {
-    // const { name, longitude, latitude } = this.props.stores;
-
     return (
       <div className="Map">
         <div className="wrapper">

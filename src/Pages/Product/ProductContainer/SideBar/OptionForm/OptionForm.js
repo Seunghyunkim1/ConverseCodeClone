@@ -42,6 +42,7 @@ class OptionForm extends Component {
   //size handler
   handleSizeClick(e) {
     const id = Number(e.target.id);
+    //하나의 사이즈만 true 보장
     const sizeCheck = this.state.sizeCheck.map((e, index) =>
       id === index ? !e : false
     );
@@ -67,23 +68,15 @@ class OptionForm extends Component {
       amount++;
     }
 
-    this.setState(
-      {
-        amount: amount,
-      },
-      () => console.log(this.state.amount)
-    );
+    this.setState({
+      amount: amount,
+    });
   }
 
   //장바구니, get handler
   handleGetClick(e) {
-    let check = this.isSizeSelected(this.state.sizeCheck);
+    let check = this.state.sizeSlected;
     if (!check) e.preventDefault();
-
-    // localStorage.setItem(
-    //   "access_token",
-    //   "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo2fQ.XJDePJuHoEMAOrEO0nZekln6hCqEuftXxIfmr2n-c4E"
-    // );
 
     let token = localStorage.getItem("access_token");
 
@@ -101,10 +94,6 @@ class OptionForm extends Component {
         }),
       });
     }
-
-    this.setState({
-      sizeSlected: this.isSizeSelected(this.state.sizeCheck),
-    });
   }
 
   render() {
