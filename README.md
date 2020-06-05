@@ -18,7 +18,7 @@ Converse Korea Official Store [컨버스 코리아 공식 스토어](https://www
 
 ### 구현 페이지, 컴포넌트
 - 메인 페이지 (with React Components)
-- Banner (Slider) 및 Header 
+- Banner(Slider) 및 Header 
 - 회원가입 / 로그인
 - access token 관리
 - 제품 카테고리
