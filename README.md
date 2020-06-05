@@ -20,7 +20,7 @@ Converse Korea Official Store [컨버스 코리아 공식 스토어](https://www
 - 메인 페이지 (with React Components)
 - Banner 및 Header
 - 회원가입 / 로그인
-- JSON Web Token을 활용한 access token 발행
+- access token 관리
 - 제품 카테고리
 - 사이즈, 색상별 제품 필터링
 - 제품 상세보기 (with Responsive Web)
